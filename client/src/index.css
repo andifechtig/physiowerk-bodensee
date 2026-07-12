@@ -4,6 +4,8 @@
 :root {
   --brand: #e63746;
   --brand-dark: #c72535;
+  --brand-soft: #f9dfe2;
+  --brand-soft-hover: #f5cdd2;
   --ink: #393939;
   --muted: #656665;
   --paper: #ffffff;
@@ -38,12 +40,17 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .brand-link { flex: 0 0 auto; }
 .brand-logo { width: 154px; height: auto; }
 .desktop-navigation { display: flex; align-items: center; justify-content: flex-end; gap: clamp(.7rem, 1.35vw, 1.45rem); font-size: .78rem; line-height: 1.1; }
-.desktop-navigation > a:not(.booking-button):not(.contact-pill) { position: relative; max-width: 9rem; padding-block: .8rem; }
+.desktop-navigation > a:not(.booking-button):not(.contact-pill) { position: relative; max-width: 9rem; padding: .8rem 0; border-radius: 999px; transition: padding 180ms var(--ease-out), color 180ms var(--ease-out), background-color 180ms var(--ease-out); }
 .desktop-navigation > a:not(.booking-button):not(.contact-pill)::after { position: absolute; right: 0; bottom: .35rem; left: 0; height: 2px; content: ""; background: var(--brand); transform: scaleX(0); transform-origin: right; transition: transform 180ms var(--ease-out); }
-.desktop-navigation > a:hover::after, .desktop-navigation > a.active::after { transform: scaleX(1); transform-origin: left; }
+.desktop-navigation > a:not(.booking-button):not(.contact-pill):not(.active):hover::after { transform: scaleX(1); transform-origin: left; }
+.desktop-navigation > a:not(.booking-button):not(.contact-pill).active { padding: .72rem 1rem; color: var(--brand); background: var(--brand-soft); }
+.desktop-navigation > a:not(.booking-button):not(.contact-pill).active:hover { background: var(--brand-soft-hover); }
+.desktop-navigation > a:not(.booking-button):not(.contact-pill).active::after { display: none; }
 .contact-pill, .booking-button, .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: .72rem 1.2rem; border: 1px solid var(--brand); border-radius: 999px; font-weight: 600; line-height: 1; }
 .contact-pill { color: var(--paper); background: var(--brand); }
 .contact-pill:hover { background: var(--brand-dark); }
+.contact-pill.active { border-color: var(--brand-soft); color: var(--brand); background: var(--brand-soft); }
+.contact-pill.active:hover { border-color: var(--brand-soft-hover); background: var(--brand-soft-hover); }
 .booking-button { color: var(--brand); background: var(--paper); white-space: nowrap; }
 .booking-button svg { width: 1rem; height: 1rem; }
 .booking-button:hover { color: var(--paper); background: var(--brand); }
@@ -53,8 +60,9 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .mobile-navigation { display: grid; grid-template-rows: 0fr; border-top: 0 solid var(--line); opacity: 0; transition: grid-template-rows 220ms var(--ease-out), opacity 160ms var(--ease-out), border-width 160ms var(--ease-out); }
 .mobile-navigation.open { grid-template-rows: 1fr; border-top-width: 1px; opacity: 1; }
 .mobile-navigation-inner { min-height: 0; display: flex; flex-direction: column; gap: .1rem; overflow: hidden; }
-.mobile-navigation-inner > a:not(.booking-button) { padding: .9rem .2rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
-.mobile-navigation-inner > a.active { color: var(--brand); }
+.mobile-navigation-inner > a:not(.booking-button) { padding: .9rem .2rem; border-bottom: 1px solid var(--line); border-radius: 0; font-size: 1.05rem; transition: padding 180ms var(--ease-out), color 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out); }
+.mobile-navigation-inner > a.active { margin: .35rem 0; padding: .78rem 1rem; border-bottom-color: transparent; border-radius: 999px; color: var(--brand); background: var(--brand-soft); }
+.mobile-navigation-inner > a.active:hover { background: var(--brand-soft-hover); }
 .mobile-navigation-inner .booking-button { margin: 1rem 0 1.4rem; }
 
 .eyebrow { margin: 0 0 1.15rem; color: var(--brand); font-size: .78rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }

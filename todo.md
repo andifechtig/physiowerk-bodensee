@@ -40,4 +40,10 @@
 - [x] Tests für Coaching-Route, Navigation, SEO-Konfiguration und WhatsApp-Link ergänzen
 - [x] Coaching-Seite und Startseiten-Teaser in Desktop- und Mobilansicht visuell prüfen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Aktualisierten Projekt-Checkpoint erstellen und Website erneut mit Sichtbarkeit `public` veröffentlichen
+- [x] Aktualisierten Projekt-Checkpoint erstellen und Website erneut mit Sichtbarkeit `public` veröffentlichen
+- [x] Aktive Desktop-Navigationslinks mit hellrotem Hintergrund und abgerundeter Pill-Form hervorheben
+- [x] Aktive Mobil-Navigationslinks mit demselben hellroten Pill-System hervorheben
+- [x] Kontaktseite im aktiven Zustand gestalterisch an das neue helle Pill-System angleichen
+- [x] Aktive Zustände auf Start-, Leistungs-, Coaching-, Karriere- und Kontaktseite visuell prüfen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild ausführen
+- [ ] Aktualisierten Navigations-Checkpoint erstellen und erneut öffentlich veröffentlichen

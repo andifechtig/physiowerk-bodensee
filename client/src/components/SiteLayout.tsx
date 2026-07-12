@@ -94,7 +94,13 @@ function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/kontakt/">Kontakt</Link>
+          <Link
+            href="/kontakt/"
+            className={isActive(location, "/kontakt/") ? "active" : ""}
+            aria-current={isActive(location, "/kontakt/") ? "page" : undefined}
+          >
+            Kontakt
+          </Link>
           <BookingLink />
         </div>
       </nav>
