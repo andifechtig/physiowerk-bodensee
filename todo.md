@@ -16,7 +16,7 @@
 - [x] THEORG/TheraConnect-Platzhalterziel zentral konfigurierbar machen und in Navigation, Leistungsseiten und Buchungsbereich verlinken
 - [x] Anfrage-Datenmodell und Datenbankmigration für Kontaktformularübermittlungen implementieren
 - [x] Öffentliches tRPC-Kontaktformular mit Zod-Validierung, Honeypot, zeitbasierter Plausibilitätsprüfung und serverseitigem Rate-Limiting implementieren
-- [ ] SMTP-Zustellung ausschließlich an `info@physiowerk-bodensee.de` nach Verfügbarkeit der Mailserver-Zugangsdaten aktivieren
+- [x] SMTP-Zustellung ausschließlich an `info@physiowerk-bodensee.de` auf Nutzerwunsch als nachgelagerte Konfiguration dokumentieren
 - [x] SMTP-Zustellung auf Nutzerwunsch für die Erstveröffentlichung zurückstellen; Kontaktanfragen werden weiterhin in der Datenbank gespeichert
 - [x] Lazy-loaded Google-Maps-Anfahrtskarte für Tettnanger Straße 14, 88074 Meckenbeuren mit adressbasierter Markierung umsetzen
 - [x] Vitest-Abdeckung für Seitenkonfiguration, Routen, Kontaktvalidierung, Honeypot und Rate-Limiting erstellen
@@ -27,4 +27,17 @@
 - [x] Rechtliche Inhalte als Migrationsstand übernehmen und notwendige fachliche Prüfung der neuen Hosting-/Formular-/Kartenkonfiguration dokumentieren
 - [x] Finale TODO-Prüfung durchführen und den einzigen vollständigen Projekt-Checkpoint unmittelbar erstellen
 - [x] Öffentliche Sichtbarkeit (`public`) durch den Nutzer bestätigen lassen
-- [ ] Website mit Sichtbarkeit `public` veröffentlichen
+- [x] Website mit Sichtbarkeit `public` veröffentlichen
+- [x] Navigationspunkt `Coaching` prominent zwischen Karriere und Kontakt in Desktop- und Mobilnavigation ergänzen
+- [x] SEO-stabile Route `/coaching/` mit eigenem Title, Meta-Description, Canonical und Sitemap-Eintrag anlegen
+- [x] Coaching-Hero mit vorgegebenem Titel, Untertitel, Badges, drei Kennzahlen und WhatsApp-CTA umsetzen
+- [x] Coaching-Bereiche Problem, Lösung, vierstufiger Programmablauf und sechs Leistungsbausteine vollständig umsetzen
+- [x] Vergleichstabelle `Coaching vs. klassische Physiotherapie` responsiv und zugänglich umsetzen
+- [x] Zielgruppenbereich, sechs FAQ-Einträge und abschließenden WhatsApp-CTA vollständig umsetzen
+- [x] WhatsApp-Floating-Button ausschließlich auf `/coaching/` mit dem vorgegebenen Link umsetzen
+- [x] Auffälligen Coaching-Teaser mit Link auf `/coaching/` in die Startseite integrieren
+- [x] Medizinische Ergebnisversprechen, Erfahrungszahlen, Platzlimit und Geld-zurück-Aussage als vom Nutzer bereitgestellte Marketingangaben kennzeichnen und fachliche Prüfung dokumentieren
+- [x] Tests für Coaching-Route, Navigation, SEO-Konfiguration und WhatsApp-Link ergänzen
+- [x] Coaching-Seite und Startseiten-Teaser in Desktop- und Mobilansicht visuell prüfen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Aktualisierten Projekt-Checkpoint erstellen und Website erneut mit Sichtbarkeit `public` veröffentlichen

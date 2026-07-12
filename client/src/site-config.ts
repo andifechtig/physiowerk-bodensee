@@ -27,6 +27,9 @@ export const BOOKING_CONFIG = {
   isPlaceholder: true,
 } as const;
 
+export const COACHING_WHATSAPP_URL =
+  "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.";
+
 export const NAVIGATION = [
   { label: "Physiotherapie", href: "/physiotherapie/" },
   {
@@ -35,6 +38,7 @@ export const NAVIGATION = [
   },
   { label: "Team & Praxis", href: "/team-praxis/" },
   { label: "Karriere", href: "/karriere/" },
+  { label: "Coaching", href: "/coaching/" },
 ] as const;
 
 export const SOCIAL_LINKS = [
@@ -83,6 +87,12 @@ export const SEO: Record<string, SeoConfig> = {
     title: "Karriere - Physiowerk Bodensee",
     description: "Physiotherapie mit Herz, Know-how und modernem Umfeld.",
     path: "/karriere/",
+  },
+  coaching: {
+    title: "Schmerzfrei Jetzt Coaching - Physiowerk Bodensee",
+    description:
+      "Das ganzheitliche 6-Monats-Coaching von Andreas Fechtig – biomechanisch fundiert, persönlich betreut und nachhaltig ausgerichtet.",
+    path: "/coaching/",
   },
   contact: {
     title: "Kontakt - Physiowerk Bodensee",

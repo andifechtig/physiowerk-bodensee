@@ -1,5 +1,11 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { BOOKING_CONFIG, NAVIGATION, SEO } from "../client/src/site-config";
+import {
+  BOOKING_CONFIG,
+  COACHING_WHATSAPP_URL,
+  NAVIGATION,
+  SEO,
+} from "../client/src/site-config";
 
 describe("stable site routes", () => {
   it("keeps every required canonical route with a trailing slash", () => {
@@ -9,6 +15,7 @@ describe("stable site routes", () => {
       "/medizinisches-training-und-fitness/",
       "/team-praxis/",
       "/karriere/",
+      "/coaching/",
       "/kontakt/",
       "/impressum/",
       "/datenschutzerklaerung/",
@@ -17,6 +24,18 @@ describe("stable site routes", () => {
 
   it("keeps the primary navigation on canonical paths", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
+    expect(NAVIGATION.at(-1)).toEqual({ label: "Coaching", href: "/coaching/" });
+  });
+
+  it("uses the exact coaching WhatsApp conversation URL", () => {
+    expect(COACHING_WHATSAPP_URL).toBe(
+      "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.",
+    );
+  });
+
+  it("publishes the coaching route in the sitemap", () => {
+    const sitemap = readFileSync(new URL("../client/public/sitemap.xml", import.meta.url), "utf8");
+    expect(sitemap).toContain("https://www.physiowerk-bodensee.de/coaching/");
   });
 
   it("uses the iframe-ready booking placeholder until THEORG is configured", () => {

@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 const Career = lazy(() => import("./pages/Career"));
+const Coaching = lazy(() => import("./pages/Coaching"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Imprint = lazy(() => import("./pages/Imprint"));
 const Physiotherapy = lazy(() => import("./pages/Physiotherapy"));
@@ -19,6 +20,7 @@ const canonicalRedirects: Record<string, string> = {
   "/medizinisches-training-und-fitness": "/medizinisches-training-und-fitness/",
   "/team-praxis": "/team-praxis/",
   "/karriere": "/karriere/",
+  "/coaching": "/coaching/",
   "/kontakt": "/kontakt/",
   "/impressum": "/impressum/",
   "/datenschutzerklaerung": "/datenschutzerklaerung/",
@@ -51,6 +53,7 @@ function Router() {
           <Route path="/medizinisches-training-und-fitness/" component={Training} />
           <Route path="/team-praxis/" component={Team} />
           <Route path="/karriere/" component={Career} />
+          <Route path="/coaching/" component={Coaching} />
           <Route path="/kontakt/" component={Contact} />
           <Route path="/impressum/" component={Imprint} />
           <Route path="/datenschutzerklaerung/" component={Privacy} />

@@ -1,0 +1,7 @@
+# Coaching-Qualitätsprüfung
+
+Die neue Route `/coaching/` und der Startseiten-Teaser wurden bei 1440 × 900 Pixeln sowie 390 × 844 Pixeln vollständig gerendert. Der neue Navigationspunkt sitzt nach „Karriere“ und vor dem Kontakt-CTA. Hero, Programmbadges, Kennzahlen, Problem- und Lösungsbereiche, vier Programmschritte, sechs Leistungsbausteine, Vergleichstabelle, Zielgruppe, FAQ und Abschluss-CTA folgen der bestehenden Markenwelt und weisen keine sichtbaren horizontalen Seitenüberläufe auf.
+
+Auf Mobilgeräten stapeln sich die Hero-Kennzahlen, Leistungs- und Lösungskarten korrekt. Die Vergleichstabelle bleibt in ihrem vorgesehenen horizontal scrollbaren Container. Die FAQ verwendet zugängliche Accordion-Trigger. Der Coaching-Teaser ist auf der Startseite zwischen Schwerpunkten und Lauftext prominent sichtbar. Der WhatsApp-Floating-Button ist ausschließlich Bestandteil der Coaching-Seite; bei automatischen Full-Page-Screenshots wird nicht oben verankertes Fixed-Chrome absichtlich ausgeblendet und deshalb nicht im Langbild dargestellt.
+
+Die Marketingangaben „20+ Jahre“, „5.000+ Behandlungen“, „nur 3 Plätze/Monat“ und die Geld-zurück-Aussage werden als vom Anbieter bereitgestellte Angaben behandelt. Ein sichtbarer Hinweis stellt klar, dass Ergebnisse individuell sind, das Coaching notwendige medizinische Diagnostik oder Behandlung nicht ersetzt und die Angebots- beziehungsweise Garantiebedingungen vor Buchung geprüft werden sollten.

@@ -1,4 +1,4 @@
-import { Activity, Dumbbell, HeartHandshake, SearchCheck, Sparkles, UsersRound } from "lucide-react";
+import { Activity, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, UsersRound } from "lucide-react";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import {
   ArrowLink,
@@ -130,6 +130,21 @@ export default function Home() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="home-coaching-teaser">
+        <div className="site-shell home-coaching-teaser-grid">
+          <div>
+            <p className="eyebrow eyebrow-light">Neu im Physiowerk Bodensee</p>
+            <h2>NEU: Schmerzfrei Jetzt — Dein 6-Monats-Coaching</h2>
+            <p>Das ganzheitliche Coaching-Programm für nachhaltige Schmerzfreiheit. Biomechanisch fundiert, persönlich betreut von Andreas Fechtig.</p>
+            <ArrowLink href="/coaching/">Mehr erfahren</ArrowLink>
+          </div>
+          <div className="home-coaching-teaser-mark" aria-hidden="true">
+            <HeartPulse />
+            <span>6 Monate</span>
+          </div>
         </div>
       </section>
 

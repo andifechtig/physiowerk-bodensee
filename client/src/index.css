@@ -275,3 +275,124 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+.home-coaching-teaser { padding: clamp(4.5rem, 8vw, 7rem) 0; color: var(--paper); background: var(--brand); }
+.home-coaching-teaser-grid { display: grid; grid-template-columns: 1.2fr .55fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+.home-coaching-teaser h2 { max-width: 800px; margin: 0; font-size: clamp(2.2rem, 4.8vw, 4.75rem); font-weight: 400; line-height: .98; letter-spacing: -.035em; }
+.home-coaching-teaser p:not(.eyebrow) { max-width: 650px; color: color-mix(in srgb, white 82%, transparent); line-height: 1.55; }
+.home-coaching-teaser .arrow-link { margin-top: 1rem; }
+.home-coaching-teaser-mark { aspect-ratio: 1; display: grid; place-items: center; align-content: center; gap: 1rem; border: 1px solid color-mix(in srgb, white 40%, transparent); border-radius: 50%; background: color-mix(in srgb, var(--ink) 16%, transparent); }
+.home-coaching-teaser-mark svg { width: 4.5rem; height: 4.5rem; }
+.home-coaching-teaser-mark span { font-size: 1.15rem; }
+
+.coaching-hero { position: relative; overflow: hidden; color: var(--paper); background: var(--ink); }
+.coaching-hero::before { position: absolute; inset: 0; content: ""; background: radial-gradient(circle at 78% 25%, color-mix(in srgb, var(--brand) 70%, transparent), transparent 32%), linear-gradient(135deg, transparent 0 58%, color-mix(in srgb, var(--brand) 18%, transparent) 58% 100%); pointer-events: none; }
+.coaching-hero-grid { position: relative; min-height: 720px; display: grid; grid-template-columns: 1.25fr .55fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); padding-block: clamp(5rem, 10vw, 9rem); }
+.coaching-badges { display: flex; flex-wrap: wrap; gap: .65rem; margin-bottom: 2rem; }
+.coaching-badges span { padding: .65rem 1rem; border: 1px solid color-mix(in srgb, white 30%, transparent); border-radius: 999px; color: var(--paper); background: color-mix(in srgb, white 7%, transparent); font-size: .78rem; font-weight: 600; }
+.coaching-badges span:last-child { border-color: var(--brand); background: var(--brand); }
+.coaching-kicker, .coaching-eyebrow { margin: 0 0 1rem; color: var(--brand); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.coaching-hero h1 { max-width: 850px; margin: 0; font-size: clamp(3.2rem, 6.5vw, 7rem); font-weight: 400; line-height: .9; letter-spacing: -.05em; }
+.coaching-hero-intro { max-width: 720px; margin: 2rem 0; color: color-mix(in srgb, white 78%, transparent); font-size: clamp(1.05rem, 1.7vw, 1.35rem); line-height: 1.5; }
+.coaching-whatsapp-cta { width: fit-content; min-height: 52px; display: inline-flex; align-items: center; gap: .7rem; padding: .85rem 1.25rem; border: 1px solid #168b4b; border-radius: 999px; color: white; background: #168b4b; font-weight: 700; transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out); }
+.coaching-whatsapp-cta:hover { background: #10753e; }
+.coaching-whatsapp-cta:active { transform: scale(.97); }
+.coaching-whatsapp-cta svg { width: 1.15rem; height: 1.15rem; }
+.coaching-whatsapp-cta svg:last-child { margin-left: .25rem; }
+.coaching-whatsapp-cta-light { color: var(--ink); background: var(--paper); border-color: var(--paper); }
+.coaching-whatsapp-cta-light:hover { color: var(--paper); background: #168b4b; border-color: #168b4b; }
+.coaching-hero-panel { display: flex; flex-direction: column; border: 1px solid color-mix(in srgb, white 17%, transparent); border-radius: 3rem; overflow: hidden; background: color-mix(in srgb, white 5%, transparent); backdrop-filter: blur(10px); }
+.coaching-hero-panel div { display: flex; flex-direction: column; padding: 1.8rem 2rem; border-bottom: 1px solid color-mix(in srgb, white 15%, transparent); }
+.coaching-hero-panel div:last-child { border-bottom: 0; }
+.coaching-hero-panel strong { color: var(--brand); font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 400; line-height: 1; }
+.coaching-hero-panel span { margin-top: .45rem; color: color-mix(in srgb, white 72%, transparent); }
+
+.coaching-section { padding: clamp(5.5rem, 10vw, 9rem) 0; }
+.coaching-heading { max-width: 840px; margin-bottom: clamp(3rem, 6vw, 5rem); }
+.coaching-heading h2, .coaching-problem h2, .coaching-final-cta h2 { margin: 0; color: var(--brand); font-size: clamp(2.4rem, 5vw, 5.2rem); font-weight: 400; line-height: .96; letter-spacing: -.04em; }
+.coaching-heading > p:last-child { max-width: 720px; margin: 1.5rem 0 0; color: var(--muted); line-height: 1.6; }
+.coaching-heading-light h2 { color: var(--paper); }
+.coaching-heading-light > p:last-child { color: color-mix(in srgb, white 74%, transparent); }
+.coaching-problem { background: var(--paper-soft); }
+.coaching-problem-grid { display: grid; grid-template-columns: .65fr 1.35fr; gap: clamp(3rem, 8vw, 8rem); }
+.coaching-problem-list { display: flex; flex-direction: column; }
+.coaching-problem-list article { display: grid; grid-template-columns: 70px 1fr; gap: 1.2rem; padding: 1.6rem 0; border-top: 1px solid var(--line); }
+.coaching-problem-list article span { color: var(--brand); font-weight: 700; }
+.coaching-problem-list article p { margin: 0; font-size: clamp(1.1rem, 2vw, 1.55rem); line-height: 1.35; }
+.coaching-problem-list blockquote { margin: 2rem 0 0; padding: 1.5rem 2rem; border-left: 5px solid var(--brand); color: var(--brand); background: var(--paper); font-size: clamp(1.25rem, 2.3vw, 1.8rem); }
+.coaching-solution { color: var(--paper); background: var(--brand); }
+.coaching-solution .coaching-eyebrow { color: color-mix(in srgb, white 72%, transparent); }
+.coaching-solution-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.coaching-solution-grid article { min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.6rem; border: 1px solid color-mix(in srgb, white 25%, transparent); border-radius: 2rem; background: color-mix(in srgb, var(--ink) 12%, transparent); }
+.coaching-solution-grid svg { color: var(--paper); }
+.coaching-solution-grid h3 { margin: 0; font-size: 1.3rem; font-weight: 400; }
+.coaching-steps { margin: 0; padding: 0; list-style: none; }
+.coaching-steps li { display: grid; grid-template-columns: 80px 1fr auto; align-items: start; gap: 1.5rem; padding: 2rem 0; border-top: 1px solid var(--line); }
+.coaching-steps li:last-child { border-bottom: 1px solid var(--line); }
+.coaching-steps > li > span { color: var(--brand); font-size: 1.1rem; font-weight: 700; }
+.coaching-steps h3 { margin: 0 0 .5rem; color: var(--brand); font-size: clamp(1.45rem, 2.5vw, 2.2rem); font-weight: 400; }
+.coaching-steps p { max-width: 800px; margin: 0; color: var(--muted); line-height: 1.55; }
+.coaching-steps svg { color: var(--brand); }
+.coaching-features-section { background: var(--paper-soft); }
+.coaching-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.coaching-feature-grid article { padding: 2rem; border: 1px solid var(--line); border-radius: 2.25rem; background: var(--paper); }
+.coaching-feature-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; color: var(--paper); background: var(--brand); }
+.coaching-feature-icon svg { width: 1.4rem; height: 1.4rem; }
+.coaching-feature-grid h3 { margin: 2rem 0 .7rem; color: var(--brand); font-size: 1.4rem; font-weight: 400; }
+.coaching-feature-grid p { margin: 0; color: var(--muted); line-height: 1.55; }
+.coaching-comparison-section { color: var(--paper); background: var(--ink); }
+.coaching-comparison-grid { display: grid; grid-template-columns: .75fr 1.25fr; align-items: start; gap: clamp(3rem, 7vw, 7rem); }
+.coaching-table-card { overflow: hidden; border: 1px solid color-mix(in srgb, white 14%, transparent); border-radius: 2.5rem; background: color-mix(in srgb, white 5%, transparent); }
+.coaching-table { min-width: 640px; }
+.coaching-table th, .coaching-table td { height: auto; padding: 1.15rem 1.25rem; border-color: color-mix(in srgb, white 13%, transparent); color: color-mix(in srgb, white 70%, transparent); white-space: normal; }
+.coaching-table th { color: var(--paper); font-weight: 600; }
+.coaching-table th:last-child { color: var(--paper); background: color-mix(in srgb, var(--brand) 82%, transparent); }
+.coaching-table-label { color: var(--paper) !important; font-weight: 600; }
+.coaching-table-highlight { color: var(--paper) !important; background: color-mix(in srgb, var(--brand) 24%, transparent); }
+.coaching-audience-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 8vw, 8rem); }
+.coaching-audience-grid .coaching-heading { margin: 0; }
+.coaching-audience-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.coaching-audience-list div { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1.15rem 0; border-bottom: 1px solid var(--line); }
+.coaching-audience-list svg { width: 1.2rem; color: var(--brand); }
+.coaching-faq-section { background: var(--paper-soft); }
+.coaching-faq-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(3rem, 8vw, 8rem); }
+.coaching-faq-grid .coaching-heading { margin: 0; }
+.coaching-faq { border-top: 1px solid var(--line); }
+.coaching-faq-trigger { padding: 1.3rem 0; color: var(--ink); font-size: 1.05rem; text-decoration: none !important; }
+.coaching-faq-content { color: var(--muted); font-size: .95rem; line-height: 1.55; }
+.coaching-final-cta { padding: clamp(5.5rem, 10vw, 9rem) 0 3rem; color: var(--paper); background: var(--brand); }
+.coaching-final-cta .coaching-eyebrow { color: color-mix(in srgb, white 72%, transparent); }
+.coaching-final-cta h2 { color: var(--paper); }
+.coaching-final-cta-grid { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 3rem; }
+.coaching-final-cta-grid p:not(.coaching-eyebrow) { max-width: 720px; color: color-mix(in srgb, white 78%, transparent); font-size: 1.1rem; }
+.coaching-disclaimer { display: flex; align-items: flex-start; gap: .8rem; margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, white 30%, transparent); color: color-mix(in srgb, white 65%, transparent); font-size: .72rem; line-height: 1.45; }
+.coaching-disclaimer svg { flex: 0 0 auto; width: 1rem; height: 1rem; margin-top: .1rem; }
+.coaching-disclaimer p { margin: 0; }
+.coaching-floating-whatsapp { position: fixed; z-index: 45; right: 1.25rem; bottom: 1.25rem; display: inline-flex; align-items: center; gap: .55rem; padding: .8rem 1rem; border: 1px solid color-mix(in srgb, white 35%, transparent); border-radius: 999px; color: white; background: #168b4b; box-shadow: 0 14px 40px rgba(0,0,0,.24); font-size: .82rem; font-weight: 700; transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out); }
+.coaching-floating-whatsapp:hover { background: #10753e; transform: translateY(-2px); }
+.coaching-floating-whatsapp svg { width: 1.15rem; height: 1.15rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 980px) {
+  .home-coaching-teaser-grid, .coaching-hero-grid, .coaching-problem-grid, .coaching-comparison-grid, .coaching-audience-grid, .coaching-faq-grid, .coaching-final-cta-grid { grid-template-columns: 1fr; }
+  .home-coaching-teaser-mark { width: min(280px, 70vw); }
+  .coaching-hero-grid { min-height: auto; }
+  .coaching-hero-panel { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .coaching-hero-panel div { border-right: 1px solid color-mix(in srgb, white 15%, transparent); border-bottom: 0; }
+  .coaching-solution-grid { grid-template-columns: repeat(2, 1fr); }
+  .coaching-feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .coaching-final-cta-grid { align-items: start; }
+}
+
+@media (max-width: 640px) {
+  .coaching-hero-grid { padding-block: 4rem; }
+  .coaching-hero h1 { font-size: clamp(3rem, 14vw, 4.4rem); }
+  .coaching-hero-panel { grid-template-columns: 1fr; }
+  .coaching-hero-panel div { border-right: 0; border-bottom: 1px solid color-mix(in srgb, white 15%, transparent); }
+  .coaching-solution-grid, .coaching-feature-grid { grid-template-columns: 1fr; }
+  .coaching-steps li { grid-template-columns: 48px 1fr; }
+  .coaching-steps li > svg { display: none; }
+  .coaching-floating-whatsapp { right: .75rem; bottom: .75rem; }
+  .coaching-floating-whatsapp span { display: none; }
+  .coaching-floating-whatsapp { width: 52px; height: 52px; justify-content: center; padding: 0; }
+}
