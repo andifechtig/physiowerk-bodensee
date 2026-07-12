@@ -73,4 +73,12 @@
 - [x] Gefundene Navigations-, Layout-, Accessibility-, SEO-, Performance- oder Funktionsprobleme beheben
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild nach allen Korrekturen ausführen
 - [x] Umfassenden QA-Bericht erstellen
-- [ ] Finalen QA-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+- [x] Finalen QA-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+- [x] Produktionsfehler mit Sonderzeichen und weißer Seite auf der öffentlichen Domain reproduzieren
+- [x] Produktions-HTML, Chunk-Referenzen, Browserkonsole, Netzwerkanfragen und Runtime-Logs diagnostizieren
+- [x] Fehlerhafte `manualChunks`-Optimierung zurücksetzen oder sicher reparieren
+- [x] Produktionsbuild ohne kaputte Chunk-Referenzen erfolgreich erstellen
+- [x] Navigation, Hero und vollständige Inhalte aller neun Seiten im Browser verifizieren
+- [x] Desktop- und Mobilansicht der korrigierten Startseite prüfen
+- [x] Vollständige Test-Suite und TypeScript-Prüfung erfolgreich ausführen
+- [ ] Stabilen Notfall-Checkpoint erstellen und korrigierte Version öffentlich redeployen

@@ -72,6 +72,15 @@ describe("website quality contracts", () => {
     expect(Object.values(BRAND_ASSETS).every(url => url.startsWith("/manus-storage/"))).toBe(true);
   });
 
+  it("keeps the HTML entry document clean and mountable", () => {
+    const html = readFileSync(join(clientRoot, "index.html"), "utf8");
+    expect(html).toContain('<html lang="de">');
+    expect(html).toContain('<div id="root"></div>');
+    expect(html).toContain('type="module" src="/src/main.tsx"');
+    expect(html).not.toMatch(/^@@$|^[+-](?!\+|-)/m);
+    expect(html.trimEnd().endsWith("</html>")).toBe(true);
+  });
+
   it("keeps non-home routes lazy-loaded", () => {
     const app = readFileSync(join(sourceRoot, "App.tsx"), "utf8");
     const lazyPages = ["Career", "Coaching", "Contact", "Imprint", "Physiotherapy", "Privacy", "Team", "Training"];

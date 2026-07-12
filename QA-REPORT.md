@@ -8,7 +8,7 @@
 
 Die vollständige Website wurde auf Desktop mit 1440 × 900 Pixeln, Tablet mit 768 × 1024 Pixeln und Mobil mit 390 × 844 Pixeln geprüft. Alle neun kanonischen Seiten wurden vollständig gerendert. Die Navigation, responsiven Raster, Rechtsseiten, Coaching-Tabelle, Formulare und Iframes blieben ohne sichtbaren Seitenüberlauf oder blockierenden Layoutfehler. Sämtliche kanonischen Routen, `robots.txt` und `sitemap.xml` antworteten in der Vorschau mit HTTP-Status 200.[1]
 
-Der Audit führte zu zwei technischen Verbesserungen. Die acht Canonical-Weiterleitungen wurden als zentraler, automatisch getesteter Vertrag umgesetzt. Außerdem wurde die Produktionsausgabe in React-, Daten-, UI- und allgemeine Vendor-Chunks geteilt. Dadurch sank der Einstiegschunk von zuvor rund 609 kB auf rund 69 kB; kein JavaScript-Chunk überschreitet mehr 500 kB.[2]
+Der Audit führte zu einer dauerhaft beibehaltenen technischen Verbesserung: Die acht Canonical-Weiterleitungen wurden als zentraler, automatisch getesteter Vertrag umgesetzt. Eine anschließend erprobte manuelle Vendor-Chunk-Aufteilung wurde nach einem kritischen Produktionsproblem vollständig zurückgesetzt; die Website verwendet wieder die stabile Vite-Standardausgabe bei weiterhin aktivem Lazy Loading der acht Nicht-Home-Seiten.[2]
 
 | Prüfbereich | Ergebnis | Nachweis |
 | --- | --- | --- |
@@ -16,7 +16,7 @@ Der Audit führte zu zwei technischen Verbesserungen. Die acht Canonical-Weiterl
 | Desktop, Tablet und Mobil | Bestanden | Vollständige Screenshots aller Seiten in drei Viewports |
 | Accessibility | Bestanden | Fokus-Ringe, Labels, ARIA, Landmarken, H1 und Tastaturziele geprüft |
 | Medien und Deployment | Bestanden | Keine großen oder binären Medien in `client/public/` |
-| Performance | Verbessert | Vendor-Splitting; keine Chunk-Warnung über 500 kB |
+| Performance | Stabil | Seiten-Lazy-Loading aktiv; manuelles Vendor-Splitting zurückgesetzt |
 | Animationen | Bestanden | UI-Transitionen 160–220 ms; Reduced Motion aktiv |
 | SEO | Bestanden | Neun eindeutige Titles, Descriptions, Canonicals und Sitemap-URLs |
 | Kontaktformular | Bestanden | Browservalidierung und 13 Formular-/Router-/E-Mail-Tests |
@@ -36,7 +36,7 @@ Jede Seite besitzt genau eine H1-Überschrift sowie Header-, Navigations-, Main-
 
 ## Performance, Medien und Animationen
 
-`client/public/` enthält nur kleine Konfigurationsdateien; keine Datei überschreitet 100 kB und es befinden sich dort keine Bilder oder Videos. Logo und Favicon werden über `/manus-storage/` referenziert. Acht Nicht-Home-Seiten werden mit React `lazy()` geladen. Zusätzlich verhindern die neuen Vendor-Chunks einen unnötig großen Einstiegschunk.[2]
+`client/public/` enthält nur kleine Konfigurationsdateien; keine Datei überschreitet 100 kB und es befinden sich dort keine Bilder oder Videos. Logo und Favicon werden über `/manus-storage/` referenziert. Acht Nicht-Home-Seiten werden mit React `lazy()` geladen. Die Buildausgabe verwendet bewusst wieder Vites stabile Standard-Chunk-Strategie.[2]
 
 Alle UI-Transitionen liegen bei maximal 220 Millisekunden. Buttons verwenden beim Drücken `transform: scale(0.97)`. Der kontinuierliche Lauftext und der Lade-Spinner sind keine Interaktionsübergänge. Der Lauftext läuft nur bei `prefers-reduced-motion: no-preference`; die globale Reduced-Motion-Regel reduziert Animationen und Transitionen bei entsprechender Systemeinstellung.[2]
 
@@ -52,7 +52,7 @@ Der THEORG-Iframe wurde als geladene Browserressource bestätigt und rendert mit
 
 ## Codequalität und Regression
 
-Die abschließende Regression umfasst sechs Testdateien mit insgesamt 26 erfolgreichen Tests. `pnpm check` lief ohne TypeScript-Fehler. `pnpm build` erzeugte den Client- und Serverbuild erfolgreich und ohne die frühere Chunk-Größenwarnung. Die aktuellen Netzwerkprotokolle enthalten keine HTTP-4xx- oder HTTP-5xx-Fehler.[6]
+Die Notfall-Regression umfasst sechs Testdateien mit insgesamt 27 erfolgreichen Tests, einschließlich eines neuen HTML-Korruptionsschutzes. `pnpm check` lief ohne TypeScript-Fehler. `pnpm build` erzeugte Client- und Serverbuild erfolgreich. Die stabile Standardausgabe weist wieder auf den großen gemeinsamen Einstiegschunk hin; die acht Inhaltsseiten bleiben dennoch separat lazy geladen.[6]
 
 ## Verbleibende Hinweise
 
