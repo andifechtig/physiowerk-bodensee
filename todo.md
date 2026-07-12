@@ -1,0 +1,30 @@
+# Project TODO
+
+- [x] Inhalte, Medienmaße, URLs, Metadaten, Kontaktangaben und rechtliche Texte vollständig aus `website-analysis.md` extrahieren
+- [x] Corporate-Design-Tokens mit `#E63746`, `#393939`, `#656665`, `#FFFFFF` und Proxima Nova/Typekit definieren
+- [x] Wiederverwendbares responsives Seitenlayout mit Header, Desktop-Navigation, Mobilmenü, Buchungs-CTA und Footer erstellen
+- [x] Logo-Platzhalter im exakten Seitenverhältnis `201.856 × 73.457` und markentreuer Wort-/Bildmarken-Anmutung umsetzen
+- [x] SEO-stabile Route `/` mit vollständigen Startseiteninhalten, Hero, Schwerpunkten, Vorteilen, Buchungsbereich und Medienplatzhaltern erstellen
+- [x] SEO-stabile Route `/physiotherapie/` mit vollständigen Originalinhalten, CTAs und maßhaltigen Medienplatzhaltern erstellen
+- [x] SEO-stabile Route `/medizinisches-training-und-fitness/` mit vollständigen Originalinhalten, CTAs und maßhaltigen Medienplatzhaltern erstellen
+- [x] SEO-stabile Route `/team-praxis/` mit vollständigen Originalinhalten, Mitarbeiterkarten und maßhaltigen Medienplatzhaltern erstellen
+- [x] SEO-stabile Route `/karriere/` mit vollständigen Originalinhalten, Stellenangeboten und Bewerbungs-CTA erstellen
+- [x] SEO-stabile Route `/kontakt/` mit Kontaktdaten, Öffnungszeiten, Anfahrt, Karte und Formular erstellen
+- [x] SEO-stabile Route `/impressum/` mit vollständigem Originaltext erstellen
+- [x] SEO-stabile Route `/datenschutzerklaerung/` mit vollständigem Originaltext erstellen
+- [x] Routenbezogene Seitentitel, Meta-Descriptions, Canonicals, Open-Graph-Daten, robots.txt und sitemap.xml implementieren
+- [x] THEORG/TheraConnect-Platzhalterziel zentral konfigurierbar machen und in Navigation, Leistungsseiten und Buchungsbereich verlinken
+- [x] Anfrage-Datenmodell und Datenbankmigration für Kontaktformularübermittlungen implementieren
+- [x] Öffentliches tRPC-Kontaktformular mit Zod-Validierung, Honeypot, zeitbasierter Plausibilitätsprüfung und serverseitigem Rate-Limiting implementieren
+- [ ] SMTP-Zustellung ausschließlich an `info@physiowerk-bodensee.de` nach Verfügbarkeit der Mailserver-Zugangsdaten aktivieren
+- [x] SMTP-Zustellung auf Nutzerwunsch für die Erstveröffentlichung zurückstellen; Kontaktanfragen werden weiterhin in der Datenbank gespeichert
+- [x] Lazy-loaded Google-Maps-Anfahrtskarte für Tettnanger Straße 14, 88074 Meckenbeuren mit adressbasierter Markierung umsetzen
+- [x] Vitest-Abdeckung für Seitenkonfiguration, Routen, Kontaktvalidierung, Honeypot und Rate-Limiting erstellen
+- [x] TypeScript-Prüfung, Produktionsbuild und vollständige Test-Suite erfolgreich ausführen
+- [x] Desktop- und Mobilansichten aller relevanten Seiten visuell prüfen und erkannte Probleme beheben
+- [x] Tastaturbedienung, Fokuszustände, Kontraste, semantische Struktur und Reduced-Motion-Verhalten prüfen
+- [x] Nicht initial benötigte Unterseiten per Lazy Loading in separate Produktions-Chunks aufteilen
+- [x] Rechtliche Inhalte als Migrationsstand übernehmen und notwendige fachliche Prüfung der neuen Hosting-/Formular-/Kartenkonfiguration dokumentieren
+- [x] Finale TODO-Prüfung durchführen und den einzigen vollständigen Projekt-Checkpoint unmittelbar erstellen
+- [x] Öffentliche Sichtbarkeit (`public`) durch den Nutzer bestätigen lassen
+- [ ] Website mit Sichtbarkeit `public` veröffentlichen

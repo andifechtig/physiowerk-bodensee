@@ -1,39 +1,77 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { lazy, Suspense, useEffect } from "react";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { SiteLayout } from "./components/SiteLayout";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
-function Router() {
-  // make sure to consider if you need authentication for certain routes
-  return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
-  );
+const Career = lazy(() => import("./pages/Career"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Imprint = lazy(() => import("./pages/Imprint"));
+const Physiotherapy = lazy(() => import("./pages/Physiotherapy"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Team = lazy(() => import("./pages/Team"));
+const Training = lazy(() => import("./pages/Training"));
+
+const canonicalRedirects: Record<string, string> = {
+  "/physiotherapie": "/physiotherapie/",
+  "/medizinisches-training-und-fitness": "/medizinisches-training-und-fitness/",
+  "/team-praxis": "/team-praxis/",
+  "/karriere": "/karriere/",
+  "/kontakt": "/kontakt/",
+  "/impressum": "/impressum/",
+  "/datenschutzerklaerung": "/datenschutzerklaerung/",
+};
+
+function CanonicalRedirect({ to }: { to: string }) {
+  useEffect(() => {
+    window.history.replaceState(null, "", to);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+  }, [to]);
+  return null;
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    if (!window.location.hash) window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location]);
+  return null;
+}
+
+function Router() {
+  return (
+    <SiteLayout>
+      <ScrollToTop />
+      <Suspense fallback={<div className="route-loading" role="status">Seite wird geladen</div>}>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/physiotherapie/" component={Physiotherapy} />
+          <Route path="/medizinisches-training-und-fitness/" component={Training} />
+          <Route path="/team-praxis/" component={Team} />
+          <Route path="/karriere/" component={Career} />
+          <Route path="/kontakt/" component={Contact} />
+          <Route path="/impressum/" component={Imprint} />
+          <Route path="/datenschutzerklaerung/" component={Privacy} />
+          {Object.entries(canonicalRedirects).map(([from, to]) => (
+            <Route key={from} path={from}>
+              {() => <CanonicalRedirect to={to} />}
+            </Route>
+          ))}
+          <Route path="/404" component={NotFound} />
+          <Route component={NotFound} />
+        </Switch>
+      </Suspense>
+    </SiteLayout>
+  );
+}
 
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+      <ThemeProvider defaultTheme="light">
+        <Router />
       </ThemeProvider>
     </ErrorBoundary>
   );

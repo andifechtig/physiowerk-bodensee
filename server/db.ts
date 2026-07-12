@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { and, count, eq, gte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { contactSubmissions, InsertContactSubmission, InsertUser, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,40 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+export async function countRecentContactSubmissions(requestFingerprint: string, since: Date) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+
+  const [result] = await db
+    .select({ total: count() })
+    .from(contactSubmissions)
+    .where(
+      and(
+        eq(contactSubmissions.requestFingerprint, requestFingerprint),
+        gte(contactSubmissions.createdAt, since),
+      ),
+    );
+
+  return result?.total ?? 0;
+}
+
+export async function createContactSubmission(submission: InsertContactSubmission) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+
+  const result = await db.insert(contactSubmissions).values(submission);
+  return Number(result[0].insertId);
+}
+
+export async function updateContactDeliveryStatus(
+  id: number,
+  status: "pending" | "owner_notified" | "emailed" | "failed",
+) {
+  const db = await getDb();
+  if (!db) throw new Error("Database is not available");
+
+  await db
+    .update(contactSubmissions)
+    .set({ deliveryStatus: status })
+    .where(eq(contactSubmissions.id, id));
+}
