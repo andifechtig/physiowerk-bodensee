@@ -28,12 +28,19 @@ export const BOOKING_CONFIG = {
 export const COACHING_WHATSAPP_URL =
   "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.";
 
+export const THERACONNECT = {
+  qrCode: "/manus-storage/theracode-qr_3bdbe30f.png",
+  googlePlay: "https://play.google.com/store/apps/details?id=de.sovdwaer.theraconnect",
+  appStore: "https://apps.apple.com/de/iphone/today",
+} as const;
+
 export const CANONICAL_REDIRECTS: Record<string, string> = {
   "/physiotherapie": "/physiotherapie/",
   "/medizinisches-training-und-fitness": "/medizinisches-training-und-fitness/",
   "/team-praxis": "/team-praxis/",
   "/karriere": "/karriere/",
   "/coaching": "/coaching/",
+  "/app": "/app/",
   "/kontakt": "/kontakt/",
   "/impressum": "/impressum/",
   "/datenschutzerklaerung": "/datenschutzerklaerung/",
@@ -48,6 +55,7 @@ export const NAVIGATION = [
   { label: "Team & Praxis", href: "/team-praxis/" },
   { label: "Karriere", href: "/karriere/" },
   { label: "Coaching", href: "/coaching/" },
+  { label: "App", href: "/app/" },
 ] as const;
 
 export const SOCIAL_LINKS = [
@@ -102,6 +110,12 @@ export const SEO: Record<string, SeoConfig> = {
     description:
       "Das ganzheitliche 6-Monats-Coaching von Andreas Fechtig – biomechanisch fundiert, persönlich betreut und nachhaltig ausgerichtet.",
     path: "/coaching/",
+  },
+  app: {
+    title: "TheraConnect App - Physiowerk Bodensee",
+    description:
+      "Termine bequem online verwalten, einsehen und buchen – mit der TheraConnect App und dem Praxiscode des Physiowerk Bodensee.",
+    path: "/app/",
   },
   contact: {
     title: "Kontakt - Physiowerk Bodensee",

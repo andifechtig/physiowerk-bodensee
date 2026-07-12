@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import { CANONICAL_REDIRECTS } from "./site-config";
 
+const AppPage = lazy(() => import("./pages/AppPage"));
 const Career = lazy(() => import("./pages/Career"));
 const Coaching = lazy(() => import("./pages/Coaching"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -44,6 +45,7 @@ function Router() {
           <Route path="/team-praxis/" component={Team} />
           <Route path="/karriere/" component={Career} />
           <Route path="/coaching/" component={Coaching} />
+          <Route path="/app/" component={AppPage} />
           <Route path="/kontakt/" component={Contact} />
           <Route path="/impressum/" component={Imprint} />
           <Route path="/datenschutzerklaerung/" component={Privacy} />

@@ -1,4 +1,4 @@
-import { Activity, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, UsersRound } from "lucide-react";
+import { Activity, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, Smartphone, UsersRound } from "lucide-react";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import {
   ArrowLink,
@@ -8,7 +8,7 @@ import {
   SectionHeading,
 } from "@/components/PageElements";
 import { Seo } from "@/components/Seo";
-import { SEO } from "@/site-config";
+import { SEO, THERACONNECT } from "@/site-config";
 
 const focusCards = [
   {
@@ -145,6 +145,31 @@ export default function Home() {
             <HeartPulse />
             <span>6 Monate</span>
           </div>
+        </div>
+      </section>
+
+      <section className="home-app-teaser">
+        <div className="site-shell home-app-teaser-grid">
+          <div className="home-app-teaser-icon" aria-hidden="true">
+            <Smartphone />
+          </div>
+          <div>
+            <p className="eyebrow">Neu: TheraConnect App</p>
+            <h2>Ihre Termine. Direkt auf Ihrem Smartphone.</h2>
+            <p>
+              Termine einsehen, online buchen und verwalten – sicher verbunden mit dem Physiowerk
+              Bodensee.
+            </p>
+            <ArrowLink href="/app/">App kennenlernen</ArrowLink>
+          </div>
+          <img
+            src={THERACONNECT.qrCode}
+            alt="TheraCode QR-Code des Physiowerk Bodensee"
+            width="250"
+            height="250"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </section>
 

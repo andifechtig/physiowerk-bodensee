@@ -6,6 +6,7 @@ import {
   COACHING_WHATSAPP_URL,
   NAVIGATION,
   SEO,
+  THERACONNECT,
 } from "../client/src/site-config";
 
 describe("stable site routes", () => {
@@ -17,6 +18,7 @@ describe("stable site routes", () => {
       "/team-praxis/",
       "/karriere/",
       "/coaching/",
+      "/app/",
       "/kontakt/",
       "/impressum/",
       "/datenschutzerklaerung/",
@@ -25,7 +27,7 @@ describe("stable site routes", () => {
 
   it("keeps the primary navigation on canonical paths", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
-    expect(NAVIGATION.at(-1)).toEqual({ label: "Coaching", href: "/coaching/" });
+    expect(NAVIGATION.at(-1)).toEqual({ label: "App", href: "/app/" });
   });
 
   it("redirects every non-slash URL to its canonical trailing-slash route", () => {
@@ -35,6 +37,7 @@ describe("stable site routes", () => {
       "/team-praxis": "/team-praxis/",
       "/karriere": "/karriere/",
       "/coaching": "/coaching/",
+      "/app": "/app/",
       "/kontakt": "/kontakt/",
       "/impressum": "/impressum/",
       "/datenschutzerklaerung": "/datenschutzerklaerung/",
@@ -47,9 +50,18 @@ describe("stable site routes", () => {
     );
   });
 
-  it("publishes the coaching route in the sitemap", () => {
+  it("publishes the coaching and app routes in the sitemap", () => {
     const sitemap = readFileSync(new URL("../client/public/sitemap.xml", import.meta.url), "utf8");
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/coaching/");
+    expect(sitemap).toContain("https://www.physiowerk-bodensee.de/app/");
+  });
+
+  it("keeps the TheraConnect downloads and QR asset exact", () => {
+    expect(THERACONNECT).toEqual({
+      qrCode: "/manus-storage/theracode-qr_3bdbe30f.png",
+      googlePlay: "https://play.google.com/store/apps/details?id=de.sovdwaer.theraconnect",
+      appStore: "https://apps.apple.com/de/iphone/today",
+    });
   });
 
   it("uses the active THEORG iframe and canonical contact anchor", () => {

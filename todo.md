@@ -81,4 +81,19 @@
 - [x] Navigation, Hero und vollständige Inhalte aller neun Seiten im Browser verifizieren
 - [x] Desktop- und Mobilansicht der korrigierten Startseite prüfen
 - [x] Vollständige Test-Suite und TypeScript-Prüfung erfolgreich ausführen
-- [ ] Stabilen Notfall-Checkpoint erstellen und korrigierte Version öffentlich redeployen
+- [x] Stabilen Notfall-Checkpoint erstellen und korrigierte Version öffentlich redeployen
+- [x] Bereitgestellten `theracode-qr.png` in den dauerhaften Website-Asset-Speicher hochladen
+- [x] Navigationspunkt `App` in Desktop-, Mobil- und Footer-Navigation ergänzen
+- [x] SEO-stabile Route `/app/` mit Title, Description, Canonical, Redirect und Sitemap-Eintrag anlegen
+- [x] App-Hero mit vorgegebener Überschrift, Kurzbeschreibung und Download-CTAs umsetzen
+- [x] Fünf TheraConnect-Vorteile im bestehenden Physiowerk-Design umsetzen
+- [x] Download-Bereich mit Google-Play-Link, Apple-Platzhalterlink und prominentem Praxis-QR-Code umsetzen
+- [x] Fünfstufige Einrichtungsanleitung einschließlich Hinweis für bestehende Online-Zugangsdaten umsetzen
+- [x] Praxis-Verbindungsbereich mit QR-Code und vorgegebenem Erklärungstext umsetzen
+- [x] FAQ mit drei vorgegebenen Fragen und Antworten zugänglich umsetzen
+- [x] Startseiten-Teaser zur TheraConnect App mit Link auf `/app/` integrieren
+- [x] Automatische Tests für App-Route, SEO, Navigation, Sitemap, Store-Links und QR-Asset ergänzen
+- [x] App-Seite und Startseiten-Teaser in Desktop- und Mobilansicht visuell prüfen
+- [x] QR-Code-Asset, Google-Play-Link und Apple-Platzhalterlink funktional prüfen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Aktualisierten App-Checkpoint erstellen und Website erneut öffentlich veröffentlichen

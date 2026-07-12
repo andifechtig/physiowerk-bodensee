@@ -10,6 +10,7 @@ import {
   NAVIGATION,
   SEO,
   SITE_ORIGIN,
+  THERACONNECT,
 } from "../client/src/site-config";
 
 const projectRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -45,7 +46,7 @@ describe("website quality contracts", () => {
 
   it("keeps SEO metadata and sitemap complete for all nine pages", () => {
     const entries = Object.values(SEO);
-    expect(entries).toHaveLength(9);
+    expect(entries).toHaveLength(10);
     expect(new Set(entries.map(entry => entry.title)).size).toBe(entries.length);
     for (const entry of entries) {
       expect(entry.title.length).toBeGreaterThan(15);
@@ -60,7 +61,7 @@ describe("website quality contracts", () => {
 
   it("keeps navigation canonical and redirect coverage complete", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
-    expect(Object.keys(CANONICAL_REDIRECTS)).toHaveLength(8);
+    expect(Object.keys(CANONICAL_REDIRECTS)).toHaveLength(9);
     expect(Object.values(CANONICAL_REDIRECTS)).toEqual(Object.values(SEO).slice(1).map(entry => entry.path));
   });
 
@@ -83,7 +84,7 @@ describe("website quality contracts", () => {
 
   it("keeps non-home routes lazy-loaded", () => {
     const app = readFileSync(join(sourceRoot, "App.tsx"), "utf8");
-    const lazyPages = ["Career", "Coaching", "Contact", "Imprint", "Physiotherapy", "Privacy", "Team", "Training"];
+    const lazyPages = ["AppPage", "Career", "Coaching", "Contact", "Imprint", "Physiotherapy", "Privacy", "Team", "Training"];
     for (const page of lazyPages) {
       expect(app).toContain(`const ${page} = lazy(() => import("./pages/${page}"))`);
     }
@@ -114,5 +115,8 @@ describe("website quality contracts", () => {
     expect(COACHING_WHATSAPP_URL).toBe(
       "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.",
     );
+    expect(THERACONNECT.qrCode).toBe("/manus-storage/theracode-qr_3bdbe30f.png");
+    expect(THERACONNECT.googlePlay).toContain("de.sovdwaer.theraconnect");
+    expect(THERACONNECT.appStore).toBe("https://apps.apple.com/de/iphone/today");
   });
 });
