@@ -5,6 +5,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { SiteLayout } from "./components/SiteLayout";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import { CANONICAL_REDIRECTS } from "./site-config";
 
 const Career = lazy(() => import("./pages/Career"));
 const Coaching = lazy(() => import("./pages/Coaching"));
@@ -14,17 +15,6 @@ const Physiotherapy = lazy(() => import("./pages/Physiotherapy"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Team = lazy(() => import("./pages/Team"));
 const Training = lazy(() => import("./pages/Training"));
-
-const canonicalRedirects: Record<string, string> = {
-  "/physiotherapie": "/physiotherapie/",
-  "/medizinisches-training-und-fitness": "/medizinisches-training-und-fitness/",
-  "/team-praxis": "/team-praxis/",
-  "/karriere": "/karriere/",
-  "/coaching": "/coaching/",
-  "/kontakt": "/kontakt/",
-  "/impressum": "/impressum/",
-  "/datenschutzerklaerung": "/datenschutzerklaerung/",
-};
 
 function CanonicalRedirect({ to }: { to: string }) {
   useEffect(() => {
@@ -57,7 +47,7 @@ function Router() {
           <Route path="/kontakt/" component={Contact} />
           <Route path="/impressum/" component={Imprint} />
           <Route path="/datenschutzerklaerung/" component={Privacy} />
-          {Object.entries(canonicalRedirects).map(([from, to]) => (
+          {Object.entries(CANONICAL_REDIRECTS).map(([from, to]) => (
             <Route key={from} path={from}>
               {() => <CanonicalRedirect to={to} />}
             </Route>

@@ -54,4 +54,23 @@
 - [x] Einbettbarkeit, Ladeverhalten und responsive Darstellung des externen Iframes prüfen
 - [x] Buchungskonfigurationstest an die aktive Iframe-URL anpassen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild ausführen
-- [ ] Aktualisierten THEORG-Checkpoint erstellen und erneut öffentlich veröffentlichen
+- [x] Aktualisierten THEORG-Checkpoint erstellen und erneut öffentlich veröffentlichen
+- [x] Routeninventar für alle neun SEO-Seiten und Canonical-Weiterleitungen automatisiert prüfen
+- [x] Navigation, aktive Pill-Zustände, aria-current und interne Links auf allen Seiten prüfen
+- [x] Hamburger-Menü, Fokusführung und Tastaturbedienung der kompakten Navigation prüfen
+- [x] Desktopansicht aller neun Seiten visuell auf Layout- und Laufzeitfehler prüfen
+- [x] Tabletansicht aller neun Seiten visuell auf Umbrüche, Tabellen, Medien und Navigation prüfen
+- [x] Mobilansicht aller neun Seiten visuell auf Umbrüche, Tabellen, Medien und Navigation prüfen
+- [x] Fokus-Ringe, ARIA-Beschriftungen, semantische Struktur und Tastaturerreichbarkeit auditieren
+- [x] `client/public/` auf unzulässige große Medien und alle Bildreferenzen auf `/manus-storage/` prüfen
+- [x] Lazy Loading, Route-Code-Splitting und Produktionsbundle prüfen
+- [x] Button-Active-Scale, Animationsdauern und `prefers-reduced-motion` prüfen
+- [x] Meta-Titel, Meta-Descriptions, Canonicals, robots.txt und vollständige Sitemap inklusive `/coaching/` prüfen
+- [x] Kontaktformular-Validierung, Honeypot, Rate-Limit und erfolgreiche Datenbankpersistenz testen
+- [x] THEORG-Iframe-Ladung, 750-Pixel-Höhe, responsive Breite und Fallback-Link prüfen
+- [x] Alle Coaching-WhatsApp-Links auf korrekte Zielnummer und Nachricht prüfen
+- [x] Sämtliche „Termin online buchen“-CTAs auf `/kontakt/#terminbuchung` prüfen
+- [x] Gefundene Navigations-, Layout-, Accessibility-, SEO-, Performance- oder Funktionsprobleme beheben
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild nach allen Korrekturen ausführen
+- [x] Umfassenden QA-Bericht erstellen
+- [ ] Finalen QA-Checkpoint erstellen und Website erneut öffentlich veröffentlichen

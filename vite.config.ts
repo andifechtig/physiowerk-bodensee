@@ -167,6 +167,32 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return undefined;
+          if (
+            id.includes("/react/") ||
+            id.includes("/react-dom/") ||
+            id.includes("/scheduler/") ||
+            id.includes("/wouter/")
+          ) {
+            return "react-vendor";
+          }
+          if (
+            id.includes("/@trpc/") ||
+            id.includes("/@tanstack/") ||
+            id.includes("/superjson/")
+          ) {
+            return "data-vendor";
+          }
+          if (id.includes("/lucide-react/") || id.includes("/@radix-ui/")) {
+            return "ui-vendor";
+          }
+          return "vendor";
+        },
+      },
+    },
   },
   server: {
     host: true,

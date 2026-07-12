@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
   BOOKING_CONFIG,
+  CANONICAL_REDIRECTS,
   COACHING_WHATSAPP_URL,
   NAVIGATION,
   SEO,
@@ -25,6 +26,19 @@ describe("stable site routes", () => {
   it("keeps the primary navigation on canonical paths", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
     expect(NAVIGATION.at(-1)).toEqual({ label: "Coaching", href: "/coaching/" });
+  });
+
+  it("redirects every non-slash URL to its canonical trailing-slash route", () => {
+    expect(CANONICAL_REDIRECTS).toEqual({
+      "/physiotherapie": "/physiotherapie/",
+      "/medizinisches-training-und-fitness": "/medizinisches-training-und-fitness/",
+      "/team-praxis": "/team-praxis/",
+      "/karriere": "/karriere/",
+      "/coaching": "/coaching/",
+      "/kontakt": "/kontakt/",
+      "/impressum": "/impressum/",
+      "/datenschutzerklaerung": "/datenschutzerklaerung/",
+    });
   });
 
   it("uses the exact coaching WhatsApp conversation URL", () => {

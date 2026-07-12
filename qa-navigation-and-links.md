@@ -1,0 +1,5 @@
+# QA: Navigation und interne Links
+
+Alle neun kanonischen Seiten sowie `robots.txt` und `sitemap.xml` antworteten in der laufenden Vorschau mit HTTP-Status `200`. Die Desktop-Header aller acht Unterseiten wurden parallel geprüft. Auf Physiotherapie, Training, Team, Karriere, Coaching und Kontakt markiert jeweils genau eine hellrote Pill den aktiven Hauptmenüpunkt. Impressum und Datenschutz besitzen bewusst keinen eigenen Hauptmenüpunkt; dort bleibt kein Inhaltslink fälschlich aktiv. Der Kontakt-CTA behält außerhalb der Kontaktseite seinen roten Standardzustand.
+
+Das kompakte Menü wurde im gerenderten DOM geöffnet und geschlossen. `aria-expanded` wechselte korrekt von `false` auf `true` und zurück, während die Klasse `open` synchron gesetzt und entfernt wurde. Der aktive Coaching-Link führte `aria-current="page"` und den erwarteten hellroten Hintergrund `rgb(249, 223, 226)`. Sämtliche mobilen Navigationsziele waren vorhanden: Physiotherapie, medizinisches Training, Team, Karriere, Coaching, Kontakt und `/kontakt/#terminbuchung`.
