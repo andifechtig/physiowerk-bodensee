@@ -17,14 +17,12 @@ export const BRAND_ASSETS = {
   favicon: "/manus-storage/physiowerk-bodensee-favicon_102ddb57.svg",
 } as const;
 
-/**
- * Zentraler THEORG/TheraConnect-Platzhalter.
- * Sobald der finale Direktlink vorliegt, muss nur `directUrl` ersetzt werden.
- */
+/** Zentrale THEORG/TheraConnect-Konfiguration. */
 export const BOOKING_CONFIG = {
   directUrl: "/kontakt/#terminbuchung",
-  iframeUrl: "",
-  isPlaceholder: true,
+  iframeUrl:
+    "https://4d6a4d304e4445363152753455457a4437657765302b5151.proxy.sovd.cloud/otrs",
+  isPlaceholder: false,
 } as const;
 
 export const COACHING_WHATSAPP_URL =

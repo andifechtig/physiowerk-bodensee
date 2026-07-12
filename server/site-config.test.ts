@@ -38,9 +38,11 @@ describe("stable site routes", () => {
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/coaching/");
   });
 
-  it("uses the iframe-ready booking placeholder until THEORG is configured", () => {
-    expect(BOOKING_CONFIG.isPlaceholder).toBe(true);
+  it("uses the active THEORG iframe and canonical contact anchor", () => {
+    expect(BOOKING_CONFIG.isPlaceholder).toBe(false);
     expect(BOOKING_CONFIG.directUrl).toBe("/kontakt/#terminbuchung");
-    expect(BOOKING_CONFIG.iframeUrl).toBe("");
+    expect(BOOKING_CONFIG.iframeUrl).toBe(
+      "https://4d6a4d304e4445363152753455457a4437657765302b5151.proxy.sovd.cloud/otrs",
+    );
   });
 });

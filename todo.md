@@ -46,4 +46,12 @@
 - [x] Kontaktseite im aktiven Zustand gestalterisch an das neue helle Pill-System angleichen
 - [x] Aktive Zustände auf Start-, Leistungs-, Coaching-, Karriere- und Kontaktseite visuell prüfen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild ausführen
-- [ ] Aktualisierten Navigations-Checkpoint erstellen und erneut öffentlich veröffentlichen
+- [x] Aktualisierten Navigations-Checkpoint erstellen und erneut öffentlich veröffentlichen
+- [x] THEORG-Iframe-URL zentral in der Buchungskonfiguration hinterlegen und Platzhalterstatus deaktivieren
+- [x] Bisherigen Buchungsplatzhalter durch funktionierenden 750-Pixel-THEORG-Iframe ersetzen
+- [x] Navigations- und Leistungsseiten-CTAs auf `/kontakt/#terminbuchung` ausrichten
+- [x] THEORG-Iframe mit Titel, Lazy Loading, responsiver Breite und zugänglichem Fallback-Link umsetzen
+- [x] Einbettbarkeit, Ladeverhalten und responsive Darstellung des externen Iframes prüfen
+- [x] Buchungskonfigurationstest an die aktive Iframe-URL anpassen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild ausführen
+- [ ] Aktualisierten THEORG-Checkpoint erstellen und erneut öffentlich veröffentlichen

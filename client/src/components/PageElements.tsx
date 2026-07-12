@@ -2,7 +2,7 @@ import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "wouter";
 import { BookingLink } from "@/components/SiteLayout";
-import { CONTACT } from "@/site-config";
+import { BOOKING_CONFIG, CONTACT } from "@/site-config";
 
 export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return <p className={`eyebrow ${light ? "eyebrow-light" : ""}`}>{children}</p>;
@@ -121,12 +121,29 @@ export function BookingSection() {
         <div>
           <Eyebrow>Online-Terminreservierung</Eyebrow>
           <h2>Termin online buchen</h2>
-          <BookingLink />
+          <p className="booking-section-intro">
+            Willkommen in unserem Online-Reservierungssystem. Wähle direkt eine verfügbare Therapieleistung und reserviere Deinen Termin.
+          </p>
+          <a
+            className="arrow-link booking-fallback-link"
+            href={BOOKING_CONFIG.iframeUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Terminbuchung in neuem Fenster öffnen</span>
+            <ArrowRight aria-hidden="true" />
+          </a>
         </div>
-        <div className="booking-placeholder" aria-label="Platzhalter für das THEORG- oder TheraConnect-Buchungswidget">
-          <span>THEORG / TheraConnect</span>
-          <strong>Buchungs-Widget</strong>
-          <small>Iframe-ready · zentral konfigurierbar</small>
+        <div className="theorg-iframe-shell">
+          <iframe
+            className="theorg-iframe"
+            src={BOOKING_CONFIG.iframeUrl}
+            title="THEORG Online-Terminreservierung Physiowerk Bodensee"
+            height="750"
+            width="100%"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
         </div>
       </div>
     </section>
