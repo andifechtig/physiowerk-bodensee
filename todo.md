@@ -112,4 +112,18 @@
 - [x] Automatische Tests für Kursroute, SEO, Navigation, Sitemap, Preise und KGG ergänzen
 - [x] Kursseite, Startseiten-Teaser, Mitgliedschaftskarten und KGG in Desktop- und Mobilansicht prüfen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Aktualisierten Präventions-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+- [x] Aktualisierten Präventions-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+- [x] Bestehende Startseiten-Rezensionssektion und mögliche statische Rezensionstexte vollständig lokalisieren
+- [x] Google-Places-Proxy und verfügbare Review-Felder für das Business-Profil `Physiowerk Bodensee` prüfen
+- [x] Google-Richtlinien für Review-Anzeige, Attribution und Cache-Dauer berücksichtigen
+- [x] Dauerhaft verfügbare Live-Datenquelle ohne statisch hinterlegte Rezensionstexte auswählen
+- [x] Serverseitigen Review-Abruf mit validierter Place-ID und Zeitüberschreitung ohne persistente Review-Kopie implementieren
+- [x] Öffentliche tRPC-Abfrage für Sternebewertung, Rezensionstext, Name und Datum implementieren
+- [x] Startseiten-Rezensionssektion durch responsives Google-Widget im bestehenden Design ersetzen
+- [x] Google-Attribution, Ladezustand, Leerzustand und Fehlerfallback zugänglich umsetzen
+- [x] Sicherstellen, dass ausschließlich live geladene Google-Rezensionen angezeigt werden
+- [x] Automatische Tests für Profilvalidierung, Live-Datentransformation und Fehlerfälle ergänzen
+- [x] Live-Datenabruf, Namen, Sterne, Texte, Datumsangaben und Google-Attribution im Browser prüfen
+- [x] Widget in Desktop- und Mobilansicht visuell prüfen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Aktualisierten Google-Reviews-Checkpoint erstellen und Website erneut öffentlich veröffentlichen

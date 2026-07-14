@@ -7,3 +7,5 @@ Die drei Mitgliedschaftskarten zeigen Wellpass, sechs Monate zu 60 Euro pro Mona
 Die Erstattungsangabe wird ausdrücklich als mögliche, kassen- und kursabhängige Bezuschussung beschrieben. Direkt neben der Prozentangabe steht der Hinweis, dass eine Kostenerstattung nicht pauschal garantiert werden kann und vorab bei der Krankenkasse geprüft werden sollte.
 
 Die DOM-Prüfung bestätigte genau eine H1, den Titel „ZPP-Präventionskurse – Physiowerk Bodensee“, die Canonical-URL `https://www.physiowerk-bodensee.de/kurse/`, aktive Kurslinks mit `aria-current="page"` in Desktop- und Mobilnavigation, den vollständigen Erstattungs-Hinweis, „Prävention digital“ und beide Kursanfrage-CTAs.
+
+Nach dem öffentlichen Redeployment wurde `https://physiowerk-5xfysgit.manus.space/kurse/` erneut geöffnet. Nach dem kurzen Lazy-Loading-Zustand renderten Navigation, Hero, Kursformate, Erstattungsbereich, Digitalangebot, Teilnahmeablauf und Kursanfrage vollständig.

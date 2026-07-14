@@ -8,6 +8,7 @@ import {
   SectionHeading,
 } from "@/components/PageElements";
 import { Seo } from "@/components/Seo";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { SEO, THERACONNECT } from "@/site-config";
 
 const focusCards = [
@@ -190,6 +191,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <GoogleReviewsWidget />
 
       <div className="marquee" aria-label="Physiotherapie, Biomechanik, medizinisches Training, Fitness">
         <span>Physiotherapie — Biomechanik — medizinisches Training — Fitness —</span>
