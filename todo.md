@@ -126,4 +126,4 @@
 - [x] Live-Datenabruf, Namen, Sterne, Texte, Datumsangaben und Google-Attribution im Browser prüfen
 - [x] Widget in Desktop- und Mobilansicht visuell prüfen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Aktualisierten Google-Reviews-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+- [x] Aktualisierten Google-Reviews-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
