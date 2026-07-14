@@ -1,4 +1,4 @@
-import { Activity, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, Smartphone, UsersRound } from "lucide-react";
+import { Activity, BadgeCheck, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, Smartphone, UsersRound } from "lucide-react";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import {
   ArrowLink,
@@ -170,6 +170,24 @@ export default function Home() {
             loading="lazy"
             decoding="async"
           />
+        </div>
+      </section>
+
+      <section className="home-courses-teaser">
+        <div className="site-shell home-courses-teaser-grid">
+          <div className="home-courses-seal" aria-hidden="true">
+            <BadgeCheck />
+            <span>§20 SGB V</span>
+          </div>
+          <div>
+            <p className="eyebrow eyebrow-light">ZPP-Kurse</p>
+            <h2>Zertifizierte Prävention – vor Ort und digital</h2>
+            <p>
+              Gesundheitsfördernde Kurse mit möglicher Bezuschussung durch Ihre Krankenkasse. Lernen
+              Sie auch unser digitales Angebot „Prävention digital“ kennen.
+            </p>
+            <ArrowLink href="/kurse/">Kurse entdecken</ArrowLink>
+          </div>
         </div>
       </section>
 

@@ -11,6 +11,7 @@ const AppPage = lazy(() => import("./pages/AppPage"));
 const Career = lazy(() => import("./pages/Career"));
 const Coaching = lazy(() => import("./pages/Coaching"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Courses = lazy(() => import("./pages/Courses"));
 const Imprint = lazy(() => import("./pages/Imprint"));
 const Physiotherapy = lazy(() => import("./pages/Physiotherapy"));
 const Privacy = lazy(() => import("./pages/Privacy"));
@@ -46,6 +47,7 @@ function Router() {
           <Route path="/karriere/" component={Career} />
           <Route path="/coaching/" component={Coaching} />
           <Route path="/app/" component={AppPage} />
+          <Route path="/kurse/" component={Courses} />
           <Route path="/kontakt/" component={Contact} />
           <Route path="/impressum/" component={Imprint} />
           <Route path="/datenschutzerklaerung/" component={Privacy} />

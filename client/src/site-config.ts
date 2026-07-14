@@ -41,6 +41,7 @@ export const CANONICAL_REDIRECTS: Record<string, string> = {
   "/karriere": "/karriere/",
   "/coaching": "/coaching/",
   "/app": "/app/",
+  "/kurse": "/kurse/",
   "/kontakt": "/kontakt/",
   "/impressum": "/impressum/",
   "/datenschutzerklaerung": "/datenschutzerklaerung/",
@@ -56,6 +57,7 @@ export const NAVIGATION = [
   { label: "Karriere", href: "/karriere/" },
   { label: "Coaching", href: "/coaching/" },
   { label: "App", href: "/app/" },
+  { label: "Kurse", href: "/kurse/" },
 ] as const;
 
 export const SOCIAL_LINKS = [
@@ -116,6 +118,12 @@ export const SEO: Record<string, SeoConfig> = {
     description:
       "Termine bequem online verwalten, einsehen und buchen – mit der TheraConnect App und dem Praxiscode des Physiowerk Bodensee.",
     path: "/app/",
+  },
+  courses: {
+    title: "ZPP-Präventionskurse - Physiowerk Bodensee",
+    description:
+      "Zertifizierte Präventionskurse nach §20 SGB V vor Ort und digital – mit möglicher Bezuschussung durch die Krankenkasse.",
+    path: "/kurse/",
   },
   contact: {
     title: "Kontakt - Physiowerk Bodensee",

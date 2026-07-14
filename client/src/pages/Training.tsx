@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { BadgeCheck, Check, Dumbbell } from "lucide-react";
 import { ContactCta, PageHero, SectionHeading } from "@/components/PageElements";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Seo } from "@/components/Seo";
@@ -22,6 +22,33 @@ const offers = [
   ["Trainingsräume & Ausstattung", "Unsere Geräte sind von der Firma Keiser und sind hydraulisch betrieben. Dadurch können wir den Widerstand auf 100g genau einstellen. Die Geräte umfassen alle wichtigen Regionen des Körpers und deren Funktionen. Auch für Cardiotraining ist gesorgt. Zusätzlich stehen Ihnen zwei Seilzüge, sowie diverse Gewichte und Trainingsutensilien für ein Offenes Training zur Verfügung."],
   ["Mitgliedschaft", "Sie wollen regelmäßig was für sich tun? Wir bieten Ihnen eine 6 oder 12 monatige Mitgliedschaft an und helfen Ihnen dabei Ihre Ziele zu erreichen. Sprechen Sie uns gerne darauf an."],
   ["EGYM Wellpass", "Sie sind Inhaber eines Wellpass? Top. Wir sind Partner von Wellpass. Informieren Sie sich gerne bei uns über die Konditionen."],
+] as const;
+
+const memberships = [
+  {
+    name: "EGYM Wellpass",
+    price: "Wellpass",
+    unit: "Mitgliedschaft",
+    text: "Training ist mit einer aktiven Wellpass-Mitgliedschaft möglich. Es gelten die separaten Konditionen von Wellpass.",
+    icon: BadgeCheck,
+    featured: false,
+  },
+  {
+    name: "6 Monate",
+    price: "60 €",
+    unit: "pro Monat",
+    text: "Regulärer Mitgliedsvertrag mit sechs Monaten Laufzeit für kontinuierliches Training in unserem Trainingsbereich.",
+    icon: Dumbbell,
+    featured: false,
+  },
+  {
+    name: "12 Monate",
+    price: "50 €",
+    unit: "pro Monat",
+    text: "Regulärer Mitgliedsvertrag mit zwölf Monaten Laufzeit und unserem günstigsten monatlichen Beitrag.",
+    icon: Dumbbell,
+    featured: true,
+  },
 ] as const;
 
 export default function Training() {
@@ -76,6 +103,31 @@ export default function Training() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="content-section membership-section">
+        <div className="site-shell">
+          <SectionHeading
+            eyebrow="Trainieren bei uns"
+            title="Die Mitgliedschaft, die zu Ihrem Training passt"
+            intro="Nutzen Sie unseren medizinisch ausgestatteten Trainingsbereich über Wellpass oder mit einem regulären Mitgliedsvertrag."
+          />
+          <div className="membership-grid">
+            {memberships.map(({ name, price, unit, text, icon: Icon, featured }) => (
+              <article className={`membership-card ${featured ? "membership-card-featured" : ""}`} key={name}>
+                {featured ? <span className="membership-badge">Bestes Monatsangebot</span> : null}
+                <Icon aria-hidden="true" />
+                <p className="membership-name">{name}</p>
+                <div className="membership-price"><strong>{price}</strong><span>{unit}</span></div>
+                <p>{text}</p>
+                <a href="/kontakt/" className="membership-link">Konditionen anfragen</a>
+              </article>
+            ))}
+          </div>
+          <p className="membership-footnote">
+            Die Wellpass-Nutzung richtet sich nach den jeweils gültigen Konditionen Ihres Wellpass-Vertrags.
+          </p>
         </div>
       </section>
 

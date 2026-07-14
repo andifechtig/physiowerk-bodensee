@@ -17,7 +17,7 @@ const services = [
   ["Manuelle Therapie (MT)", "Mobilisation spezifischer Gelenke auf Basis physiotherapeutischer Aus- und Weiterbildungen."],
   ["Lymphdrainage (MLD)", "Therapie zur Entwässerung des Körpers von Ödemen/Flüssigkeitseinlagerungen unterschiedlicher Art."],
   ["Bobath (KG ZNS)", "Physiotherapie für Neurologische Themen rund um das zentrale und periphere Nervensystems (Schlaganfall, Paresen, MS ect)."],
-  ["Krankengynastik am Gerät (KG-G)", "Wir rechnen Rezepte für gerätegestützes therapeutisches Training ab."],
+  ["Krankengymnastik am Gerät (KGG)", "KGG ist ein gerätegestütztes Training unter physiotherapeutischer Anleitung. Ziel ist es, Kraft, Ausdauer, Koordination und Beweglichkeit zu verbessern. Die Leistung wird vom Arzt über eine Heilmittelverordnung verordnet und findet in unserem Trainingsbereich mit medizinischen Trainingsgeräten statt – einzeln oder in Kleingruppen mit maximal drei Personen."],
   ["Faszientherapie (Strukturelle Integration)", "Ganzheitliche Behandlung des Bewegungsapparats mit Hinblick auf die Faszialen Strukturen nach Dr. Ida Rolf. 10er Serie (Selbstzahlerleistung)."],
   ["Kinesiotaping", "Taping bei Verletzungen oder Schmerzen (Entlastung der betroffenen Strukturen)."],
   ["Elektrotherapie/Ultraschalltherapie/Fango", "Zusatzleistungen auf den Physio-Rezepten."],

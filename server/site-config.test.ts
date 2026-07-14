@@ -19,6 +19,7 @@ describe("stable site routes", () => {
       "/karriere/",
       "/coaching/",
       "/app/",
+      "/kurse/",
       "/kontakt/",
       "/impressum/",
       "/datenschutzerklaerung/",
@@ -27,7 +28,7 @@ describe("stable site routes", () => {
 
   it("keeps the primary navigation on canonical paths", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
-    expect(NAVIGATION.at(-1)).toEqual({ label: "App", href: "/app/" });
+    expect(NAVIGATION.at(-1)).toEqual({ label: "Kurse", href: "/kurse/" });
   });
 
   it("redirects every non-slash URL to its canonical trailing-slash route", () => {
@@ -38,6 +39,7 @@ describe("stable site routes", () => {
       "/karriere": "/karriere/",
       "/coaching": "/coaching/",
       "/app": "/app/",
+      "/kurse": "/kurse/",
       "/kontakt": "/kontakt/",
       "/impressum": "/impressum/",
       "/datenschutzerklaerung": "/datenschutzerklaerung/",
@@ -50,10 +52,25 @@ describe("stable site routes", () => {
     );
   });
 
-  it("publishes the coaching and app routes in the sitemap", () => {
+  it("publishes the coaching, app and course routes in the sitemap", () => {
     const sitemap = readFileSync(new URL("../client/public/sitemap.xml", import.meta.url), "utf8");
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/coaching/");
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/app/");
+    expect(sitemap).toContain("https://www.physiowerk-bodensee.de/kurse/");
+  });
+
+  it("keeps membership prices, reimbursement caveat and KGG details explicit", () => {
+    const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
+    const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
+    const courses = readFileSync(new URL("../client/src/pages/Courses.tsx", import.meta.url), "utf8");
+
+    expect(training).toContain('price: "60 €"');
+    expect(training).toContain('price: "50 €"');
+    expect(training).toContain("Wellpass-Mitgliedschaft");
+    expect(physiotherapy).toContain("Krankengymnastik am Gerät (KGG)");
+    expect(physiotherapy).toContain("maximal drei Personen");
+    expect(courses).toContain("Eine Kostenerstattung kann nicht pauschal garantiert werden.");
+    expect(courses).toContain("Prävention digital");
   });
 
   it("keeps the TheraConnect downloads and QR asset exact", () => {

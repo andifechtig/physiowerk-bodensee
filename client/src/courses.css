@@ -1,0 +1,99 @@
+.home-courses-teaser { padding: clamp(4.5rem, 8vw, 7rem) 0; color: var(--paper); background: var(--ink); }
+.home-courses-teaser-grid { display: grid; grid-template-columns: .45fr 1.55fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+.home-courses-seal { width: min(100%, 260px); aspect-ratio: 1; display: grid; place-items: center; align-content: center; gap: 1rem; border: 1px solid color-mix(in srgb, white 20%, transparent); border-radius: 50%; color: var(--paper); background: color-mix(in srgb, var(--brand) 85%, var(--ink)); }
+.home-courses-seal svg { width: 3.5rem; height: 3.5rem; }
+.home-courses-seal span { font-weight: 700; }
+.home-courses-teaser h2 { max-width: 850px; margin: 0; color: var(--paper); font-size: clamp(2.2rem, 4.8vw, 4.8rem); font-weight: 400; line-height: .98; letter-spacing: -.04em; }
+.home-courses-teaser p:not(.eyebrow) { max-width: 680px; color: color-mix(in srgb, white 73%, transparent); line-height: 1.55; }
+.home-courses-teaser .arrow-link { margin-top: 1rem; }
+
+.courses-hero { position: relative; overflow: hidden; color: var(--paper); background: var(--brand); }
+.courses-hero::before { position: absolute; inset: 0; content: ""; background: radial-gradient(circle at 80% 35%, color-mix(in srgb, var(--ink) 35%, transparent), transparent 35%), linear-gradient(145deg, transparent 0 60%, color-mix(in srgb, var(--ink) 14%, transparent) 60% 100%); pointer-events: none; }
+.courses-hero-grid { position: relative; min-height: 650px; display: grid; grid-template-columns: 1.2fr .6fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); padding-block: clamp(5rem, 9vw, 8rem); }
+.courses-eyebrow { margin: 0 0 1rem; color: var(--brand); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.courses-eyebrow-light, .courses-hero .courses-eyebrow { color: color-mix(in srgb, white 76%, transparent); }
+.courses-badges { display: flex; flex-wrap: wrap; gap: .65rem; margin-bottom: 2rem; }
+.courses-badges span { display: inline-flex; align-items: center; gap: .45rem; padding: .6rem .9rem; border: 1px solid color-mix(in srgb, white 35%, transparent); border-radius: 999px; background: color-mix(in srgb, white 8%, transparent); font-size: .75rem; font-weight: 700; }
+.courses-badges svg { width: 1rem; height: 1rem; }
+.courses-hero h1 { max-width: 900px; margin: 0; font-size: clamp(3rem, 6vw, 6.2rem); font-weight: 400; line-height: .92; letter-spacing: -.05em; }
+.courses-hero-intro { max-width: 760px; margin: 2rem 0; color: color-mix(in srgb, white 82%, transparent); font-size: clamp(1.05rem, 1.7vw, 1.35rem); line-height: 1.5; }
+.courses-hero-panel { min-height: 340px; display: flex; flex-direction: column; justify-content: center; padding: 2rem; border: 1px solid color-mix(in srgb, white 25%, transparent); border-radius: 3rem; background: color-mix(in srgb, var(--ink) 22%, transparent); backdrop-filter: blur(10px); }
+.courses-hero-panel svg { width: 2rem; height: 2rem; }
+.courses-hero-panel strong { margin: 2.5rem 0 .5rem; font-size: clamp(2.7rem, 5vw, 4.5rem); font-weight: 400; line-height: 1; }
+.courses-hero-panel span { color: color-mix(in srgb, white 75%, transparent); line-height: 1.45; }
+.courses-section { padding: clamp(5.5rem, 10vw, 9rem) 0; }
+.courses-heading { max-width: 820px; margin-bottom: clamp(3rem, 6vw, 5rem); }
+.courses-heading h2, .courses-refund-section h2, .courses-digital-grid h2, .courses-registration h2 { margin: 0; color: var(--brand); font-size: clamp(2.4rem, 5vw, 5rem); font-weight: 400; line-height: .97; letter-spacing: -.04em; }
+.courses-heading > p:last-child { color: var(--muted); line-height: 1.55; }
+.courses-format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.courses-format-grid article { padding: 2rem; border: 1px solid var(--line); border-radius: 2.25rem; background: var(--paper-soft); }
+.courses-format-grid article > div { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; color: var(--paper); background: var(--brand); }
+.courses-format-grid svg { width: 1.4rem; height: 1.4rem; }
+.courses-format-grid h3 { margin: 2rem 0 .7rem; color: var(--brand); font-size: 1.4rem; font-weight: 400; }
+.courses-format-grid p { margin: 0; color: var(--muted); line-height: 1.55; }
+.courses-refund-section { color: var(--paper); background: var(--ink); }
+.courses-refund-grid { display: grid; grid-template-columns: 1.15fr .65fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+.courses-refund-section h2 { color: var(--paper); }
+.courses-refund-section p:not(.courses-eyebrow) { max-width: 760px; color: color-mix(in srgb, white 72%, transparent); line-height: 1.6; }
+.courses-refund-note { display: grid; grid-template-columns: auto 1fr; gap: 1rem; margin-top: 2rem; padding: 1.2rem; border: 1px solid color-mix(in srgb, white 16%, transparent); border-radius: 1.25rem; color: color-mix(in srgb, white 75%, transparent); background: color-mix(in srgb, white 5%, transparent); }
+.courses-refund-note svg { width: 1.25rem; height: 1.25rem; color: var(--brand); }
+.courses-refund-card { aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; border-radius: 50%; color: var(--paper); background: var(--brand); text-align: center; }
+.courses-refund-card span, .courses-refund-card small { max-width: 220px; color: color-mix(in srgb, white 75%, transparent); }
+.courses-refund-card strong { margin: .7rem 0; font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 400; line-height: 1; }
+.courses-digital-grid { display: grid; grid-template-columns: .55fr 1.25fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+.courses-digital-mark { width: min(100%, 340px); aspect-ratio: 1; display: grid; place-items: center; border-radius: 3rem; color: var(--paper); background: var(--brand); box-shadow: 0 20px 60px color-mix(in srgb, var(--brand) 22%, transparent); }
+.courses-digital-mark svg { width: 40%; height: 40%; }
+.courses-digital-grid > div:last-child > p:not(.courses-eyebrow) { max-width: 720px; color: var(--muted); line-height: 1.6; }
+.courses-check-list { display: flex; flex-direction: column; gap: .8rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+.courses-check-list li { display: grid; grid-template-columns: auto 1fr; gap: .7rem; color: var(--ink); }
+.courses-check-list svg { width: 1.15rem; height: 1.15rem; color: var(--brand); }
+.courses-steps-section { background: var(--paper-soft); }
+.courses-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.courses-steps li { min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.7rem; border: 1px solid var(--line); border-radius: 2rem; background: var(--paper); }
+.courses-steps > li > span { color: var(--brand); font-size: 1.5rem; }
+.courses-steps h3 { margin: 0 0 .5rem; color: var(--brand); font-size: 1.35rem; font-weight: 400; }
+.courses-steps p { margin: 0; color: var(--muted); line-height: 1.5; }
+.courses-registration { padding: clamp(5.5rem, 10vw, 9rem) 0; color: var(--paper); background: var(--brand); }
+.courses-registration-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: clamp(3rem, 8vw, 8rem); }
+.courses-registration h2 { color: var(--paper); }
+.courses-registration p:not(.courses-eyebrow) { max-width: 700px; color: color-mix(in srgb, white 78%, transparent); line-height: 1.55; }
+.courses-contact-links { display: flex; flex-direction: column; border-top: 1px solid color-mix(in srgb, white 35%, transparent); }
+.courses-contact-links > * { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid color-mix(in srgb, white 25%, transparent); }
+.courses-contact-links svg { width: 1.2rem; height: 1.2rem; }
+
+.membership-section { background: var(--paper-soft); }
+.membership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.membership-card { position: relative; min-height: 390px; display: flex; flex-direction: column; align-items: flex-start; padding: 2rem; border: 1px solid var(--line); border-radius: 2.5rem; background: var(--paper); }
+.membership-card > svg { width: 1.7rem; height: 1.7rem; color: var(--brand); }
+.membership-name { margin: 2rem 0 .6rem; color: var(--brand); font-size: 1.2rem; font-weight: 600; }
+.membership-price { display: flex; flex-direction: column; margin-bottom: 1.2rem; }
+.membership-price strong { color: var(--ink); font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 400; line-height: 1; letter-spacing: -.04em; }
+.membership-price span { margin-top: .35rem; color: var(--muted); font-size: .8rem; }
+.membership-card > p:not(.membership-name) { margin: 0; color: var(--muted); line-height: 1.5; }
+.membership-link { margin-top: auto; padding-top: 1.5rem; border-bottom: 1px solid currentColor; color: var(--brand); font-weight: 600; }
+.membership-card-featured { border-color: var(--brand); color: var(--paper); background: var(--brand); }
+.membership-card-featured > svg, .membership-card-featured .membership-name, .membership-card-featured .membership-link { color: var(--paper); }
+.membership-card-featured .membership-price strong { color: var(--paper); }
+.membership-card-featured .membership-price span, .membership-card-featured > p:not(.membership-name) { color: color-mix(in srgb, white 78%, transparent); }
+.membership-badge { position: absolute; top: 1.2rem; right: 1.2rem; padding: .45rem .65rem; border-radius: 999px; color: var(--brand); background: var(--paper); font-size: .68rem; font-weight: 700; }
+.membership-footnote { margin: 1.4rem 0 0; color: var(--muted); font-size: .78rem; }
+
+@media (max-width: 980px) {
+  .home-courses-teaser-grid, .courses-hero-grid, .courses-refund-grid, .courses-digital-grid, .courses-registration-grid { grid-template-columns: 1fr; }
+  .home-courses-seal { width: 220px; }
+  .courses-hero-grid { min-height: auto; }
+  .courses-hero-panel { max-width: 500px; }
+  .courses-format-grid { grid-template-columns: 1fr 1fr; }
+  .courses-refund-card { width: min(350px, 80vw); }
+  .courses-steps { grid-template-columns: 1fr 1fr; }
+  .membership-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .courses-hero h1 { font-size: clamp(2.8rem, 13vw, 4.2rem); }
+  .courses-format-grid, .courses-steps { grid-template-columns: 1fr; }
+  .courses-steps li { min-height: 210px; }
+  .courses-refund-note { grid-template-columns: 1fr; }
+  .membership-grid { grid-template-columns: 1fr; }
+  .membership-card { min-height: 340px; }
+}

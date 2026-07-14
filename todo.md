@@ -96,4 +96,20 @@
 - [x] App-Seite und Startseiten-Teaser in Desktop- und Mobilansicht visuell prüfen
 - [x] QR-Code-Asset, Google-Play-Link und Apple-Platzhalterlink funktional prüfen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Aktualisierten App-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+- [x] Aktualisierten App-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+- [x] Erstattungs- und Zertifizierungsaussagen für ZPP-Präventionskurse sachlich einordnen und transparent formulieren
+- [x] Navigationspunkt `Kurse` in Desktop-, Mobil- und Footer-Navigation ergänzen
+- [x] SEO-stabile Route `/kurse/` mit Title, Description, Canonical, Redirect und Sitemap-Eintrag anlegen
+- [x] Kurs-Hero mit §20-SGB-V-Teaser und Link zur Anmeldung umsetzen
+- [x] Kursbeschreibungen und Teilnahmeablauf für zertifizierte Präventionskurse umsetzen
+- [x] Krankenkassen-Bezuschussung mit Hinweis auf kassen- und kursabhängige Erstattung darstellen
+- [x] Digitales Angebot `Prävention digital` und Teilnahmeweg erklären
+- [x] Anmeldemöglichkeit über Kontakt- und Telefon-CTA integrieren
+- [x] Startseiten-Teaser für ZPP-Kurse mit Link auf `/kurse/` integrieren
+- [x] Bereich `Trainieren bei uns` mit Wellpass-, 6-Monats- und 12-Monats-Karten auf der Trainingsseite umsetzen
+- [x] Preisangaben 60 €/Monat bei 6 Monaten und 50 €/Monat bei 12 Monaten klar darstellen
+- [x] `Krankengymnastik am Gerät (KGG)` mit allen fünf vorgegebenen Leistungsmerkmalen auf der Physiotherapie-Seite ergänzen
+- [x] Automatische Tests für Kursroute, SEO, Navigation, Sitemap, Preise und KGG ergänzen
+- [x] Kursseite, Startseiten-Teaser, Mitgliedschaftskarten und KGG in Desktop- und Mobilansicht prüfen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Aktualisierten Präventions-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
