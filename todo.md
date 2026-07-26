@@ -141,4 +141,4 @@
 - [x] Automatische Tests für neue Kursseiten-Texte, entfernte Abschnitte und CTA-Platzhalter aktualisieren
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Überarbeitete Kursseite in Desktop- und Mobilansicht visuell prüfen
-- [ ] Finalen Kursseiten-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Kursseiten-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
