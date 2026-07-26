@@ -152,4 +152,4 @@
 - [x] Automatische Tests für neue Preise, Laufzeiten, Reihenfolge und entfernte Altangebote aktualisieren
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Trainingsbereich und alle geänderten Preisreferenzen in Desktop- und Mobilansicht visuell prüfen
-- [ ] Finalen Mitgliedschafts-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Mitgliedschafts-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
