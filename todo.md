@@ -142,3 +142,14 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Überarbeitete Kursseite in Desktop- und Mobilansicht visuell prüfen
 - [x] Finalen Kursseiten-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Alle bisherigen Preis- und Mitgliedschaftsreferenzen für medizinisches Training auf der Website vollständig erfassen
+- [x] Drei Mitgliedschaftskarten für monatlich 70 €, 12 Monate 60 € und 24 Monate 50 € im bestehenden Trainingsbereich umsetzen
+- [x] Die drei neuen Mitgliedschaftskarten vor der bestehenden EGYM-Wellpass-Karte anordnen
+- [x] Alte 6-Monats- und 12-Monats-Angebote mit 60 € beziehungsweise 50 € vollständig entfernen
+- [x] Preis- und Mitgliedschaftshinweise auf Startseite und allen weiteren Referenzen auf die neuen Angebote aktualisieren
+- [x] Bestehendes Design, Farbschema, Kartenlayout und responsive Verhalten im Trainingsbereich beibehalten
+- [x] Automatische Tests für neue Preise, Laufzeiten, Reihenfolge und entfernte Altangebote aktualisieren
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Trainingsbereich und alle geänderten Preisreferenzen in Desktop- und Mobilansicht visuell prüfen
+- [ ] Finalen Mitgliedschafts-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

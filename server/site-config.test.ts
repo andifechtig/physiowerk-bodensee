@@ -59,14 +59,22 @@ describe("stable site routes", () => {
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/kurse/");
   });
 
-  it("keeps membership prices, course funding contracts and KGG details explicit", () => {
+  it("keeps current membership prices, course funding contracts and KGG details explicit", () => {
     const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
     const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
     const courses = readFileSync(new URL("../client/src/pages/Courses.tsx", import.meta.url), "utf8");
 
+    expect(training).toContain('name: "Monatlich"');
+    expect(training).toContain('price: "70 €"');
+    expect(training).toContain('name: "12 Monate"');
     expect(training).toContain('price: "60 €"');
+    expect(training).toContain('name: "24 Monate"');
     expect(training).toContain('price: "50 €"');
     expect(training).toContain("Wellpass-Mitgliedschaft");
+    expect(training).not.toContain('name: "6 Monate"');
+    expect(training.indexOf('name: "Monatlich"')).toBeLessThan(training.indexOf('name: "EGYM Wellpass"'));
+    expect(training.indexOf('name: "12 Monate"')).toBeLessThan(training.indexOf('name: "EGYM Wellpass"'));
+    expect(training.indexOf('name: "24 Monate"')).toBeLessThan(training.indexOf('name: "EGYM Wellpass"'));
     expect(physiotherapy).toContain("Krankengymnastik am Gerät (KGG)");
     expect(physiotherapy).toContain("maximal drei Personen");
     expect(courses).toContain("Online-Präventionskurse – bis zu 100 % gefördert");

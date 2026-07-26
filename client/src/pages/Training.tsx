@@ -20,11 +20,35 @@ const offers = [
   ["Fitness & Prävention", "Sie haben körperliche Ziele? Beweglichkeit, Schmerzfreiheit; Kraftaufbau, Koordination? Wir helfen Ihnen gern dabei diese Ziele zu erreichen und arbeiten gemeinsam an einer Lösung die nachhaltig erfolgreich bleibt."],
   ["T-RENA", "T-RENA ist ein Nachsorge Programm der deutschen Rentenversicherung und ist im Anschluss an die Reha verordnet. Sie können bis zu einem halben Jahr regelmäßig unter therapeutischer Aufsicht trainieren. Weitere Infos finden Sie auf der Website der deutschen Rentenversicherung."],
   ["Trainingsräume & Ausstattung", "Unsere Geräte sind von der Firma Keiser und sind hydraulisch betrieben. Dadurch können wir den Widerstand auf 100g genau einstellen. Die Geräte umfassen alle wichtigen Regionen des Körpers und deren Funktionen. Auch für Cardiotraining ist gesorgt. Zusätzlich stehen Ihnen zwei Seilzüge, sowie diverse Gewichte und Trainingsutensilien für ein Offenes Training zur Verfügung."],
-  ["Mitgliedschaft", "Sie wollen regelmäßig was für sich tun? Wir bieten Ihnen eine 6 oder 12 monatige Mitgliedschaft an und helfen Ihnen dabei Ihre Ziele zu erreichen. Sprechen Sie uns gerne darauf an."],
+  ["Mitgliedschaft", "Sie wollen regelmäßig etwas für sich tun? Wählen Sie zwischen einer monatlichen Mitgliedschaft sowie Laufzeiten von 12 oder 24 Monaten. Wir helfen Ihnen dabei, Ihre Ziele zu erreichen. Sprechen Sie uns gerne darauf an."],
   ["EGYM Wellpass", "Sie sind Inhaber eines Wellpass? Top. Wir sind Partner von Wellpass. Informieren Sie sich gerne bei uns über die Konditionen."],
 ] as const;
 
 const memberships = [
+  {
+    name: "Monatlich",
+    price: "70 €",
+    unit: "pro Monat",
+    text: "Reguläre Mitgliedschaft mit monatlicher Laufzeit für einen flexiblen Einstieg in Ihr Training.",
+    icon: Dumbbell,
+    featured: false,
+  },
+  {
+    name: "12 Monate",
+    price: "60 €",
+    unit: "pro Monat",
+    text: "Regulärer Mitgliedsvertrag mit zwölf Monaten Laufzeit für kontinuierliches Training in unserem Trainingsbereich.",
+    icon: Dumbbell,
+    featured: false,
+  },
+  {
+    name: "24 Monate",
+    price: "50 €",
+    unit: "pro Monat",
+    text: "Regulärer Mitgliedsvertrag mit vierundzwanzig Monaten Laufzeit und unserem günstigsten monatlichen Beitrag.",
+    icon: Dumbbell,
+    featured: true,
+  },
   {
     name: "EGYM Wellpass",
     price: "Wellpass",
@@ -32,22 +56,6 @@ const memberships = [
     text: "Training ist mit einer aktiven Wellpass-Mitgliedschaft möglich. Es gelten die separaten Konditionen von Wellpass.",
     icon: BadgeCheck,
     featured: false,
-  },
-  {
-    name: "6 Monate",
-    price: "60 €",
-    unit: "pro Monat",
-    text: "Regulärer Mitgliedsvertrag mit sechs Monaten Laufzeit für kontinuierliches Training in unserem Trainingsbereich.",
-    icon: Dumbbell,
-    featured: false,
-  },
-  {
-    name: "12 Monate",
-    price: "50 €",
-    unit: "pro Monat",
-    text: "Regulärer Mitgliedsvertrag mit zwölf Monaten Laufzeit und unserem günstigsten monatlichen Beitrag.",
-    icon: Dumbbell,
-    featured: true,
   },
 ] as const;
 

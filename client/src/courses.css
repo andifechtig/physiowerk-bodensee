@@ -65,7 +65,7 @@
 .courses-contact-secondary svg { width: .9rem; height: .9rem; }
 
 .membership-section { background: var(--paper-soft); }
-.membership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.membership-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
 .membership-card { position: relative; min-height: 390px; display: flex; flex-direction: column; align-items: flex-start; padding: 2rem; border: 1px solid var(--line); border-radius: 2.5rem; background: var(--paper); }
 .membership-card > svg { width: 1.7rem; height: 1.7rem; color: var(--brand); }
 .membership-name { margin: 2rem 0 .6rem; color: var(--brand); font-size: 1.2rem; font-weight: 600; }
