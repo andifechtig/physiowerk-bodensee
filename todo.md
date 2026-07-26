@@ -127,3 +127,18 @@
 - [x] Widget in Desktop- und Mobilansicht visuell prüfen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Aktualisierten Google-Reviews-Checkpoint erstellen und Website erneut öffentlich veröffentlichen
+
+- [x] Hero der Kursseite auf zertifizierte Online-Präventionskurse, bis zu 100 % Förderung und Förderprüfungs-CTA umstellen
+- [x] Abschnitt `Unsere Kursformate` durch `Online-Präventionskurse` mit neuer Headline, Beschreibung und drei vorgegebenen Infoboxen ersetzen
+- [x] Zusätzlichen Förderprüfungs-CTA nach den drei Online-Kurs-Infoboxen integrieren
+- [x] Abschnitt `Krankenkassen-Zuschuss` vollständig auf `Individuelle Förderprüfung` mit neuer Copy, Hinweisbox, Förderangabe und CTA umstellen
+- [x] Abschnitt `Prävention digital` ersatzlos von `/kurse/` entfernen
+- [x] Vier-Schritte-Abschnitt durch Zielgruppenbereich `Flexibel in den Alltag integrierbar` mit drei vorgegebenen Boxen ersetzen
+- [x] Abschlussbereich `Anmeldung` in `Kostenlose Förderprüfung` mit neuer Copy, CTA und drei kompakten Vorteilen umwandeln
+- [x] Telefonnummer und E-Mail im Abschlussbereich optisch klar dem Förderprüfungs-CTA unterordnen
+- [x] Sämtliche Förderprüfungs-CTAs ausschließlich auf den temporären Platzhalter `#foerderung-pruefen` verlinken
+- [x] Sicherstellen, dass ausschließlich `/kurse/` inhaltlich oder strukturell geändert wird und das bestehende Design erhalten bleibt
+- [x] Automatische Tests für neue Kursseiten-Texte, entfernte Abschnitte und CTA-Platzhalter aktualisieren
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Überarbeitete Kursseite in Desktop- und Mobilansicht visuell prüfen
+- [ ] Finalen Kursseiten-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

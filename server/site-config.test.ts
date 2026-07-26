@@ -59,7 +59,7 @@ describe("stable site routes", () => {
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/kurse/");
   });
 
-  it("keeps membership prices, reimbursement caveat and KGG details explicit", () => {
+  it("keeps membership prices, course funding contracts and KGG details explicit", () => {
     const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
     const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
     const courses = readFileSync(new URL("../client/src/pages/Courses.tsx", import.meta.url), "utf8");
@@ -69,8 +69,12 @@ describe("stable site routes", () => {
     expect(training).toContain("Wellpass-Mitgliedschaft");
     expect(physiotherapy).toContain("Krankengymnastik am Gerät (KGG)");
     expect(physiotherapy).toContain("maximal drei Personen");
-    expect(courses).toContain("Eine Kostenerstattung kann nicht pauschal garantiert werden.");
-    expect(courses).toContain("Prävention digital");
+    expect(courses).toContain("Online-Präventionskurse – bis zu 100 % gefördert");
+    expect(courses).toContain('href="#foerderung-pruefen"');
+    expect(courses).toContain("Kostenlos · unverbindlich · in weniger als 30 Sekunden");
+    expect(courses).toContain("Unser unabhängiger Förderpartner");
+    expect(courses).not.toContain("Prävention digital");
+    expect(courses).not.toContain("In vier Schritten zum Präventionskurs");
   });
 
   it("keeps the TheraConnect downloads and QR asset exact", () => {
