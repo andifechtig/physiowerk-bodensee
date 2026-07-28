@@ -160,4 +160,4 @@
 - [x] Automatische Tests für URL, neues Tab und Sicherheitsattribute aktualisieren
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Typeform-CTAs auf Desktop und Mobil visuell sowie funktional prüfen
-- [ ] Finalen Typeform-CTA-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Typeform-CTA-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
