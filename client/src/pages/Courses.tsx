@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   BadgeCheck,
   CalendarCheck,
   FileCheck2,
@@ -9,9 +10,10 @@ import {
   ShieldCheck,
   UsersRound,
 } from "lucide-react";
-import { ArrowLink } from "@/components/PageElements";
 import { Seo } from "@/components/Seo";
 import { CONTACT, SEO } from "@/site-config";
+
+const FUNDING_FORM_URL = "https://krankenkassen-cashback.typeform.com/Physiowerk";
 
 const onlineCourseBenefits = [
   {
@@ -70,7 +72,16 @@ const fundingBenefits = [
 function FundingCta({ label }: { label: string }) {
   return (
     <div className="courses-funding-cta">
-      <ArrowLink href="#foerderung-pruefen">{label}</ArrowLink>
+      <a
+        className="arrow-link"
+        href={FUNDING_FORM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${label} (öffnet in einem neuen Tab)`}
+      >
+        <span>{label}</span>
+        <ArrowRight aria-hidden="true" />
+      </a>
       <small>Kostenlos · unverbindlich · in weniger als 30 Sekunden</small>
     </div>
   );
@@ -179,7 +190,7 @@ export default function Courses() {
         </div>
       </section>
 
-      <section className="courses-registration" id="foerderung-pruefen">
+      <section className="courses-registration">
         <div className="site-shell courses-registration-grid">
           <div>
             <p className="courses-eyebrow courses-eyebrow-light">Kostenlose Förderprüfung</p>

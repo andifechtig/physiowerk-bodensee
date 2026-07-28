@@ -153,3 +153,11 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Trainingsbereich und alle geänderten Preisreferenzen in Desktop- und Mobilansicht visuell prüfen
 - [x] Finalen Mitgliedschafts-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Alle Förderprüfungs-CTAs auf `/kurse/` auf den echten Typeform-Link umstellen
+- [x] Externe Förderprüfungs-Links in einem neuen Tab mit sicherem `rel`-Attribut öffnen
+- [x] Veralteten Platzhalter `#foerderung-pruefen` aus Förderprüfungs-CTAs und dazugehörigen Tests entfernen
+- [x] Automatische Tests für URL, neues Tab und Sicherheitsattribute aktualisieren
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Typeform-CTAs auf Desktop und Mobil visuell sowie funktional prüfen
+- [ ] Finalen Typeform-CTA-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

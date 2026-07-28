@@ -78,7 +78,12 @@ describe("stable site routes", () => {
     expect(physiotherapy).toContain("Krankengymnastik am Gerät (KGG)");
     expect(physiotherapy).toContain("maximal drei Personen");
     expect(courses).toContain("Online-Präventionskurse – bis zu 100 % gefördert");
-    expect(courses).toContain('href="#foerderung-pruefen"');
+    expect(courses).toContain('const FUNDING_FORM_URL = "https://krankenkassen-cashback.typeform.com/Physiowerk"');
+    expect(courses).toContain("href={FUNDING_FORM_URL}");
+    expect(courses).toContain('target="_blank"');
+    expect(courses).toContain('rel="noopener noreferrer"');
+    expect(courses).not.toContain("#foerderung-pruefen");
+    expect((courses.match(/<FundingCta label=/g) ?? [])).toHaveLength(4);
     expect(courses).toContain("Kostenlos · unverbindlich · in weniger als 30 Sekunden");
     expect(courses).toContain("Unser unabhängiger Förderpartner");
     expect(courses).not.toContain("Prävention digital");
