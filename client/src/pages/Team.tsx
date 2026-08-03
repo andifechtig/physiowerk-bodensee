@@ -1,7 +1,8 @@
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 import { PageHero, SectionHeading, ArrowLink, ContactCta } from "@/components/PageElements";
+
+const TEAM_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/rSQQTljhWGQMIZzP.webp";
 
 const team = [
   { name: "Andreas Fechtig", role: "Inhaber und Physiotherapeut", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/PoWYIAWoCZSqpiFF.webp" },
@@ -20,7 +21,7 @@ export default function Team() {
       <PageHero
         title={<>Bewegung ist Leben –<br />und unsere Leidenschaft</>}
         intro="Wir sind das Physiowerk Bodensee – ein Team aus erfahrenen Therapeut:innen, das Menschen in Bewegung bringt."
-        media={<MediaPlaceholder width={800} height={534} filename="Physiowerk_Bodensee©patrickdunst-095-0601.jpg" description="Team und Praxis in Meckenbeuren" dark />}
+        media={<img className="team-hero-photo" src={TEAM_HERO_IMAGE_URL} alt="Empfangsbereich des Physiowerk Bodensee in Meckenbeuren" decoding="async" fetchPriority="high" />}
       />
 
       <section className="content-section">

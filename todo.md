@@ -162,27 +162,36 @@
 - [x] Typeform-CTAs auf Desktop und Mobil visuell sowie funktional prüfen
 - [x] Finalen Typeform-CTA-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
-- [ ] Alle sieben bereitgestellten externen Teamfoto-URLs auf Erreichbarkeit und Bildinhalt prüfen
-- [ ] Bestehende Teamdaten, Platzhalterbilder und Teamkarten auf `/team-und-praxis/` vollständig analysieren
-- [ ] Andreas Fechtig, Laura Knapp, Lea Jäger, Madeleine Seitz, Luise Schwab, Selina Lanz und Stefanie Ruhstorfer in der vorgegebenen Reihenfolge anordnen
-- [ ] Platzhalterbilder der sieben Teamkarten durch die zugeordneten externen Foto-URLs ersetzen
-- [ ] Teamfotos einheitlich mit `object-fit: cover` und zugänglichen Alternativtexten in den bestehenden Karten darstellen
-- [ ] Sicherstellen, dass ausschließlich die Teamseite und ihre zugehörigen Tests beziehungsweise Stile geändert werden
-- [ ] Automatische Tests für externe Foto-URLs, Teamreihenfolge, Alternativtexte und Bilddarstellung ergänzen
-- [ ] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Teamseite in Desktop- und Mobilansicht auf Bildzuschnitt, Reihenfolge und responsives Layout visuell prüfen
-- [ ] Finalen Teamfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Alle sieben bereitgestellten externen Teamfoto-URLs auf Erreichbarkeit und Bildinhalt prüfen
+- [x] Bestehende Teamdaten, Platzhalterbilder und Teamkarten auf `/team-und-praxis/` vollständig analysieren
+- [x] Andreas Fechtig, Laura Knapp, Lea Jäger, Madeleine Seitz, Luise Schwab, Selina Lanz und Stefanie Ruhstorfer in der vorgegebenen Reihenfolge anordnen
+- [x] Platzhalterbilder der sieben Teamkarten durch die zugeordneten externen Foto-URLs ersetzen
+- [x] Teamfotos einheitlich mit `object-fit: cover` und zugänglichen Alternativtexten in den bestehenden Karten darstellen
+- [x] Sicherstellen, dass ausschließlich die Teamseite und ihre zugehörigen Tests beziehungsweise Stile geändert werden
+- [x] Automatische Tests für externe Foto-URLs, Teamreihenfolge, Alternativtexte und Bilddarstellung ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Teamseite in Desktop- und Mobilansicht auf Bildzuschnitt, Reihenfolge und responsives Layout visuell prüfen
+- [x] Finalen Teamfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Herz-Bild in der "Du?"-Box auf der Teamseite einfügen
 
-- [ ] Teamfoto-Bereiche auf `/team-praxis/` mit dauerhaft quadratischem 1:1-Seitenverhältnis gestalten
-- [ ] Portraitbilder mit einer gesichtsorientierten `object-position` zentral und im oberen Bildbereich ausrichten
-- [ ] Teamnamen unter den Bildkarten mit ausreichender Schriftgröße, Kontrast und Zeilenabstand lesbar darstellen
-- [ ] Automatische Prüfungen für quadratische Teamfotos, Positionierung und Namensdarstellung ergänzen oder aktualisieren
-- [ ] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Teamkarten auf Desktop und Mobil visuell auf Bildzuschnitt, Gesichtsausrichtung und Namenslesbarkeit prüfen
-- [ ] Finalen Teamkarten-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Teamfoto-Bereiche auf `/team-praxis/` mit dauerhaft quadratischem 1:1-Seitenverhältnis gestalten
+- [x] Portraitbilder mit einer gesichtsorientierten `object-position` zentral und im oberen Bildbereich ausrichten
+- [x] Teamnamen unter den Bildkarten mit ausreichender Schriftgröße, Kontrast und Zeilenabstand lesbar darstellen
+- [x] Automatische Prüfungen für quadratische Teamfotos, Positionierung und Namensdarstellung ergänzen oder aktualisieren
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Teamkarten auf Desktop und Mobil visuell auf Bildzuschnitt, Gesichtsausrichtung und Namenslesbarkeit prüfen
+- [x] Finalen Teamkarten-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Automatische Tests für alle sieben externen Teamfoto-URLs und die jeweiligen Alternativtexte `Portrait <Name>` ergänzen
 
 - [x] Räumlichkeiten-Bild auf der Teamseite durch das neue Foto ersetzen
 
 - [x] Platzhalter "anatomische Herzdekoration" in der Karriere-Sektion der Teamseite durch das Herz-Bild ersetzen
+
+- [x] Hero-Platzhalter „Team und Praxis in Meckenbeuren“ auf `/team-praxis/` durch das bereitgestellte Empfangsbereichsfoto ersetzen
+- [x] Empfangsbereichsfoto im bestehenden Hero-Rahmen mit zugänglichem Alternativtext und einheitlichem Bildzuschnitt darstellen
+- [x] Automatische Prüfung für die externe Hero-Bildquelle und den Alternativtext ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Team-Hero in Desktop- und Mobilansicht auf Bilddarstellung, Lesbarkeit und responsives Verhalten visuell prüfen
+- [ ] Finalen Hero-Bild-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

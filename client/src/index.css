@@ -86,6 +86,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .home-hero-grid, .page-hero-grid { min-height: 600px; display: grid; grid-template-columns: minmax(320px, .92fr) minmax(420px, 1.08fr); align-items: center; gap: clamp(3rem, 7vw, 7rem); padding-block: clamp(4rem, 7vw, 7rem); }
 .page-hero-grid { min-height: 530px; }
 .home-hero-media, .page-hero-media .media-placeholder { border-color: color-mix(in srgb, white 42%, transparent); border-radius: 0 clamp(3.5rem, 8vw, 7.5rem) clamp(3.5rem, 8vw, 7.5rem) 0; }
+.page-hero-media > .team-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover; object-position: 50% 50%; border: 1px solid color-mix(in srgb, white 42%, transparent); border-radius: 0 clamp(3.5rem, 8vw, 7.5rem) clamp(3.5rem, 8vw, 7.5rem) 0; }
 .home-hero-copy h1, .page-hero-copy h1 { margin: 0; max-width: 720px; font-size: clamp(2.8rem, 5.2vw, 5.4rem); font-weight: 400; line-height: .96; letter-spacing: -.045em; }
 .home-hero-copy p, .page-hero-copy p { max-width: 680px; margin: 2rem 0; font-size: clamp(1rem, 1.5vw, 1.25rem); line-height: 1.42; }
 .home-hero-copy .arrow-link { padding-inline: 1.35rem; border: 1px solid color-mix(in srgb, white 72%, transparent); border-radius: 999px; }
