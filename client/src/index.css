@@ -235,15 +235,18 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .footer-about h2 { max-width: 31rem; margin: 0 0 1.25rem; font-size: clamp(1.45rem, 2vw, 2.1rem); font-weight: 400; line-height: 1.1; }
 .footer-about > p:last-child { max-width: 36rem; margin: 0; color: color-mix(in srgb, var(--paper) 72%, transparent); font-size: .9rem; }
 .footer-links, .social-links, .opening-hours { display: flex; flex-direction: column; gap: .75rem; }
-.footer-links a, .social-links a { width: fit-content; color: color-mix(in srgb, var(--paper) 84%, transparent); font-size: .86rem; }
-.footer-links a:hover, .social-links a:hover { color: var(--paper); text-decoration: underline; text-underline-offset: .25rem; }
+.footer-links a { width: fit-content; color: color-mix(in srgb, var(--paper) 84%, transparent); font-size: .86rem; }
+.footer-links a:hover { color: var(--paper); text-decoration: underline; text-underline-offset: .25rem; }
 .opening-hours { margin: 0 0 1.3rem; }
 .opening-hours div { display: grid; gap: .2rem; }
 .opening-hours dt, .opening-hours dd { margin: 0; font-size: .8rem; }
 .opening-hours dt { color: color-mix(in srgb, var(--paper) 62%, transparent); }
-.social-links { flex-direction: row; flex-wrap: wrap; }
-.social-links a { display: inline-flex; align-items: center; gap: .25rem; }
-.social-links svg { width: .9rem; height: .9rem; }
+.social-links { flex-direction: row; flex-wrap: wrap; gap: .65rem; }
+.social-link { min-height: 44px; display: inline-flex; align-items: center; gap: .5rem; padding: .55rem .8rem; border: 1px solid color-mix(in srgb, var(--paper) 36%, transparent); border-radius: 999px; color: var(--paper); background: color-mix(in srgb, var(--brand) 27%, transparent); box-shadow: 0 8px 22px color-mix(in srgb, black 14%, transparent); font-size: .86rem; font-weight: 700; line-height: 1; transition: transform 160ms var(--ease-out), color 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out); }
+.social-link:hover { border-color: var(--brand); color: var(--paper); background: var(--brand); box-shadow: 0 12px 26px color-mix(in srgb, var(--brand) 32%, transparent); transform: translateY(-2px); }
+.social-link:active { transform: scale(.97); }
+.social-link-icon { width: 1.15rem; height: 1.15rem; }
+.social-link-arrow { width: .9rem; height: .9rem; margin-left: .05rem; opacity: .82; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 1rem; margin-top: clamp(3rem, 6vw, 5rem); padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, white 14%, transparent); color: color-mix(in srgb, var(--paper) 48%, transparent); font-size: .72rem; }
 
 @media (max-width: 1120px) {

@@ -194,4 +194,12 @@
 - [x] Automatische Prüfung für die externe Hero-Bildquelle und den Alternativtext ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Team-Hero in Desktop- und Mobilansicht auf Bilddarstellung, Lesbarkeit und responsives Verhalten visuell prüfen
-- [ ] Finalen Hero-Bild-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Hero-Bild-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Bestehende Instagram- und Facebook-Links im Website-Footer sowie ihre Ziel-URLs prüfen
+- [x] Erkennbare Instagram- und Facebook-Icons direkt in die bestehenden Footer-Links integrieren
+- [x] Social-Media-Links im bestehenden Footer-Design mit zugänglichen Labels, Fokuszuständen und klarer Hervorhebung gestalten
+- [x] Bestehende Social-Media-Ziel-URLs unverändert beibehalten und automatisiert absichern
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Footer-Social-Media-Links in Desktop- und Mobilansicht auf Sichtbarkeit, Icons und responsives Verhalten visuell prüfen
+- [ ] Finalen Footer-Social-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

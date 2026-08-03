@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { useEffect, useState, type PropsWithChildren } from "react";
-import { ArrowUpRight, CalendarDays, Menu, X } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Facebook, Instagram, Menu, X } from "lucide-react";
 import {
   BOOKING_CONFIG,
   BRAND_ASSETS,
@@ -176,9 +176,21 @@ function Footer() {
           </dl>
           <div className="social-links">
             {SOCIAL_LINKS.map(item => (
-              <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
-                {item.label}
-                <ArrowUpRight aria-hidden="true" />
+              <a
+                key={item.label}
+                className="social-link"
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Physiowerk Bodensee auf ${item.label}`}
+              >
+                {item.label === "Instagram" ? (
+                  <Instagram className="social-link-icon" aria-hidden="true" />
+                ) : (
+                  <Facebook className="social-link-icon" aria-hidden="true" />
+                )}
+                <span>{item.label}</span>
+                <ArrowUpRight className="social-link-arrow" aria-hidden="true" />
               </a>
             ))}
           </div>

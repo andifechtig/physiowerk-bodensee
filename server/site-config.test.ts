@@ -6,6 +6,7 @@ import {
   COACHING_WHATSAPP_URL,
   NAVIGATION,
   SEO,
+  SOCIAL_LINKS,
   THERACONNECT,
 } from "../client/src/site-config";
 
@@ -50,6 +51,24 @@ describe("stable site routes", () => {
     expect(COACHING_WHATSAPP_URL).toBe(
       "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.",
     );
+  });
+
+  it("keeps the established social profiles and renders highlighted brand icons in the footer", () => {
+    const siteLayout = readFileSync(new URL("../client/src/components/SiteLayout.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+
+    expect(SOCIAL_LINKS).toEqual([
+      { label: "Instagram", href: "https://www.instagram.com/andi_physiowerk/" },
+      { label: "Facebook", href: "https://www.facebook.com/deinbiomechaniker/" },
+    ]);
+    expect(siteLayout).toContain('Facebook, Instagram');
+    expect(siteLayout).toContain('className="social-link"');
+    expect(siteLayout).toContain('aria-label={`Physiowerk Bodensee auf ${item.label}`}');
+    expect(siteLayout).toContain('rel="noopener noreferrer"');
+    expect(siteLayout).toContain('item.label === "Instagram"');
+    expect(styles).toContain('.social-link { min-height: 44px; display: inline-flex;');
+    expect(styles).toContain('.social-link-icon { width: 1.15rem; height: 1.15rem; }');
+    expect(styles).toContain('.social-link:hover { border-color: var(--brand);');
   });
 
   it("publishes the coaching, app and course routes in the sitemap", () => {
