@@ -36,13 +36,17 @@ export default function Team() {
           <div className="team-grid">
             {team.map((member) => (
               <article className="team-card" key={member.name}>
-                <img src={member.imageUrl} alt={`Portrait ${member.name}`} style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
+                <div className="team-card-media">
+                  <img className="team-card-photo" src={member.imageUrl} alt={`Portrait ${member.name}`} loading="lazy" decoding="async" />
+                </div>
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>
               </article>
             ))}
             <article className="team-card team-card-open">
-              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg" alt="Offener Teamplatz" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
+              <div className="team-card-media">
+                <img className="team-card-photo team-card-photo-heart" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg" alt="Rotes Herz als Symbol für einen offenen Teamplatz" loading="lazy" decoding="async" />
+              </div>
               <h3>Du?</h3>
               <p>Werde Teil unseres Teams</p>
               <ArrowLink href="/karriere/">Jetzt bewerben</ArrowLink>
@@ -57,7 +61,7 @@ export default function Team() {
             <SectionHeading eyebrow="Räumlichkeiten" title="Helle Räume. Moderne Ausstattung. Persönliche Atmosphäre." />
             <p>Unsere Praxis bietet helle, moderne Behandlungsräume und einen bestens ausgestatteten Trainingsbereich. Hochwertige medizinische Geräte, funktionelle Trainingsflächen und eine angenehme Atmosphäre schaffen ideale Bedingungen für effektive Therapie und gezieltes Training.</p>
           </div>
-          <MediaPlaceholder width={800} height={534} filename="Physiowerk_Bodensee©patrickdunst-095-0601.jpg" description="Räumlichkeiten des Physiowerk Bodensee" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/VRoTnjFtrEORAoel.webp" alt="Heller Behandlungsraum mit roter Therapieliege" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
         </div>
       </section>
 
@@ -67,7 +71,7 @@ export default function Team() {
             <SectionHeading eyebrow="Karriere" title={<>Werde Teil<br />unseres Teams!</>} intro="Du bist Physiotherapeut:in mit Herz und möchtest in einem modernen, wertschätzenden Umfeld arbeiten?" />
             <ArrowLink href="/karriere/">Jetzt bewerben</ArrowLink>
           </div>
-          <MediaPlaceholder width={500} height={522} filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg" alt="Rotes Herz als Symbol für einen offenen Teamplatz" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
         </div>
       </section>
       <ContactCta />

@@ -179,8 +179,13 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .lead-copy { font-size: clamp(1.2rem, 2.2vw, 1.8rem); line-height: 1.4; }
 
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.team-card h3 { margin-top: 1.2rem; }
-.team-card p { margin: .2rem 0 0; color: var(--muted); }
+.team-card { min-width: 0; display: flex; flex-direction: column; }
+.team-card-media { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 2.8rem; background: var(--brand-soft); box-shadow: 0 14px 32px color-mix(in srgb, var(--ink) 10%, transparent); }
+.team-card-photo { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 24%; }
+.team-card-photo-heart { object-position: center; }
+.team-card h3 { margin: 1.2rem .25rem 0; color: var(--brand); font-size: clamp(1.5rem, 2.2vw, 2.1rem); font-weight: 600; line-height: 1.08; letter-spacing: -.015em; }
+.team-card p { min-height: 1.5em; margin: .35rem .25rem 0; color: var(--muted); font-size: .98rem; line-height: 1.45; }
+.team-card .arrow-link { margin: .9rem .25rem 0; }
 .career-benefits { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
 .career-benefits div { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .career-benefits svg { width: 1.1rem; color: var(--brand); }

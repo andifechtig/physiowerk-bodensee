@@ -90,6 +90,30 @@ describe("stable site routes", () => {
     expect(courses).not.toContain("In vier Schritten zum Präventionskurs");
   });
 
+  it("keeps team portraits square, face-oriented and their names readable", () => {
+    const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+    const names = [
+      "Andreas Fechtig",
+      "Laura Knapp",
+      "Lea Jäger",
+      "Madeleine Seitz",
+      "Luise Schwab",
+      "Selina Lanz",
+      "Stefanie Ruhstorfer",
+    ];
+
+    expect(team).toContain('className="team-card-media"');
+    expect(team).toContain('className="team-card-photo"');
+    expect(team).toContain('className="team-card-photo team-card-photo-heart"');
+    expect(team).toContain('alt="Rotes Herz als Symbol für einen offenen Teamplatz"');
+    expect(names.map(name => team.indexOf(name))).toEqual([...names.map(name => team.indexOf(name))].sort((a, b) => a - b));
+    expect(styles).toContain(".team-card-media { position: relative; aspect-ratio: 1;");
+    expect(styles).toContain(".team-card-photo { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 24%; }");
+    expect(styles).toContain(".team-card-photo-heart { object-position: center; }");
+    expect(styles).toContain(".team-card h3 { margin: 1.2rem .25rem 0; color: var(--brand); font-size: clamp(1.5rem, 2.2vw, 2.1rem); font-weight: 600;");
+  });
+
   it("keeps the TheraConnect downloads and QR asset exact", () => {
     expect(THERACONNECT).toEqual({
       qrCode: "/manus-storage/theracode-qr_3bdbe30f.png",

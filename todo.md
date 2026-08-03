@@ -174,3 +174,15 @@
 - [ ] Finalen Teamfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Herz-Bild in der "Du?"-Box auf der Teamseite einfügen
+
+- [ ] Teamfoto-Bereiche auf `/team-praxis/` mit dauerhaft quadratischem 1:1-Seitenverhältnis gestalten
+- [ ] Portraitbilder mit einer gesichtsorientierten `object-position` zentral und im oberen Bildbereich ausrichten
+- [ ] Teamnamen unter den Bildkarten mit ausreichender Schriftgröße, Kontrast und Zeilenabstand lesbar darstellen
+- [ ] Automatische Prüfungen für quadratische Teamfotos, Positionierung und Namensdarstellung ergänzen oder aktualisieren
+- [ ] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Teamkarten auf Desktop und Mobil visuell auf Bildzuschnitt, Gesichtsausrichtung und Namenslesbarkeit prüfen
+- [ ] Finalen Teamkarten-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Räumlichkeiten-Bild auf der Teamseite durch das neue Foto ersetzen
+
+- [x] Platzhalter "anatomische Herzdekoration" in der Karriere-Sektion der Teamseite durch das Herz-Bild ersetzen
