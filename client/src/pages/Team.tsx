@@ -1,15 +1,17 @@
-import { ArrowLink, ContactCta, PageHero, SectionHeading } from "@/components/PageElements";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
+import { PageHero, SectionHeading, ArrowLink, ContactCta } from "@/components/PageElements";
 
 const team = [
-  ["Andreas Fechtig", "Inhaber und Physiotherapeut", "andreas-fechtig.jpg"],
-  ["Laura Knapp", "Inhaberin und Physiotherapeutin", "laura-knapp.jpg"],
-  ["Lea Jäger", "Physiotherapeutin", "lea-jaeger.jpg"],
-  ["Luise Schwab", "Physiotherapeutin", "luise-schwab.jpg"],
-  ["Selina Lanz", "Physiotherapeutin", "selina-lanz.jpg"],
-] as const;
+  { name: "Andreas Fechtig", role: "Inhaber und Physiotherapeut", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/PoWYIAWoCZSqpiFF.webp" },
+  { name: "Laura Knapp", role: "Inhaberin und Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ZjKXnqXaALGOqQDC.webp" },
+  { name: "Lea Jäger", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/raIDLFFsURHnKBUj.webp" },
+  { name: "Madeleine Seitz", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/YkAPXyQZvEqpJLkk.webp" },
+  { name: "Luise Schwab", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/HTwmBqkaovwHeJZo.webp" },
+  { name: "Selina Lanz", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/SOJwLGJAfyoLtAtQ.webp" },
+  { name: "Stefanie Ruhstorfer", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/HNYcFjfSLlQBCSZN.webp" },
+];
 
 export default function Team() {
   return (
@@ -32,15 +34,15 @@ export default function Team() {
         <div className="site-shell">
           <SectionHeading eyebrow="Team" title="Menschen, die Menschen bewegen" />
           <div className="team-grid">
-            {team.map(([name, role, filename]) => (
-              <article className="team-card" key={name}>
-                <MediaPlaceholder filename={filename} width={450} height={450} description={`Portrait ${name}`} />
-                <h3>{name}</h3>
-                <p>{role}</p>
+            {team.map((member) => (
+              <article className="team-card" key={member.name}>
+                <img src={member.imageUrl} alt={`Portrait ${member.name}`} style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
               </article>
             ))}
             <article className="team-card team-card-open">
-              <MediaPlaceholder filename="physiowerk-herz.jpg" width={450} height={450} description="Offener Teamplatz" />
+              <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg" alt="Offener Teamplatz" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
               <h3>Du?</h3>
               <p>Werde Teil unseres Teams</p>
               <ArrowLink href="/karriere/">Jetzt bewerben</ArrowLink>
@@ -62,7 +64,7 @@ export default function Team() {
       <section className="career-banner">
         <div className="site-shell career-banner-grid">
           <div>
-            <SectionHeading eyebrow="Karriere" title={<>Werde Teil<br />unseres Teams!</>} intro="Du bist Physiotherapeut:in mit Herz und möchtest in einem modernen, wertschätzenden Umfeld arbeiten? Dann bist Du bei uns genau richtig." light />
+            <SectionHeading eyebrow="Karriere" title={<>Werde Teil<br />unseres Teams!</>} intro="Du bist Physiotherapeut:in mit Herz und möchtest in einem modernen, wertschätzenden Umfeld arbeiten?" />
             <ArrowLink href="/karriere/">Jetzt bewerben</ArrowLink>
           </div>
           <MediaPlaceholder width={500} height={522} filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark />

@@ -161,3 +161,16 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Typeform-CTAs auf Desktop und Mobil visuell sowie funktional prüfen
 - [x] Finalen Typeform-CTA-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [ ] Alle sieben bereitgestellten externen Teamfoto-URLs auf Erreichbarkeit und Bildinhalt prüfen
+- [ ] Bestehende Teamdaten, Platzhalterbilder und Teamkarten auf `/team-und-praxis/` vollständig analysieren
+- [ ] Andreas Fechtig, Laura Knapp, Lea Jäger, Madeleine Seitz, Luise Schwab, Selina Lanz und Stefanie Ruhstorfer in der vorgegebenen Reihenfolge anordnen
+- [ ] Platzhalterbilder der sieben Teamkarten durch die zugeordneten externen Foto-URLs ersetzen
+- [ ] Teamfotos einheitlich mit `object-fit: cover` und zugänglichen Alternativtexten in den bestehenden Karten darstellen
+- [ ] Sicherstellen, dass ausschließlich die Teamseite und ihre zugehörigen Tests beziehungsweise Stile geändert werden
+- [ ] Automatische Tests für externe Foto-URLs, Teamreihenfolge, Alternativtexte und Bilddarstellung ergänzen
+- [ ] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Teamseite in Desktop- und Mobilansicht auf Bildzuschnitt, Reihenfolge und responsives Layout visuell prüfen
+- [ ] Finalen Teamfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Herz-Bild in der "Du?"-Box auf der Teamseite einfügen
