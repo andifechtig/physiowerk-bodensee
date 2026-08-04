@@ -113,6 +113,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .contact-page-grid { grid-template-columns: 1fr .85fr; align-items: start; }
 .mission-grid .media-placeholder, .rooms-grid .media-placeholder, .opportunity-grid .media-placeholder, .career-banner .media-placeholder { min-height: 0; }
 .mission-grid .arrow-link, .career-banner .arrow-link { margin-top: 1.5rem; color: var(--brand); }
+.career-banner-heart { width: 100%; max-width: 500px; justify-self: end; aspect-ratio: 1; object-fit: cover; object-position: center; border: 1px solid color-mix(in srgb, white 24%, transparent); border-radius: 2.8rem; background: color-mix(in srgb, var(--brand) 18%, var(--ink)); box-shadow: 0 18px 48px color-mix(in srgb, black 22%, transparent); }
 
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .focus-card { min-width: 0; }

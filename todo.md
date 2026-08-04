@@ -203,3 +203,11 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Footer-Social-Media-Links in Desktop- und Mobilansicht auf Sichtbarkeit, Icons und responsives Verhalten visuell prüfen
 - [x] Finalen Footer-Social-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Startseiten-Karriere-Platzhalter und die bereits verwendete Herz-Bildquelle auf der Teamseite prüfen
+- [x] Karriere-Platzhalter auf der Startseite durch das bereitgestellte Herz-Bild ersetzen
+- [x] Herz-Bild mit zugänglichem Alternativtext und bestehendem Bildzuschnitt im Karrierebereich darstellen
+- [x] Automatische Prüfung für die Herz-Bildquelle und den entfernten Karriere-Platzhalter ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Startseiten-Karrierebereich auf Desktop und Mobil visuell auf Bilddarstellung und Lesbarkeit prüfen
+- [ ] Finalen Startseiten-Herzbild-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

@@ -11,6 +11,8 @@ import { Seo } from "@/components/Seo";
 import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { SEO, THERACONNECT } from "@/site-config";
 
+const CAREER_HEART_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg";
+
 const focusCards = [
   {
     title: "Physiotherapie & Biomechanik",
@@ -269,7 +271,15 @@ export default function Home() {
             <p>Du bist Physiotherapeut:in mit Herz und möchtest in einem modernen, wertschätzenden Umfeld arbeiten? Dann bist Du bei uns genau richtig.</p>
             <ArrowLink href="/karriere/">Jetzt bewerben</ArrowLink>
           </div>
-          <MediaPlaceholder width={500} height={522} filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark />
+          <img
+            className="career-banner-heart"
+            src={CAREER_HEART_IMAGE_URL}
+            alt="Rotes Herz als Symbol für Karriere im Physiowerk Bodensee"
+            width="450"
+            height="450"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </section>
     </>

@@ -71,6 +71,17 @@ describe("stable site routes", () => {
     expect(styles).toContain('.social-link:hover { border-color: var(--brand);');
   });
 
+  it("uses the existing heart image instead of the career placeholder on the home page", () => {
+    const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+
+    expect(home).toContain('const CAREER_HEART_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg"');
+    expect(home).toContain('className="career-banner-heart"');
+    expect(home).toContain('alt="Rotes Herz als Symbol für Karriere im Physiowerk Bodensee"');
+    expect(home).not.toContain('filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark');
+    expect(styles).toContain('.career-banner-heart { width: 100%; max-width: 500px; justify-self: end; aspect-ratio: 1; object-fit: cover; object-position: center;');
+  });
+
   it("publishes the coaching, app and course routes in the sitemap", () => {
     const sitemap = readFileSync(new URL("../client/public/sitemap.xml", import.meta.url), "utf8");
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/coaching/");
