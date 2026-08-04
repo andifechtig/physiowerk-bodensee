@@ -210,4 +210,4 @@
 - [x] Automatische Prüfung für die Herz-Bildquelle und den entfernten Karriere-Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Startseiten-Karrierebereich auf Desktop und Mobil visuell auf Bilddarstellung und Lesbarkeit prüfen
-- [ ] Finalen Startseiten-Herzbild-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Startseiten-Herzbild-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
