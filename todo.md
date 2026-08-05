@@ -223,4 +223,4 @@
 - [x] Automatische Prüfung für die sechs Bildquellen und die entfernten Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Startseite in Desktop- und Mobilansicht auf Bildzuordnung, Zuschnitte, Lesbarkeit und responsives Verhalten visuell prüfen
-- [ ] Finalen Startseiten-Medien-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Startseiten-Medien-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
