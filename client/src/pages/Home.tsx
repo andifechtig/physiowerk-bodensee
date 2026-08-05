@@ -1,5 +1,4 @@
 import { Activity, BadgeCheck, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, Smartphone, UsersRound } from "lucide-react";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import {
   ArrowLink,
   BookingSection,
@@ -12,34 +11,36 @@ import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { SEO, THERACONNECT } from "@/site-config";
 
 const CAREER_HEART_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg";
+const HOME_MEDIA = {
+  heroTherapy: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
+  boneIllustration: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/OHHoxsvHutuBBXuv.svg",
+  boneModel: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/YQeESqWyCJYEgyZk.webp",
+  medicalTraining: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
+  ropeTherapy: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/zqBCyoEGBifCsLze.webp",
+  lauraAndLea: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/CePFuZnJCcjyUzGR.webp",
+} as const;
 
 const focusCards = [
   {
     title: "Physiotherapie & Biomechanik",
     text: "Ursachen erkennen, gezielt behandeln – für langfristige Beschwerdefreiheit.",
     href: "/physiotherapie/",
-    file: "2U5A3983.jpg",
-    description: "Skelettmodell",
-    width: 746,
-    height: 450,
+    imageUrl: HOME_MEDIA.boneModel,
+    description: "Knochenmodell aus der physiotherapeutischen Praxis",
   },
   {
     title: "Medizinisches Training und Fitness",
     text: "Aufbau, Stabilität und Fitness – individuell betreut, effektiv und sicher.",
     href: "/medizinisches-training-und-fitness/",
-    file: "2U5A3678.jpg",
-    description: "Kettlebells und Hand",
-    width: 746,
-    height: 450,
+    imageUrl: HOME_MEDIA.medicalTraining,
+    description: "Keiser Bikes und Trainingsgeräte im medizinischen Trainingsraum",
   },
   {
     title: "Team & Praxis",
     text: "Moderne Praxis und Individuelle Betreuung durch erfahrene Therapeut:innen.",
     href: "/team-praxis/",
-    file: "Therapieansatz-Slides_0001_Physiowerk_Bodensee©patrickdunst-051-0371.jpg",
-    description: "Therapie am Seilzug",
-    width: 1170,
-    height: 789,
+    imageUrl: HOME_MEDIA.ropeTherapy,
+    description: "Therapeut zeigt eine Übung mit Kletterwand im Hintergrund",
   },
 ] as const;
 
@@ -88,13 +89,14 @@ export default function Home() {
       <Seo {...SEO.home} />
       <section className="home-hero">
         <div className="site-shell home-hero-grid">
-          <MediaPlaceholder
-            width={1170}
-            height={1170}
-            filename="Rechteck-35.jpg"
-            description="Therapeut und Patientin am Seilzug"
-            className="home-hero-media"
-            dark
+          <img
+            className="home-hero-media home-hero-photo"
+            src={HOME_MEDIA.heroTherapy}
+            alt="Therapie-Szene am Seilzug mit Patientin und Therapeut"
+            width="1170"
+            height="1170"
+            decoding="async"
+            fetchPriority="high"
           />
           <div className="home-hero-copy">
             <h1>Physiotherapie, Biomechanik und medizinisches Training in Meckenbeuren</h1>
@@ -115,16 +117,27 @@ export default function Home() {
             title="Dein Körper im Fokus – von Therapie bis Training."
             intro="Im Physiowerk Bodensee verbinden wir fundierte Physiotherapie mit biomechanischer Analyse und modernem medizinischem Training. Ob akute Beschwerden, Rehabilitation nach Verletzungen oder gezielte Prävention – wir entwickeln gemeinsam mit Dir ein Konzept, das dir wirklich hilft."
           />
-          <MediaPlaceholder width={562} height={151} filename="Knochen-1.svg" description="Rote Langknochen-Illustration" />
+          <img
+            className="focus-intro-bone-illustration"
+            src={HOME_MEDIA.boneIllustration}
+            alt="Rote Knochen-Illustration"
+            width="562"
+            height="151"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div className="site-shell card-grid focus-card-grid">
           {focusCards.map(card => (
             <article className="focus-card" key={card.href}>
-              <MediaPlaceholder
-                width={card.width}
-                height={card.height}
-                filename={card.file}
-                description={card.description}
+              <img
+                className="focus-card-image"
+                src={card.imageUrl}
+                alt={card.description}
+                width="746"
+                height="450"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <h3>{card.title}</h3>
@@ -222,11 +235,14 @@ export default function Home() {
 
       <section className="content-section">
         <div className="site-shell mission-grid">
-          <MediaPlaceholder
-            width={1382}
-            height={894}
-            filename="Karriere-Bodensee-Jobs-Physiotherapeut.jpg"
-            description="Lea und Laura vor der Boulderwand"
+          <img
+            className="mission-grid-photo"
+            src={HOME_MEDIA.lauraAndLea}
+            alt="Laura und Lea vor der Kletterwand im Physiowerk Bodensee"
+            width="1382"
+            height="894"
+            loading="lazy"
+            decoding="async"
           />
           <div>
             <Eyebrow>Team & Praxis</Eyebrow>

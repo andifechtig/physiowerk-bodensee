@@ -82,6 +82,31 @@ describe("stable site routes", () => {
     expect(styles).toContain('.career-banner-heart { width: 100%; max-width: 500px; justify-self: end; aspect-ratio: 1; object-fit: cover; object-position: center;');
   });
 
+  it("uses all six supplied media sources in their corresponding home-page placements", () => {
+    const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+    const mediaUrls = [
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/OHHoxsvHutuBBXuv.svg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/YQeESqWyCJYEgyZk.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/zqBCyoEGBifCsLze.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/CePFuZnJCcjyUzGR.webp",
+    ];
+
+    mediaUrls.forEach(url => expect(home).toContain(url));
+    expect(home).toContain('src={HOME_MEDIA.heroTherapy}');
+    expect(home).toContain('src={HOME_MEDIA.boneIllustration}');
+    expect(home).toContain('src={card.imageUrl}');
+    expect(home).toContain('src={HOME_MEDIA.lauraAndLea}');
+    expect(home).not.toContain('filename="Rechteck-35.jpg"');
+    expect(home).not.toContain('filename="Knochen-1.svg"');
+    expect(home).not.toContain('filename="Karriere-Bodensee-Jobs-Physiotherapeut.jpg"');
+    expect(styles).toContain('.home-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 1; object-fit: cover;');
+    expect(styles).toContain('.focus-card-image { width: 100%; aspect-ratio: 746 / 450; object-fit: cover;');
+    expect(styles).toContain('.mission-grid-photo { width: 100%; aspect-ratio: 1382 / 894; object-fit: cover;');
+  });
+
   it("publishes the coaching, app and course routes in the sitemap", () => {
     const sitemap = readFileSync(new URL("../client/public/sitemap.xml", import.meta.url), "utf8");
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/coaching/");

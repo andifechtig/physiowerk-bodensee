@@ -211,3 +211,16 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Startseiten-Karrierebereich auf Desktop und Mobil visuell auf Bilddarstellung und Lesbarkeit prüfen
 - [x] Finalen Startseiten-Herzbild-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Alle sechs bereitgestellten externen Startseiten-Bildquellen auf Erreichbarkeit und fachlich korrekte Zuordnung prüfen
+- [x] Hero-Platzhalter auf der Startseite durch die Seilzug-Therapieszene ersetzen
+- [x] Knochen-Illustrationsplatzhalter durch die bereitgestellte rote SVG-Knochenillustration ersetzen
+- [x] Fokuskarte „Physiotherapie & Biomechanik“ durch das Foto des Knochenmodells ersetzen
+- [x] Fokuskarte „Medizinisches Training und Fitness“ durch das Foto der Trainingsgeräte ersetzen
+- [x] Fokuskarte „Team & Praxis“ durch das bereitgestellte Seilzugfoto mit Kletterwand ersetzen
+- [x] Team-&-Praxis-Bildbereich auf der Startseite durch das Foto von Laura und Lea vor der Kletterwand ersetzen
+- [x] Alle sechs Startseitenbilder mit passenden Alternativtexten, responsive Bildzuschnitten und bestehendem Layout darstellen
+- [x] Automatische Prüfung für die sechs Bildquellen und die entfernten Platzhalter ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Startseite in Desktop- und Mobilansicht auf Bildzuordnung, Zuschnitte, Lesbarkeit und responsives Verhalten visuell prüfen
+- [ ] Finalen Startseiten-Medien-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
