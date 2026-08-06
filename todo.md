@@ -286,7 +286,7 @@
 - [x] Automatische Prüfung für die neuen freigestellten Bildquellen und den entfernten Hintergrund ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Biomechanik-Bereich auf Desktop und Mobil auf Freistellung, Größe, Kontrast und Lesbarkeit visuell prüfen
-- [ ] Finalen Freistellungs-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Freistellungs-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Alle drei Herz-Bildcontainer auf Team- und Startseite auf weiße Ränder und unvollständige rote Flächen prüfen
 - [x] Herz-Bild in „Du?“-Box, Startseiten-Karrierebereich und Team-Karrierebereich randlos sowie containerfüllend rot darstellen
