@@ -12,6 +12,11 @@ const therapyImages = [
   ["Therapieansatz-Slides_0005_2U5A4005.jpg", 800, 539, "Klangschalen"],
 ] as const;
 
+const BIOMECHANICS_MEDIA = {
+  citrus: "/manus-storage/zitrone-freigestellt_f38caacb.png",
+  fascia: "/manus-storage/faszien-freigestellt_e32c873c.png",
+} as const;
+
 const services = [
   ["Physiotherapie/Krankengymnastik (KG)", "Wir rechnen alle klassischen Kassenrezepte im Bereich Physiotherapie ab."],
   ["Manuelle Therapie (MT)", "Mobilisation spezifischer Gelenke auf Basis physiotherapeutischer Aus- und Weiterbildungen."],
@@ -66,20 +71,20 @@ export default function Physiotherapy() {
           </div>
           <div className="biomechanics-media">
             <img
-              className="biomechanics-media-image"
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg"
-              alt="Nahaufnahme einer Zitronenscheibe"
-              width="488"
-              height="479"
+              className="biomechanics-media-image biomechanics-media-image-citrus"
+              src={BIOMECHANICS_MEDIA.citrus}
+              alt="Freigestellte Zitronenscheibe"
+              width="1920"
+              height="1920"
               loading="lazy"
               decoding="async"
             />
             <img
-              className="biomechanics-media-image"
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg"
-              alt="Anatomische Darstellung von Faszien im Querschnitt"
-              width="419"
-              height="480"
+              className="biomechanics-media-image biomechanics-media-image-fascia"
+              src={BIOMECHANICS_MEDIA.fascia}
+              alt="Freigestellte anatomische Darstellung von Faszien im Querschnitt"
+              width="1920"
+              height="1920"
               loading="lazy"
               decoding="async"
             />

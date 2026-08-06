@@ -279,4 +279,16 @@
 - [x] Datenschutz-Hero-Platzhalter „Eingang des Physiowerk Bodensee“ und bereitgestellte Sicherheits-Schild-Bildquelle prüfen
 - [x] Platzhalter auf `/datenschutzerklaerung/` durch das Sicherheits-Schild-Bild ersetzen
 - [x] Sicherheits-Schild-Bild mit zugänglichem Alternativtext und bestehendem responsiven Hero-Zuschnitt darstellen
+
+- [x] Aktuelle Faszien- und Zitronenbilder sowie ihre Darstellung im Biomechanik-Bereich prüfen
+- [x] Freigestellte Varianten ohne Hintergrund für Faszien und Zitrone erzeugen
+- [x] Freigestellte Varianten im hellen Biomechanik-Bereich mit harmonischer Größe und responsivem Layout einsetzen
+- [x] Automatische Prüfung für die neuen freigestellten Bildquellen und den entfernten Hintergrund ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Biomechanik-Bereich auf Desktop und Mobil auf Freistellung, Größe, Kontrast und Lesbarkeit visuell prüfen
+- [ ] Finalen Freistellungs-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Alle drei Herz-Bildcontainer auf Team- und Startseite auf weiße Ränder und unvollständige rote Flächen prüfen
+- [x] Herz-Bild in „Du?“-Box, Startseiten-Karrierebereich und Team-Karrierebereich randlos sowie containerfüllend rot darstellen
+- [x] Automatische Prüfung für den vollständig gefüllten Herz-Bildzuschnitt und die drei Einsatzstellen ergänzen
 - [x] Automatische Prüfung für die Datenschutz-Hero-Bildquelle und den entfernten Platzhalter ergänzen

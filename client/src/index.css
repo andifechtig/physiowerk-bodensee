@@ -117,7 +117,8 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .mission-grid .media-placeholder, .rooms-grid .media-placeholder, .opportunity-grid .media-placeholder, .career-banner .media-placeholder { min-height: 0; }
 .mission-grid .arrow-link, .career-banner .arrow-link { margin-top: 1.5rem; color: var(--brand); }
 .mission-grid-photo { width: 100%; aspect-ratio: 1382 / 894; object-fit: cover; object-position: center; border-radius: 2.8rem; background: var(--paper-soft); }
-.career-banner-heart { width: 100%; max-width: 500px; justify-self: end; aspect-ratio: 1; object-fit: cover; object-position: center; border: 1px solid color-mix(in srgb, white 24%, transparent); border-radius: 2.8rem; background: color-mix(in srgb, var(--brand) 18%, var(--ink)); box-shadow: 0 18px 48px color-mix(in srgb, black 22%, transparent); }
+.career-banner-heart, .team-career-heart { width: 100%; max-width: 500px; justify-self: end; display: block; aspect-ratio: 1; object-fit: cover; object-position: center; border: 1px solid color-mix(in srgb, white 24%, transparent); border-radius: 2.8rem; background: var(--brand); box-shadow: 0 18px 48px color-mix(in srgb, black 22%, transparent); }
+.team-career-heart { max-width: none; }
 
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .focus-card { min-width: 0; }
@@ -168,8 +169,10 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .training-media-image { width: 100%; aspect-ratio: 800 / 441; display: block; object-fit: cover; border-radius: 2rem; background: var(--paper-soft); scroll-snap-align: start; }
 .biomechanics-grid blockquote { margin: 0; padding: 2rem 0 0; border-top: 2px solid var(--brand); color: var(--ink); font-size: clamp(1.2rem, 2vw, 1.7rem); line-height: 1.35; }
 .biomechanics-grid cite { display: block; margin-top: 1rem; color: var(--muted); font-size: .85rem; font-style: normal; }
-.biomechanics-media { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 1rem; }
+.biomechanics-media { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: 1rem; }
 .biomechanics-media .media-placeholder { min-height: 0; border-radius: 2rem; }
+.biomechanics-media-image { width: 100%; aspect-ratio: 1; display: block; object-fit: contain; object-position: center; padding: clamp(.8rem, 2vw, 1.6rem); border: 1px solid var(--line); border-radius: 2rem; background: var(--paper); }
+.biomechanics-media-image-citrus { padding: clamp(.55rem, 1.4vw, 1.1rem); }
 
 .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .service-grid article { display: grid; grid-template-columns: auto 1fr; gap: 0 1rem; padding: 1.8rem; border: 1px solid var(--line); border-radius: 2rem; }
@@ -191,6 +194,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .team-card-media { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 2.8rem; background: var(--brand-soft); box-shadow: 0 14px 32px color-mix(in srgb, var(--ink) 10%, transparent); }
 .team-card-photo { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 24%; }
 .team-card-photo-heart { object-position: center; }
+.team-card-open .team-card-media { background: var(--brand); }
 .team-card h3 { margin: 1.2rem .25rem 0; color: var(--brand); font-size: clamp(1.5rem, 2.2vw, 2.1rem); font-weight: 600; line-height: 1.08; letter-spacing: -.015em; }
 .team-card p { min-height: 1.5em; margin: .35rem .25rem 0; color: var(--muted); font-size: .98rem; line-height: 1.45; }
 .team-card .arrow-link { margin: .9rem .25rem 0; }

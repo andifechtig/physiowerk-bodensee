@@ -3,6 +3,7 @@ import { SEO } from "@/site-config";
 import { PageHero, SectionHeading, ArrowLink, ContactCta } from "@/components/PageElements";
 
 const TEAM_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/rSQQTljhWGQMIZzP.webp";
+const HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png";
 
 const team = [
   { name: "Andreas Fechtig", role: "Inhaber und Physiotherapeut", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/PoWYIAWoCZSqpiFF.webp" },
@@ -46,7 +47,7 @@ export default function Team() {
             ))}
             <article className="team-card team-card-open">
               <div className="team-card-media">
-                <img className="team-card-photo team-card-photo-heart" src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg" alt="Rotes Herz als Symbol für einen offenen Teamplatz" loading="lazy" decoding="async" />
+                  <img className="team-card-photo team-card-photo-heart" src={HEART_IMAGE_URL} alt="Rotes Herz als Symbol für einen offenen Teamplatz" loading="lazy" decoding="async" />
               </div>
               <h3>Du?</h3>
               <p>Werde Teil unseres Teams</p>
@@ -72,7 +73,7 @@ export default function Team() {
             <SectionHeading eyebrow="Karriere" title={<>Werde Teil<br />unseres Teams!</>} intro="Du bist Physiotherapeut:in mit Herz und möchtest in einem modernen, wertschätzenden Umfeld arbeiten?" />
             <ArrowLink href="/karriere/">Jetzt bewerben</ArrowLink>
           </div>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg" alt="Rotes Herz als Symbol für einen offenen Teamplatz" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
+          <img className="team-career-heart" src={HEART_IMAGE_URL} alt="Rotes Herz als Symbol für einen offenen Teamplatz" loading="lazy" decoding="async" />
         </div>
       </section>
       <ContactCta />

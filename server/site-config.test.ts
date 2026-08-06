@@ -71,15 +71,15 @@ describe("stable site routes", () => {
     expect(styles).toContain('.social-link:hover { border-color: var(--brand);');
   });
 
-  it("uses the existing heart image instead of the career placeholder on the home page", () => {
+  it("uses the full-bleed heart image instead of the career placeholder on the home page", () => {
     const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(home).toContain('const CAREER_HEART_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/fQdaxpLmlxGQXsAH.jpg"');
+    expect(home).toContain('const CAREER_HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png"');
     expect(home).toContain('className="career-banner-heart"');
     expect(home).toContain('alt="Rotes Herz als Symbol für Karriere im Physiowerk Bodensee"');
     expect(home).not.toContain('filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark');
-    expect(styles).toContain('.career-banner-heart { width: 100%; max-width: 500px; justify-self: end; aspect-ratio: 1; object-fit: cover; object-position: center;');
+    expect(styles).toContain('.career-banner-heart, .team-career-heart { width: 100%; max-width: 500px; justify-self: end; display: block; aspect-ratio: 1; object-fit: cover; object-position: center;');
   });
 
   it("uses all six supplied media sources in their corresponding home-page placements", () => {
@@ -196,15 +196,33 @@ describe("stable site routes", () => {
     expect(privacy).not.toContain('filename="physiowerk-eingang.jpg" description="Eingang des Physiowerk Bodensee" dark');
   });
 
-  it("uses the supplied fascia and citrus images in the physiotherapy biomechanics section", () => {
+  it("uses freigestellte fascia and citrus images in the physiotherapy biomechanics section", () => {
     const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(physiotherapy).toContain('src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg"');
-    expect(physiotherapy).toContain('alt="Nahaufnahme einer Zitronenscheibe"');
-    expect(physiotherapy).toContain('src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg"');
-    expect(physiotherapy).toContain('alt="Anatomische Darstellung von Faszien im Querschnitt"');
+    expect(physiotherapy).toContain('citrus: "/manus-storage/zitrone-freigestellt_f38caacb.png"');
+    expect(physiotherapy).toContain('fascia: "/manus-storage/faszien-freigestellt_e32c873c.png"');
+    expect(physiotherapy).toContain('className="biomechanics-media-image biomechanics-media-image-citrus"');
+    expect(physiotherapy).toContain('className="biomechanics-media-image biomechanics-media-image-fascia"');
+    expect(physiotherapy).toContain('alt="Freigestellte Zitronenscheibe"');
+    expect(physiotherapy).toContain('alt="Freigestellte anatomische Darstellung von Faszien im Querschnitt"');
+    expect(styles).toContain('.biomechanics-media-image { width: 100%; aspect-ratio: 1; display: block; object-fit: contain;');
     expect(physiotherapy).not.toContain('filename="zitrone.jpg" description="Zitrone"');
     expect(physiotherapy).not.toContain('filename="Faszien.jpg" description="Faszien"');
+  });
+
+  it("uses one full-bleed red heart asset in all three heart placements", () => {
+    const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
+    const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+    const heartAsset = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png";
+
+    expect(home).toContain(`const CAREER_HEART_IMAGE_URL = "${heartAsset}"`);
+    expect(team).toContain(`const HEART_IMAGE_URL = "${heartAsset}"`);
+    expect(team).toContain('className="team-card-photo team-card-photo-heart" src={HEART_IMAGE_URL}');
+    expect(team).toContain('className="team-career-heart" src={HEART_IMAGE_URL}');
+    expect(styles).toContain('.career-banner-heart, .team-career-heart { width: 100%; max-width: 500px;');
+    expect(styles).toContain('.team-card-open .team-card-media { background: var(--brand); }');
   });
 
   it("uses all six supplied images in the medical training media strip", () => {
