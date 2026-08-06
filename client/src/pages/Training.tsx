@@ -4,6 +4,8 @@ import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
+const TRAINING_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XeGaePDfCrPpepHM.webp";
+
 const trainingImages = [
   "paar-trainiert-zusammen-im-fitnessstudio-2.jpg",
   "Fitness-Slides_0005_Physiowerk_Bodensee©patrickdunst-062-0389.jpg",
@@ -67,7 +69,17 @@ export default function Training() {
         title={<>Gezieltes Training.<br />Therapeutisch betreut.</>}
         intro="Baue Kraft, Stabilität und Mobilität auf – mit medizinisch begleitetem Training im Physiowerk Bodensee."
         booking
-        media={<MediaPlaceholder width={800} height={441} filename="paar-trainiert-zusammen-im-fitnessstudio-2.jpg" description="Medizinisches Training" dark />}
+        media={
+          <img
+            className="training-hero-photo"
+            src={TRAINING_HERO_IMAGE_URL}
+            alt="Trainingsraum mit Kraftgeräten im Physiowerk Bodensee"
+            width="800"
+            height="441"
+            decoding="async"
+            fetchPriority="high"
+          />
+        }
       />
 
       <section className="content-section">

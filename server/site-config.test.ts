@@ -145,6 +145,17 @@ describe("stable site routes", () => {
     expect(courses).not.toContain("In vier Schritten zum Präventionskurs");
   });
 
+  it("uses the supplied training-room photo in the medical training hero", () => {
+    const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+
+    expect(training).toContain('const TRAINING_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XeGaePDfCrPpepHM.webp"');
+    expect(training).toContain('className="training-hero-photo"');
+    expect(training).toContain('alt="Trainingsraum mit Kraftgeräten im Physiowerk Bodensee"');
+    expect(training).not.toContain('filename="paar-trainiert-zusammen-im-fitnessstudio-2.jpg" description="Medizinisches Training" dark');
+    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
+  });
+
   it("keeps team portraits square, face-oriented and their names readable", () => {
     const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
@@ -183,7 +194,7 @@ describe("stable site routes", () => {
     expect(team).toContain('className="team-hero-photo"');
     expect(team).toContain('alt="Empfangsbereich des Physiowerk Bodensee in Meckenbeuren"');
     expect(team).not.toContain('description="Team und Praxis in Meckenbeuren"');
-    expect(styles).toContain(".page-hero-media > .team-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover; object-position: 50% 50%;");
+    expect(styles).toContain(".page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover; object-position: 50% 50%;");
   });
 
   it("keeps the TheraConnect downloads and QR asset exact", () => {

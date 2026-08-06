@@ -224,3 +224,11 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Startseite in Desktop- und Mobilansicht auf Bildzuordnung, Zuschnitte, Lesbarkeit und responsives Verhalten visuell prüfen
 - [x] Finalen Startseiten-Medien-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Bildplatzhalter für medizinisches Training und bereitgestellte Trainingsraumfoto-URL prüfen
+- [x] Platzhalter auf `/medizinisches-training-und-fitness/` durch das Trainingsraumfoto mit Kraftgeräten ersetzen
+- [x] Trainingsraumfoto mit zugänglichem Alternativtext und bestehendem responsiven Bildzuschnitt darstellen
+- [x] Automatische Prüfung für die Trainingsraum-Bildquelle und den entfernten Platzhalter ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Trainingsbereich auf Desktop und Mobil auf Bilddarstellung, Zuschnitt und Lesbarkeit visuell prüfen
+- [ ] Finalen Trainingsraumfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
