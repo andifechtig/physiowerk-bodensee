@@ -240,7 +240,7 @@
 - [x] Automatische Prüfung für die sechs Trainingsbildquellen und die entfernten Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Trainings-Bildstreifen auf Desktop und Mobil auf Bildzuordnung, Zuschnitt und horizontales Scrollverhalten visuell prüfen — auf Nutzerwunsch nach erfolgreichen automatisierten Prüfungen übersprungen
-- [ ] Finalen Trainings-Bildstreifen-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Trainings-Bildstreifen-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Platzhalter „Faszien“ auf der Trainingsseite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen — nach Nutzerklärung korrekt auf `/physiotherapie/` umgesetzt
 - [x] Platzhalter „Zitrone“ auf der Trainingsseite durch das bereitgestellte Zitrusfrucht-Bild ersetzen — nach Nutzerklärung korrekt auf `/physiotherapie/` umgesetzt
@@ -258,7 +258,7 @@
 - [x] Automatische Prüfung für die Kontaktbildquelle und den entfernten Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Kontaktbereich auf Desktop und Mobil auf Bilddarstellung, Zuschnitt und Lesbarkeit visuell prüfen
-- [ ] Finalen Kontaktfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Kontaktfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Platzhalter „Nachricht senden“ auf der Kontaktseite und bereitgestellte Briefkasten-Bildquelle prüfen
 - [x] Platzhalter im Bereich „Nachricht senden“ auf `/kontakt/` durch das Briefkasten-Foto ersetzen
