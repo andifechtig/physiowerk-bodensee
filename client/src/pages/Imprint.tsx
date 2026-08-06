@@ -3,11 +3,27 @@ import { PageHero } from "@/components/PageElements";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
+const IMPRINT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XrFqmLOCULpwHzPO.webp";
+
 export default function Imprint() {
   return (
     <>
       <Seo {...SEO.imprint} />
-      <PageHero title="Impressum" intro="Physiowerk Bodensee GmbH" media={<MediaPlaceholder width={800} height={441} filename="Fitness-Slides_0001_Person-entfernen.jpg" description="Trainingsfläche" dark />} />
+      <PageHero
+        title="Impressum"
+        intro="Physiowerk Bodensee GmbH"
+        media={
+          <img
+            className="imprint-hero-photo"
+            src={IMPRINT_HERO_IMAGE_URL}
+            alt="Außenansicht des Gebäudes vom Physiowerk Bodensee"
+            width="800"
+            height="441"
+            decoding="async"
+            fetchPriority="high"
+          />
+        }
+      />
       <article className="site-shell legal-page">
         <section>
           <p>Physiowerk Bodensee GmbH<br />Tettnanger Straße 14<br />88074 Meckenbeuren</p>

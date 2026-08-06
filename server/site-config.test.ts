@@ -153,7 +153,7 @@ describe("stable site routes", () => {
     expect(training).toContain('className="training-hero-photo"');
     expect(training).toContain('alt="Trainingsraum mit Kraftgeräten im Physiowerk Bodensee"');
     expect(training).not.toContain('filename="paar-trainiert-zusammen-im-fitnessstudio-2.jpg" description="Medizinisches Training" dark');
-    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
+    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo, .page-hero-media > .imprint-hero-photo, .page-hero-media > .privacy-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
   });
 
   it("uses the supplied reception-desk photo in the first contact hero placement", () => {
@@ -164,7 +164,7 @@ describe("stable site routes", () => {
     expect(contact).toContain('className="contact-hero-photo"');
     expect(contact).toContain('alt="Rezeptübergabe am Empfangstisch im Physiowerk Bodensee"');
     expect(contact).not.toContain('filename="Teamseite-Header-Physiowerk-Bodensee.jpg" description="Physiowerk Bodensee Team" dark');
-    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
+    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo, .page-hero-media > .imprint-hero-photo, .page-hero-media > .privacy-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
   });
 
   it("uses the supplied mailbox photo in the contact message placement", () => {
@@ -176,6 +176,24 @@ describe("stable site routes", () => {
     expect(contact).toContain('alt="Offener Briefkasten als Symbol für Ihre Nachricht an das Physiowerk Bodensee"');
     expect(contact).not.toContain('filename="Therapieansatz-Slides_0001_Physiowerk_Bodensee©patrickdunst-051-0371.jpg" description="Therapie am Seilzug"');
     expect(styles).toContain('.contact-message-photo { width: 100%; aspect-ratio: 800 / 539; display: block; object-fit: cover;');
+  });
+
+  it("uses the supplied exterior photo in the imprint hero", () => {
+    const imprint = readFileSync(new URL("../client/src/pages/Imprint.tsx", import.meta.url), "utf8");
+
+    expect(imprint).toContain('const IMPRINT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XrFqmLOCULpwHzPO.webp"');
+    expect(imprint).toContain('className="imprint-hero-photo"');
+    expect(imprint).toContain('alt="Außenansicht des Gebäudes vom Physiowerk Bodensee"');
+    expect(imprint).not.toContain('filename="Fitness-Slides_0001_Person-entfernen.jpg" description="Trainingsfläche" dark');
+  });
+
+  it("uses the supplied security-shield image in the privacy hero", () => {
+    const privacy = readFileSync(new URL("../client/src/pages/Privacy.tsx", import.meta.url), "utf8");
+
+    expect(privacy).toContain('const PRIVACY_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ghJaoCMtCZLrNjqV.jpg"');
+    expect(privacy).toContain('className="privacy-hero-photo"');
+    expect(privacy).toContain('alt="Digitales Sicherheits-Schild als Symbol für Datenschutz"');
+    expect(privacy).not.toContain('filename="physiowerk-eingang.jpg" description="Eingang des Physiowerk Bodensee" dark');
   });
 
   it("uses the supplied fascia and citrus images in the physiotherapy biomechanics section", () => {
@@ -247,7 +265,7 @@ describe("stable site routes", () => {
     expect(team).toContain('className="team-hero-photo"');
     expect(team).toContain('alt="Empfangsbereich des Physiowerk Bodensee in Meckenbeuren"');
     expect(team).not.toContain('description="Team und Praxis in Meckenbeuren"');
-    expect(styles).toContain(".page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover; object-position: 50% 50%;");
+    expect(styles).toContain(".page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo, .page-hero-media > .imprint-hero-photo, .page-hero-media > .privacy-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover; object-position: 50% 50%;");
   });
 
   it("keeps the TheraConnect downloads and QR asset exact", () => {

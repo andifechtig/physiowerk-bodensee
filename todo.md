@@ -264,3 +264,19 @@
 - [x] Platzhalter im Bereich „Nachricht senden“ auf `/kontakt/` durch das Briefkasten-Foto ersetzen
 - [x] Briefkasten-Foto mit zugänglichem Alternativtext und bestehendem responsiven Bildzuschnitt darstellen
 - [x] Automatische Prüfung für die Briefkasten-Bildquelle und den entfernten Platzhalter ergänzen
+
+- [x] Alle noch vorhandenen Bild-Platzhalter der Website nach Seite, Bezeichnung und erwarteten Bildmaßen vollständig inventarisieren
+- [x] Platzhalter-Inventur als übersichtliche Liste an den Nutzer übergeben
+
+- [x] Impressum-Hero-Platzhalter „Trainingsfläche“ und bereitgestellte Außenfoto-Bildquelle prüfen
+- [x] Platzhalter „Trainingsfläche“ auf `/impressum/` durch das Außenfoto des Physiowerk Bodensee ersetzen
+- [x] Außenfoto mit zugänglichem Alternativtext und bestehendem responsiven Hero-Zuschnitt darstellen
+- [x] Automatische Prüfung für die Impressum-Hero-Bildquelle und den entfernten Platzhalter ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Impressum-Hero auf Desktop und Mobil auf Bilddarstellung, Zuschnitt und Lesbarkeit visuell prüfen — gemeinsam mit dem Datenschutz-Hero geprüft
+- [ ] Finalen Impressum-Hero-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Datenschutz-Hero-Platzhalter „Eingang des Physiowerk Bodensee“ und bereitgestellte Sicherheits-Schild-Bildquelle prüfen
+- [x] Platzhalter auf `/datenschutzerklaerung/` durch das Sicherheits-Schild-Bild ersetzen
+- [x] Sicherheits-Schild-Bild mit zugänglichem Alternativtext und bestehendem responsiven Hero-Zuschnitt darstellen
+- [x] Automatische Prüfung für die Datenschutz-Hero-Bildquelle und den entfernten Platzhalter ergänzen

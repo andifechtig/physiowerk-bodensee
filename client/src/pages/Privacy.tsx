@@ -3,11 +3,27 @@ import { PageHero } from "@/components/PageElements";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
+const PRIVACY_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ghJaoCMtCZLrNjqV.jpg";
+
 export default function Privacy() {
   return (
     <>
       <Seo {...SEO.privacy} />
-      <PageHero title="Datenschutz" intro="Datenschutzerklärung" media={<MediaPlaceholder width={800} height={441} filename="physiowerk-eingang.jpg" description="Eingang des Physiowerk Bodensee" dark />} />
+      <PageHero
+        title="Datenschutz"
+        intro="Datenschutzerklärung"
+        media={
+          <img
+            className="privacy-hero-photo"
+            src={PRIVACY_HERO_IMAGE_URL}
+            alt="Digitales Sicherheits-Schild als Symbol für Datenschutz"
+            width="800"
+            height="441"
+            decoding="async"
+            fetchPriority="high"
+          />
+        }
+      />
       <article className="site-shell legal-page privacy-page">
         <section>
           <h2>1. Datenschutz auf einen Blick</h2>
