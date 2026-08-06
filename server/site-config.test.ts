@@ -153,7 +153,40 @@ describe("stable site routes", () => {
     expect(training).toContain('className="training-hero-photo"');
     expect(training).toContain('alt="Trainingsraum mit Kraftgeräten im Physiowerk Bodensee"');
     expect(training).not.toContain('filename="paar-trainiert-zusammen-im-fitnessstudio-2.jpg" description="Medizinisches Training" dark');
-    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
+    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
+  });
+
+  it("uses the supplied reception-desk photo in the first contact hero placement", () => {
+    const contact = readFileSync(new URL("../client/src/pages/Contact.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+
+    expect(contact).toContain('const CONTACT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/wGgICEiGwgJWmdPo.PNG"');
+    expect(contact).toContain('className="contact-hero-photo"');
+    expect(contact).toContain('alt="Rezeptübergabe am Empfangstisch im Physiowerk Bodensee"');
+    expect(contact).not.toContain('filename="Teamseite-Header-Physiowerk-Bodensee.jpg" description="Physiowerk Bodensee Team" dark');
+    expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
+  });
+
+  it("uses the supplied mailbox photo in the contact message placement", () => {
+    const contact = readFileSync(new URL("../client/src/pages/Contact.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+
+    expect(contact).toContain('const CONTACT_MESSAGE_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XqWXZETIrfFmZHjk.webp"');
+    expect(contact).toContain('className="contact-message-photo"');
+    expect(contact).toContain('alt="Offener Briefkasten als Symbol für Ihre Nachricht an das Physiowerk Bodensee"');
+    expect(contact).not.toContain('filename="Therapieansatz-Slides_0001_Physiowerk_Bodensee©patrickdunst-051-0371.jpg" description="Therapie am Seilzug"');
+    expect(styles).toContain('.contact-message-photo { width: 100%; aspect-ratio: 800 / 539; display: block; object-fit: cover;');
+  });
+
+  it("uses the supplied fascia and citrus images in the physiotherapy biomechanics section", () => {
+    const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
+
+    expect(physiotherapy).toContain('src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg"');
+    expect(physiotherapy).toContain('alt="Nahaufnahme einer Zitronenscheibe"');
+    expect(physiotherapy).toContain('src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg"');
+    expect(physiotherapy).toContain('alt="Anatomische Darstellung von Faszien im Querschnitt"');
+    expect(physiotherapy).not.toContain('filename="zitrone.jpg" description="Zitrone"');
+    expect(physiotherapy).not.toContain('filename="Faszien.jpg" description="Faszien"');
   });
 
   it("uses all six supplied images in the medical training media strip", () => {
@@ -214,7 +247,7 @@ describe("stable site routes", () => {
     expect(team).toContain('className="team-hero-photo"');
     expect(team).toContain('alt="Empfangsbereich des Physiowerk Bodensee in Meckenbeuren"');
     expect(team).not.toContain('description="Team und Praxis in Meckenbeuren"');
-    expect(styles).toContain(".page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover; object-position: 50% 50%;");
+    expect(styles).toContain(".page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover; object-position: 50% 50%;");
   });
 
   it("keeps the TheraConnect downloads and QR asset exact", () => {

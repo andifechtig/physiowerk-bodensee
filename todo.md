@@ -239,15 +239,28 @@
 - [x] Passende Alternativtexte für jedes der sechs Trainingsbilder ergänzen
 - [x] Automatische Prüfung für die sechs Trainingsbildquellen und die entfernten Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Trainings-Bildstreifen auf Desktop und Mobil auf Bildzuordnung, Zuschnitt und horizontales Scrollverhalten visuell prüfen
+- [x] Trainings-Bildstreifen auf Desktop und Mobil auf Bildzuordnung, Zuschnitt und horizontales Scrollverhalten visuell prüfen — auf Nutzerwunsch nach erfolgreichen automatisierten Prüfungen übersprungen
 - [ ] Finalen Trainings-Bildstreifen-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
-- [ ] Platzhalter „Faszien“ auf der Trainingsseite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen
-- [ ] Platzhalter „Zitrone“ auf der Trainingsseite durch das bereitgestellte Zitrusfrucht-Bild ersetzen
+- [x] Platzhalter „Faszien“ auf der Trainingsseite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen — nach Nutzerklärung korrekt auf `/physiotherapie/` umgesetzt
+- [x] Platzhalter „Zitrone“ auf der Trainingsseite durch das bereitgestellte Zitrusfrucht-Bild ersetzen — nach Nutzerklärung korrekt auf `/physiotherapie/` umgesetzt
 - [x] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
-- [ ] Automatische Prüfung für die beiden zusätzlichen Trainingsbildquellen und die entfernten Platzhalter ergänzen
+- [x] Automatische Prüfung für die beiden zusätzlichen Trainingsbildquellen und die entfernten Platzhalter ergänzen — nach Nutzerklärung als Physiotherapie-Bildquellen abgesichert
 
 - [x] Platzhalter „Faszien“ auf der Physiotherapie-Seite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen
 - [x] Platzhalter „Zitrone“ auf der Physiotherapie-Seite durch das bereitgestellte Zitrusfrucht-Bild ersetzen
 - [x] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
 - [x] Automatische Prüfung für die beiden zusätzlichen Physiotherapie-Bildquellen und die entfernten Platzhalter ergänzen
+
+- [x] Ersten Kontaktplatzhalter und bereitgestellte Rezeptübergabe-Bildquelle prüfen
+- [x] Ersten Platzhalter auf `/kontakt/` durch das Rezeptübergabe-Foto am Empfangstisch ersetzen
+- [x] Kontaktfoto mit zugänglichem Alternativtext und bestehendem responsiven Bildzuschnitt darstellen
+- [x] Automatische Prüfung für die Kontaktbildquelle und den entfernten Platzhalter ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Kontaktbereich auf Desktop und Mobil auf Bilddarstellung, Zuschnitt und Lesbarkeit visuell prüfen
+- [ ] Finalen Kontaktfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Platzhalter „Nachricht senden“ auf der Kontaktseite und bereitgestellte Briefkasten-Bildquelle prüfen
+- [x] Platzhalter im Bereich „Nachricht senden“ auf `/kontakt/` durch das Briefkasten-Foto ersetzen
+- [x] Briefkasten-Foto mit zugänglichem Alternativtext und bestehendem responsiven Bildzuschnitt darstellen
+- [x] Automatische Prüfung für die Briefkasten-Bildquelle und den entfernten Platzhalter ergänzen

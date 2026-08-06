@@ -6,6 +6,9 @@ import { PracticeMap } from "@/components/PracticeMap";
 import { Seo } from "@/components/Seo";
 import { CONTACT, OPENING_HOURS, SEO } from "@/site-config";
 
+const CONTACT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/wGgICEiGwgJWmdPo.PNG";
+const CONTACT_MESSAGE_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XqWXZETIrfFmZHjk.webp";
+
 export default function Contact() {
   return (
     <>
@@ -14,7 +17,17 @@ export default function Contact() {
         title={<>Wir sind für Dich da –<br />nimm Kontakt auf.</>}
         intro="Ob Termin, Frage oder Beratung – wir freuen uns, von Dir zu hören."
         booking
-        media={<MediaPlaceholder width={800} height={539} filename="Teamseite-Header-Physiowerk-Bodensee.jpg" description="Physiowerk Bodensee Team" dark />}
+        media={
+          <img
+            className="contact-hero-photo"
+            src={CONTACT_HERO_IMAGE_URL}
+            alt="Rezeptübergabe am Empfangstisch im Physiowerk Bodensee"
+            width="800"
+            height="539"
+            decoding="async"
+            fetchPriority="high"
+          />
+        }
       />
 
       <BookingSection />
@@ -26,7 +39,15 @@ export default function Contact() {
             <ContactForm />
           </div>
           <div>
-            <MediaPlaceholder width={800} height={539} filename="Therapieansatz-Slides_0001_Physiowerk_Bodensee©patrickdunst-051-0371.jpg" description="Therapie am Seilzug" />
+            <img
+              className="contact-message-photo"
+              src={CONTACT_MESSAGE_IMAGE_URL}
+              alt="Offener Briefkasten als Symbol für Ihre Nachricht an das Physiowerk Bodensee"
+              width="800"
+              height="539"
+              loading="lazy"
+              decoding="async"
+            />
             <div className="contact-detail-list">
               <a href={CONTACT.phoneHref}><Phone aria-hidden="true" /><span>{CONTACT.phoneLabel}</span></a>
               <a href={`mailto:${CONTACT.email}`}><Mail aria-hidden="true" /><span>{CONTACT.email}</span></a>
