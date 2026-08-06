@@ -244,10 +244,10 @@
 
 - [ ] Platzhalter „Faszien“ auf der Trainingsseite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen
 - [ ] Platzhalter „Zitrone“ auf der Trainingsseite durch das bereitgestellte Zitrusfrucht-Bild ersetzen
-- [ ] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
+- [x] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
 - [ ] Automatische Prüfung für die beiden zusätzlichen Trainingsbildquellen und die entfernten Platzhalter ergänzen
 
-- [ ] Platzhalter „Faszien“ auf der Physiotherapie-Seite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen
-- [ ] Platzhalter „Zitrone“ auf der Physiotherapie-Seite durch das bereitgestellte Zitrusfrucht-Bild ersetzen
-- [ ] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
-- [ ] Automatische Prüfung für die beiden zusätzlichen Physiotherapie-Bildquellen und die entfernten Platzhalter ergänzen
+- [x] Platzhalter „Faszien“ auf der Physiotherapie-Seite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen
+- [x] Platzhalter „Zitrone“ auf der Physiotherapie-Seite durch das bereitgestellte Zitrusfrucht-Bild ersetzen
+- [x] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
+- [x] Automatische Prüfung für die beiden zusätzlichen Physiotherapie-Bildquellen und die entfernten Platzhalter ergänzen

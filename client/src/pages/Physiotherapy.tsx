@@ -65,8 +65,24 @@ export default function Physiotherapy() {
             </blockquote>
           </div>
           <div className="biomechanics-media">
-            <MediaPlaceholder width={488} height={479} filename="zitrone.jpg" description="Zitrone" />
-            <MediaPlaceholder width={419} height={480} filename="Faszien.jpg" description="Faszien" />
+            <img
+              className="biomechanics-media-image"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg"
+              alt="Nahaufnahme einer Zitronenscheibe"
+              width="488"
+              height="479"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              className="biomechanics-media-image"
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg"
+              alt="Anatomische Darstellung von Faszien im Querschnitt"
+              width="419"
+              height="480"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>
