@@ -231,4 +231,4 @@
 - [x] Automatische Prüfung für die Trainingsraum-Bildquelle und den entfernten Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Trainingsbereich auf Desktop und Mobil auf Bilddarstellung, Zuschnitt und Lesbarkeit visuell prüfen
-- [ ] Finalen Trainingsraumfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Trainingsraumfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
