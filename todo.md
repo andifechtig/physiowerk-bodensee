@@ -274,7 +274,7 @@
 - [x] Automatische Prüfung für die Impressum-Hero-Bildquelle und den entfernten Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Impressum-Hero auf Desktop und Mobil auf Bilddarstellung, Zuschnitt und Lesbarkeit visuell prüfen — gemeinsam mit dem Datenschutz-Hero geprüft
-- [ ] Finalen Impressum-Hero-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Impressum-Hero-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Datenschutz-Hero-Platzhalter „Eingang des Physiowerk Bodensee“ und bereitgestellte Sicherheits-Schild-Bildquelle prüfen
 - [x] Platzhalter auf `/datenschutzerklaerung/` durch das Sicherheits-Schild-Bild ersetzen
