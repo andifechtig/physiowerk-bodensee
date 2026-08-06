@@ -156,6 +156,26 @@ describe("stable site routes", () => {
     expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
   });
 
+  it("uses all six supplied images in the medical training media strip", () => {
+    const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+    const mediaUrls = [
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/UzDHxMoJusXefqjq.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/jGeWTBVLCnPOjJRZ.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/EnImqxDUZmssYGSm.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/RgpHEMAJBiaCmWIE.webp",
+    ];
+
+    mediaUrls.forEach(url => expect(training).toContain(url));
+    expect(training).toContain('className="training-media-image"');
+    expect(training).toContain('style={{ objectPosition: image.objectPosition }}');
+    expect(training).not.toContain('Fitness-Slides_0005_Physiowerk_Bodensee©patrickdunst-062-0389.jpg');
+    expect(training).not.toContain('Fitness-Slides_0000_2U5A4023.jpg');
+    expect(styles).toContain('.training-media-image { width: 100%; aspect-ratio: 800 / 441; display: block; object-fit: cover;');
+  });
+
   it("keeps team portraits square, face-oriented and their names readable", () => {
     const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");

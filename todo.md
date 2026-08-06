@@ -232,3 +232,22 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Trainingsbereich auf Desktop und Mobil auf Bilddarstellung, Zuschnitt und Lesbarkeit visuell prüfen
 - [x] Finalen Trainingsraumfoto-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Alle sechs bereitgestellten Trainingsbilder auf Erreichbarkeit und passende Zuordnung zum Bildstreifen prüfen
+- [x] Bestehenden sechsstelligen Bildstreifen im Abschnitt „Was ist medizinisches Training?“ mit den bereitgestellten Bildern ersetzen
+- [x] Panorama, Hochformate und Querformate mit konsistentem responsiven Zuschnitt im bestehenden Bildstreifen darstellen
+- [x] Passende Alternativtexte für jedes der sechs Trainingsbilder ergänzen
+- [x] Automatische Prüfung für die sechs Trainingsbildquellen und die entfernten Platzhalter ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Trainings-Bildstreifen auf Desktop und Mobil auf Bildzuordnung, Zuschnitt und horizontales Scrollverhalten visuell prüfen
+- [ ] Finalen Trainings-Bildstreifen-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [ ] Platzhalter „Faszien“ auf der Trainingsseite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen
+- [ ] Platzhalter „Zitrone“ auf der Trainingsseite durch das bereitgestellte Zitrusfrucht-Bild ersetzen
+- [ ] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
+- [ ] Automatische Prüfung für die beiden zusätzlichen Trainingsbildquellen und die entfernten Platzhalter ergänzen
+
+- [ ] Platzhalter „Faszien“ auf der Physiotherapie-Seite durch die bereitgestellte anatomische Faszien-Darstellung ersetzen
+- [ ] Platzhalter „Zitrone“ auf der Physiotherapie-Seite durch das bereitgestellte Zitrusfrucht-Bild ersetzen
+- [ ] Faszien- und Zitrone-Bildquellen mit passenden Alternativtexten und bestehendem responsiven Bildzuschnitt darstellen
+- [ ] Automatische Prüfung für die beiden zusätzlichen Physiotherapie-Bildquellen und die entfernten Platzhalter ergänzen

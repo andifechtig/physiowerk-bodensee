@@ -7,12 +7,36 @@ import { SEO } from "@/site-config";
 const TRAINING_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XeGaePDfCrPpepHM.webp";
 
 const trainingImages = [
-  "paar-trainiert-zusammen-im-fitnessstudio-2.jpg",
-  "Fitness-Slides_0005_Physiowerk_Bodensee©patrickdunst-062-0389.jpg",
-  "Fitness-Slides_0004_Physiowerk_Bodensee©patrickdunst-105-0201.jpg",
-  "Fitness-Slides_0003_Physiowerk_Bodensee©patrickdunst-131-0272.jpg",
-  "Fitness-Slides_0002_Physiowerk_Bodensee©patrickdunst-132-0274.jpg",
-  "Fitness-Slides_0000_2U5A4023.jpg",
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/UzDHxMoJusXefqjq.webp",
+    alt: "Panorama des Trainingsraums mit Kletterwand und Trainingsgeräten",
+    objectPosition: "50% 50%",
+  },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/jGeWTBVLCnPOjJRZ.webp",
+    alt: "Andreas mit Trainingsstange vor der Kletterwand",
+    objectPosition: "50% 30%",
+  },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/EnImqxDUZmssYGSm.webp",
+    alt: "Keiser Bike in Nahaufnahme",
+    objectPosition: "50% 50%",
+  },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
+    alt: "Keiser Bikes und Trainingsgeräte im medizinischen Trainingsraum",
+    objectPosition: "50% 50%",
+  },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
+    alt: "Therapie-Szene am Seilzug mit Patientin und Therapeut",
+    objectPosition: "50% 45%",
+  },
+  {
+    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/RgpHEMAJBiaCmWIE.webp",
+    alt: "Therapeut korrigiert eine Übung an Seilzug und Sprossenwand",
+    objectPosition: "50% 35%",
+  },
 ] as const;
 
 const advantages = ["Reduziert Rückenschmerzen", "Unterstützt den Heilungsprozess", "Stärkt Gelenke & Muskulatur", "Verbessert Alltagsbewegungen"] as const;
@@ -90,8 +114,18 @@ export default function Training() {
             intro="Unter physiotherapeutischer Betreuung trainierst Du gezielt Deine Schwachstellen, verbesserst Haltung, Koordination und Kraft."
           />
           <div className="media-strip media-strip-six">
-            {trainingImages.map(filename => (
-              <MediaPlaceholder key={filename} filename={filename} width={800} height={441} description="Medizinisches Training und Fitness" />
+            {trainingImages.map(image => (
+              <img
+                className="training-media-image"
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                style={{ objectPosition: image.objectPosition }}
+                width="800"
+                height="441"
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </div>
         </div>

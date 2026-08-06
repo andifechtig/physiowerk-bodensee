@@ -164,6 +164,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .media-strip { display: grid; grid-template-columns: repeat(5, minmax(270px, 1fr)); gap: 1rem; overflow-x: auto; padding: .5rem 0 1.5rem; scroll-snap-type: x mandatory; }
 .media-strip-six { grid-template-columns: repeat(6, minmax(270px, 1fr)); }
 .media-strip .media-placeholder { min-height: 0; border-radius: 2rem; scroll-snap-align: start; }
+.training-media-image { width: 100%; aspect-ratio: 800 / 441; display: block; object-fit: cover; border-radius: 2rem; background: var(--paper-soft); scroll-snap-align: start; }
 .biomechanics-grid blockquote { margin: 0; padding: 2rem 0 0; border-top: 2px solid var(--brand); color: var(--ink); font-size: clamp(1.2rem, 2vw, 1.7rem); line-height: 1.35; }
 .biomechanics-grid cite { display: block; margin-top: 1rem; color: var(--muted); font-size: .85rem; font-style: normal; }
 .biomechanics-media { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 1rem; }
