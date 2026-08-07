@@ -53,12 +53,15 @@ describe("stable site routes", () => {
     );
   });
 
-  it("keeps the established social profiles and renders highlighted brand icons in the footer", () => {
+  it("uses the supplied Instagram profile and renders highlighted brand icons in the footer", () => {
     const siteLayout = readFileSync(new URL("../client/src/components/SiteLayout.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
     expect(SOCIAL_LINKS).toEqual([
-      { label: "Instagram", href: "https://www.instagram.com/andi_physiowerk/" },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/andi_biomechanix?igsh=MW53MnhjeGNwN2t6Mg==",
+      },
       { label: "Facebook", href: "https://www.facebook.com/deinbiomechaniker/" },
     ]);
     expect(siteLayout).toContain('Facebook, Instagram');
@@ -242,8 +245,9 @@ describe("stable site routes", () => {
     expect(physiotherapy).toContain('alt="Anatomische Darstellung von Faszien im Querschnitt"');
     expect(physiotherapy).not.toContain('/manus-storage/zitrone-freigestellt_f38caacb.png');
     expect(physiotherapy).not.toContain('/manus-storage/faszien-freigestellt_e32c873c.png');
-    expect(styles).toContain('.biomechanics-original-media { width: min(100%, 430px); aspect-ratio: 1; display: grid; place-items: center; justify-self: center; }');
-    expect(styles).toContain('.biomechanics-original-image { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain; border-radius: 0; background: transparent; }');
+    expect((physiotherapy.match(/className="biomechanics-original-media"/g) ?? [])).toHaveLength(2);
+    expect(styles).toContain('.biomechanics-original-media { width: min(100%, 430px); aspect-ratio: 1; display: grid; place-items: center; justify-self: center; overflow: hidden; }');
+    expect(styles).toContain('.biomechanics-original-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; border-radius: 0; background: transparent; }');
     expect(physiotherapy).not.toContain('filename="zitrone.jpg" description="Zitrone"');
     expect(physiotherapy).not.toContain('filename="Faszien.jpg" description="Faszien"');
   });

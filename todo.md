@@ -312,8 +312,8 @@
 - [x] Karussell mit zugänglichen Alternativtexten und manuellen Vor-/Zurück-Steuerelementen ausstatten
 - [x] Automatische Prüfung für Hero-Bildquelle, fünf Karussellbilder und entfernte Platzhalter ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
-- [ ] Hero und Karussell auf Desktop und Mobil auf Bildwechsel, Lesbarkeit und Interaktion visuell prüfen
-- [ ] Finalen Physiotherapie-Karussell-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Hero und Karussell auf Desktop und Mobil auf Bildwechsel, Lesbarkeit und Interaktion visuell prüfen — auf Nutzerwunsch nach erfolgreichen automatisierten Prüfungen übersprungen
+- [x] Finalen Physiotherapie-Karussell-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Zitrone und Faszien in exakt identischen Containerdimensionen anhand der aktuellen Faszien-Größe darstellen
 - [x] Automatische Prüfung für gleiche Biomechanik-Containergrößen ergänzen
@@ -333,3 +333,9 @@
 - [x] Korrigierte Biomechanik-Bilder auf Desktop und Mobil visuell prüfen
 - [x] Finalen Biomechanik-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 - [x] Automatische Prüfung für die Datenschutz-Hero-Bildquelle und den entfernten Platzhalter ergänzen
+
+- [x] Instagram-Link im Footer auf das bereitgestellte Konto `andi_biomechanix` aktualisieren
+- [x] Automatische Prüfung für die neue Instagram-Zieladresse im zentralen Footer-Link ergänzen
+- [ ] Aktualisierten Footer-Link testen, Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Zitrone und Faszien auf `/physiotherapie/` mit identischen CSS-Containerwerten für Breite und Höhe darstellen
+- [x] Automatische Prüfung ergänzen, dass beide Biomechanik-Motive dieselbe Containerklasse und damit dieselben Maße verwenden
