@@ -69,7 +69,7 @@ export default function Physiotherapy() {
           </div>
           <div className="biomechanics-media">
             <div className="biomechanics-original-media">
-              <img className="biomechanics-original-image" src={BIOMECHANICS_MEDIA.citrus} alt="Zitronenscheibe" width="488" height="479" loading="lazy" decoding="async" />
+              <img className="biomechanics-original-image biomechanics-citrus-image" src={BIOMECHANICS_MEDIA.citrus} alt="Zitronenscheibe" width="488" height="479" loading="lazy" decoding="async" />
             </div>
             <div className="biomechanics-original-media">
               <img className="biomechanics-original-image" src={BIOMECHANICS_MEDIA.fascia} alt="Anatomische Darstellung von Faszien im Querschnitt" width="419" height="480" loading="lazy" decoding="async" />

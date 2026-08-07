@@ -336,6 +336,11 @@
 
 - [x] Instagram-Link im Footer auf das bereitgestellte Konto `andi_biomechanix` aktualisieren
 - [x] Automatische Prüfung für die neue Instagram-Zieladresse im zentralen Footer-Link ergänzen
-- [ ] Aktualisierten Footer-Link testen, Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Aktualisierten Footer-Link testen, Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 - [x] Zitrone und Faszien auf `/physiotherapie/` mit identischen CSS-Containerwerten für Breite und Höhe darstellen
 - [x] Automatische Prüfung ergänzen, dass beide Biomechanik-Motive dieselbe Containerklasse und damit dieselben Maße verwenden
+
+- [x] Faszien-Bild auf `/physiotherapie/` mit unveränderter Containergröße und `object-fit: contain` vollständig ohne Beschnitt darstellen
+- [x] Zitronen-Bild auf `/physiotherapie/` mit `object-fit: contain` vollständig und um etwa 25 % größer darstellen
+- [x] Automatische Prüfung für fehlendes `object-fit: cover`, vollständige Faszien-Sichtbarkeit und die vergrößerte Zitrone ergänzen
+- [ ] Korrigierte Biomechanik-Bilder testen, Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
