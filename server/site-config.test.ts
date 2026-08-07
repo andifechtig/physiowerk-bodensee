@@ -202,11 +202,13 @@ describe("stable site routes", () => {
 
     expect(physiotherapy).toContain('citrus: "/manus-storage/zitrone-freigestellt_f38caacb.png"');
     expect(physiotherapy).toContain('fascia: "/manus-storage/faszien-freigestellt_e32c873c.png"');
-    expect(physiotherapy).toContain('className="biomechanics-media-image biomechanics-media-image-citrus"');
-    expect(physiotherapy).toContain('className="biomechanics-media-image biomechanics-media-image-fascia"');
+    expect(physiotherapy).toContain('className="biomechanics-media-motif biomechanics-media-motif-citrus"');
+    expect(physiotherapy).toContain('className="biomechanics-media-motif biomechanics-media-motif-fascia"');
+    expect(physiotherapy).toContain('className="biomechanics-media-image"');
     expect(physiotherapy).toContain('alt="Freigestellte Zitronenscheibe"');
     expect(physiotherapy).toContain('alt="Freigestellte anatomische Darstellung von Faszien im Querschnitt"');
-    expect(styles).toContain('.biomechanics-media-image { width: 100%; aspect-ratio: 1; display: block; object-fit: contain;');
+    expect(styles).toContain('.biomechanics-media-motif { width: min(100%, 430px); justify-self: center; aspect-ratio: 1; overflow: hidden; border-radius: 50%; background: transparent; }');
+    expect(styles).toContain('.biomechanics-media-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; transform: scale(1.24);');
     expect(physiotherapy).not.toContain('filename="zitrone.jpg" description="Zitrone"');
     expect(physiotherapy).not.toContain('filename="Faszien.jpg" description="Faszien"');
   });

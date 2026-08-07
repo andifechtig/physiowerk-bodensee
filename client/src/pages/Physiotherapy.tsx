@@ -70,24 +70,28 @@ export default function Physiotherapy() {
             </blockquote>
           </div>
           <div className="biomechanics-media">
-            <img
-              className="biomechanics-media-image biomechanics-media-image-citrus"
-              src={BIOMECHANICS_MEDIA.citrus}
-              alt="Freigestellte Zitronenscheibe"
-              width="1920"
-              height="1920"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              className="biomechanics-media-image biomechanics-media-image-fascia"
-              src={BIOMECHANICS_MEDIA.fascia}
-              alt="Freigestellte anatomische Darstellung von Faszien im Querschnitt"
-              width="1920"
-              height="1920"
-              loading="lazy"
-              decoding="async"
-            />
+            <div className="biomechanics-media-motif biomechanics-media-motif-citrus">
+              <img
+                className="biomechanics-media-image"
+                src={BIOMECHANICS_MEDIA.citrus}
+                alt="Freigestellte Zitronenscheibe"
+                width="1920"
+                height="1920"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="biomechanics-media-motif biomechanics-media-motif-fascia">
+              <img
+                className="biomechanics-media-image"
+                src={BIOMECHANICS_MEDIA.fascia}
+                alt="Freigestellte anatomische Darstellung von Faszien im Querschnitt"
+                width="1920"
+                height="1920"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
         </div>
       </section>

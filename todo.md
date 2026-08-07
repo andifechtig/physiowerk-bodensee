@@ -291,4 +291,12 @@
 - [x] Alle drei Herz-Bildcontainer auf Team- und Startseite auf weiße Ränder und unvollständige rote Flächen prüfen
 - [x] Herz-Bild in „Du?“-Box, Startseiten-Karrierebereich und Team-Karrierebereich randlos sowie containerfüllend rot darstellen
 - [x] Automatische Prüfung für den vollständig gefüllten Herz-Bildzuschnitt und die drei Einsatzstellen ergänzen
+
+- [x] Platzhalter- bzw. Schachbretthintergrund hinter den freigestellten Zitrone- und Faszienbildern im Biomechanik-Bereich entfernen
+- [x] Freigestellte Zitrone und Faszien als normale, rahmenlose `img`-Elemente ohne Platzhalterdarstellung einsetzen
+- [x] Beide Biomechanik-Motive vergrößern und für Desktop sowie Mobil harmonisch ausrichten
+- [x] Automatische Prüfung für fehlende Platzhalter-Klassen und die größere Bilddarstellung ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Korrigierte Biomechanik-Bilder auf Desktop und Mobil visuell prüfen
+- [ ] Finalen Biomechanik-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 - [x] Automatische Prüfung für die Datenschutz-Hero-Bildquelle und den entfernten Platzhalter ergänzen
