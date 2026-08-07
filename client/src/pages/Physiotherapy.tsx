@@ -13,8 +13,8 @@ const therapyImages = [
 ] as const;
 
 const BIOMECHANICS_MEDIA = {
-  citrus: "/manus-storage/zitrone-freigestellt_f38caacb.png",
-  fascia: "/manus-storage/faszien-freigestellt_e32c873c.png",
+  citrus: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg",
+  fascia: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg",
 } as const;
 
 const services = [
@@ -70,28 +70,24 @@ export default function Physiotherapy() {
             </blockquote>
           </div>
           <div className="biomechanics-media">
-            <div className="biomechanics-media-motif biomechanics-media-motif-citrus">
-              <img
-                className="biomechanics-media-image"
-                src={BIOMECHANICS_MEDIA.citrus}
-                alt="Freigestellte Zitronenscheibe"
-                width="1920"
-                height="1920"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="biomechanics-media-motif biomechanics-media-motif-fascia">
-              <img
-                className="biomechanics-media-image"
-                src={BIOMECHANICS_MEDIA.fascia}
-                alt="Freigestellte anatomische Darstellung von Faszien im Querschnitt"
-                width="1920"
-                height="1920"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+            <img
+              className="biomechanics-original-image biomechanics-original-image-citrus"
+              src={BIOMECHANICS_MEDIA.citrus}
+              alt="Zitronenscheibe"
+              width="488"
+              height="479"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              className="biomechanics-original-image biomechanics-original-image-fascia"
+              src={BIOMECHANICS_MEDIA.fascia}
+              alt="Anatomische Darstellung von Faszien im Querschnitt"
+              width="419"
+              height="480"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>

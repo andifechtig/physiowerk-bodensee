@@ -296,6 +296,14 @@
 - [x] Freigestellte Zitrone und Faszien als normale, rahmenlose `img`-Elemente ohne Platzhalterdarstellung einsetzen
 - [x] Beide Biomechanik-Motive vergrößern und für Desktop sowie Mobil harmonisch ausrichten
 - [x] Automatische Prüfung für fehlende Platzhalter-Klassen und die größere Bilddarstellung ergänzen
+
+- [x] Freigestellte Asset-Quellen und alle kreisförmigen Zuschnittsregeln für Zitrone und Faszien entfernen
+- [x] Originaldateien für Zitrone und Faszien direkt ohne Kreisbeschnitt einsetzen
+- [x] Vollständiges Faszienmotiv und natürliche Zitronenform mit angemessener Größe im hellen Biomechanik-Bereich darstellen
+- [x] Automatische Prüfung für Originalbildquellen, fehlenden Kreisbeschnitt und vollständiges Faszienmotiv ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Originalbilder im Biomechanik-Bereich auf Desktop und Mobil visuell prüfen
+- [ ] Finalen Originalbild-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Korrigierte Biomechanik-Bilder auf Desktop und Mobil visuell prüfen
 - [x] Finalen Biomechanik-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

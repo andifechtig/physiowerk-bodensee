@@ -196,19 +196,19 @@ describe("stable site routes", () => {
     expect(privacy).not.toContain('filename="physiowerk-eingang.jpg" description="Eingang des Physiowerk Bodensee" dark');
   });
 
-  it("uses freigestellte fascia and citrus images in the physiotherapy biomechanics section", () => {
+  it("uses complete original fascia and citrus images in the physiotherapy biomechanics section", () => {
     const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(physiotherapy).toContain('citrus: "/manus-storage/zitrone-freigestellt_f38caacb.png"');
-    expect(physiotherapy).toContain('fascia: "/manus-storage/faszien-freigestellt_e32c873c.png"');
-    expect(physiotherapy).toContain('className="biomechanics-media-motif biomechanics-media-motif-citrus"');
-    expect(physiotherapy).toContain('className="biomechanics-media-motif biomechanics-media-motif-fascia"');
-    expect(physiotherapy).toContain('className="biomechanics-media-image"');
-    expect(physiotherapy).toContain('alt="Freigestellte Zitronenscheibe"');
-    expect(physiotherapy).toContain('alt="Freigestellte anatomische Darstellung von Faszien im Querschnitt"');
-    expect(styles).toContain('.biomechanics-media-motif { width: min(100%, 430px); justify-self: center; aspect-ratio: 1; overflow: hidden; border-radius: 50%; background: transparent; }');
-    expect(styles).toContain('.biomechanics-media-image { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; transform: scale(1.24);');
+    expect(physiotherapy).toContain('citrus: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg"');
+    expect(physiotherapy).toContain('fascia: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg"');
+    expect(physiotherapy).toContain('className="biomechanics-original-image biomechanics-original-image-citrus"');
+    expect(physiotherapy).toContain('className="biomechanics-original-image biomechanics-original-image-fascia"');
+    expect(physiotherapy).toContain('alt="Zitronenscheibe"');
+    expect(physiotherapy).toContain('alt="Anatomische Darstellung von Faszien im Querschnitt"');
+    expect(physiotherapy).not.toContain('/manus-storage/zitrone-freigestellt_f38caacb.png');
+    expect(physiotherapy).not.toContain('/manus-storage/faszien-freigestellt_e32c873c.png');
+    expect(styles).toContain('.biomechanics-original-image { width: 100%; max-width: 430px; height: auto; display: block; justify-self: center; object-fit: contain; border-radius: 0; background: transparent; }');
     expect(physiotherapy).not.toContain('filename="zitrone.jpg" description="Zitrone"');
     expect(physiotherapy).not.toContain('filename="Faszien.jpg" description="Faszien"');
   });
