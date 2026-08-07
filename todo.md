@@ -303,7 +303,7 @@
 - [x] Automatische Prüfung für Originalbildquellen, fehlenden Kreisbeschnitt und vollständiges Faszienmotiv ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Originalbilder im Biomechanik-Bereich auf Desktop und Mobil visuell prüfen
-- [ ] Finalen Originalbild-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Originalbild-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Korrigierte Biomechanik-Bilder auf Desktop und Mobil visuell prüfen
 - [x] Finalen Biomechanik-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
