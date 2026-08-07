@@ -79,7 +79,7 @@ describe("stable site routes", () => {
     expect(home).toContain('className="career-banner-heart"');
     expect(home).toContain('alt="Rotes Herz als Symbol für Karriere im Physiowerk Bodensee"');
     expect(home).not.toContain('filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark');
-    expect(styles).toContain('.career-banner-heart, .team-career-heart { width: 100%; max-width: 500px; justify-self: end; display: block; aspect-ratio: 1; object-fit: cover; object-position: center;');
+    expect(styles).toContain('.career-banner-heart, .team-career-heart, .career-team-heart { width: 100%; max-width: 500px; justify-self: end; display: block; aspect-ratio: 1; object-fit: cover; object-position: center;');
   });
 
   it("uses all six supplied media sources in their corresponding home-page placements", () => {
@@ -156,6 +156,40 @@ describe("stable site routes", () => {
     expect(styles).toContain('.page-hero-media > .team-hero-photo, .page-hero-media > .training-hero-photo, .page-hero-media > .contact-hero-photo, .page-hero-media > .imprint-hero-photo, .page-hero-media > .privacy-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 800 / 534; object-fit: cover;');
   });
 
+  it("uses the supplied manual therapy hero and five-image carousel in physiotherapy", () => {
+    const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+    const carouselUrls = [
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/aSNziaOgvcZJGxOH.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mbKyRwtlOANsaJAN.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mRiGoOlvsOqmywSR.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/LvZMfNGauYHNvPpc.webp",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ZKXgJjLSkzRbLOPG.webp",
+    ];
+
+    expect(physiotherapy).toContain('const PHYSIOTHERAPY_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/GkQILUktqlJZyduB.webp"');
+    expect(physiotherapy).toContain('className="physiotherapy-hero-photo"');
+    expect(physiotherapy).toContain('alt="Manuelle Nackenbehandlung im Physiowerk Bodensee"');
+    expect(physiotherapy).toContain('images={therapyImages} label="Bilder unseres Therapieansatzes"');
+    carouselUrls.forEach(url => expect(physiotherapy).toContain(url));
+    expect(physiotherapy).not.toContain("Therapieansatz-Slides_0000_2U5A2992.jpg");
+    expect(styles).toContain('.page-hero-media > .physiotherapy-hero-photo, .page-hero-media > .career-hero-photo { width: 100%; min-height: 220px;');
+    expect(styles).toContain('.treatment-carousel-image { width: 100%; height: clamp(19rem, 35vw, 34rem); display: block; object-fit: cover;');
+  });
+
+  it("uses supplied career hero and the full-bleed heart image in the career opportunity", () => {
+    const career = readFileSync(new URL("../client/src/pages/Career.tsx", import.meta.url), "utf8");
+
+    expect(career).toContain('const CAREER_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/BjmnaxpzwbfZKOwc.webp"');
+    expect(career).toContain('className="career-hero-photo"');
+    expect(career).toContain('alt="Andreas beim Training mit einer Patientin am Seilzug"');
+    expect(career).toContain('const CAREER_HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png"');
+    expect(career).toContain('className="career-team-heart"');
+    expect(career).toContain('alt="Rotes Herz als Symbol für eine Karriere im Physiowerk Bodensee"');
+    expect(career).not.toContain('filename="Physiowerk_Bodensee©patrickdunst-042-0349.jpg"');
+    expect(career).not.toContain('filename="Karriere-Bodensee-Jobs-Physiotherapeut.jpg"');
+  });
+
   it("uses the supplied reception-desk photo in the first contact hero placement", () => {
     const contact = readFileSync(new URL("../client/src/pages/Contact.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
@@ -202,13 +236,14 @@ describe("stable site routes", () => {
 
     expect(physiotherapy).toContain('citrus: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg"');
     expect(physiotherapy).toContain('fascia: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg"');
-    expect(physiotherapy).toContain('className="biomechanics-original-image biomechanics-original-image-citrus"');
-    expect(physiotherapy).toContain('className="biomechanics-original-image biomechanics-original-image-fascia"');
+    expect(physiotherapy).toContain('className="biomechanics-original-media"');
+    expect(physiotherapy).toContain('className="biomechanics-original-image"');
     expect(physiotherapy).toContain('alt="Zitronenscheibe"');
     expect(physiotherapy).toContain('alt="Anatomische Darstellung von Faszien im Querschnitt"');
     expect(physiotherapy).not.toContain('/manus-storage/zitrone-freigestellt_f38caacb.png');
     expect(physiotherapy).not.toContain('/manus-storage/faszien-freigestellt_e32c873c.png');
-    expect(styles).toContain('.biomechanics-original-image { width: 100%; max-width: 430px; height: auto; display: block; justify-self: center; object-fit: contain; border-radius: 0; background: transparent; }');
+    expect(styles).toContain('.biomechanics-original-media { width: min(100%, 430px); aspect-ratio: 1; display: grid; place-items: center; justify-self: center; }');
+    expect(styles).toContain('.biomechanics-original-image { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain; border-radius: 0; background: transparent; }');
     expect(physiotherapy).not.toContain('filename="zitrone.jpg" description="Zitrone"');
     expect(physiotherapy).not.toContain('filename="Faszien.jpg" description="Faszien"');
   });
@@ -223,11 +258,11 @@ describe("stable site routes", () => {
     expect(team).toContain(`const HEART_IMAGE_URL = "${heartAsset}"`);
     expect(team).toContain('className="team-card-photo team-card-photo-heart" src={HEART_IMAGE_URL}');
     expect(team).toContain('className="team-career-heart" src={HEART_IMAGE_URL}');
-    expect(styles).toContain('.career-banner-heart, .team-career-heart { width: 100%; max-width: 500px;');
+    expect(styles).toContain('.career-banner-heart, .team-career-heart, .career-team-heart { width: 100%; max-width: 500px;');
     expect(styles).toContain('.team-card-open .team-card-media { background: var(--brand); }');
   });
 
-  it("uses all six supplied images in the medical training media strip", () => {
+  it("uses all six supplied images in the medical training carousel", () => {
     const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
     const mediaUrls = [
@@ -240,11 +275,11 @@ describe("stable site routes", () => {
     ];
 
     mediaUrls.forEach(url => expect(training).toContain(url));
-    expect(training).toContain('className="training-media-image"');
-    expect(training).toContain('style={{ objectPosition: image.objectPosition }}');
+    expect(training).toContain('images={trainingImages} label="Bilder aus dem medizinischen Training"');
+    expect(training).toContain('TreatmentImageCarousel');
     expect(training).not.toContain('Fitness-Slides_0005_Physiowerk_Bodensee©patrickdunst-062-0389.jpg');
     expect(training).not.toContain('Fitness-Slides_0000_2U5A4023.jpg');
-    expect(styles).toContain('.training-media-image { width: 100%; aspect-ratio: 800 / 441; display: block; object-fit: cover;');
+    expect(styles).toContain('.treatment-carousel-dots button.is-active { width: 2rem; background: var(--brand); }');
   });
 
   it("keeps team portraits square, face-oriented and their names readable", () => {

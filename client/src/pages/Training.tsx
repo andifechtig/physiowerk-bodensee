@@ -1,6 +1,6 @@
 import { BadgeCheck, Check, Dumbbell } from "lucide-react";
 import { ContactCta, PageHero, SectionHeading } from "@/components/PageElements";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { TreatmentImageCarousel } from "@/components/TreatmentImageCarousel";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
@@ -113,21 +113,7 @@ export default function Training() {
             title="Unser medizinisches Training schließt die Lücke zwischen Therapie und Fitness."
             intro="Unter physiotherapeutischer Betreuung trainierst Du gezielt Deine Schwachstellen, verbesserst Haltung, Koordination und Kraft."
           />
-          <div className="media-strip media-strip-six">
-            {trainingImages.map(image => (
-              <img
-                className="training-media-image"
-                key={image.src}
-                src={image.src}
-                alt={image.alt}
-                style={{ objectPosition: image.objectPosition }}
-                width="800"
-                height="441"
-                loading="lazy"
-                decoding="async"
-              />
-            ))}
-          </div>
+          <TreatmentImageCarousel images={trainingImages} label="Bilder aus dem medizinischen Training" />
         </div>
       </section>
 

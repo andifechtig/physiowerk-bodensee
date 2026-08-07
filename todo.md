@@ -304,6 +304,31 @@
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Originalbilder im Biomechanik-Bereich auf Desktop und Mobil visuell prüfen
 - [x] Finalen Originalbild-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Nackenbehandlungsfoto und alle fünf Karussell-Bildquellen auf Erreichbarkeit sowie passende Zuordnung prüfen
+- [x] Physiotherapie-Hero durch das Foto der manuellen Nackenbehandlung ersetzen
+- [x] Verbleibende Therapieansatz-Platzhalter durch ein automatisches Karussell mit fünf bereitgestellten Bildern ersetzen
+- [x] Sanfte Übergänge, sichtbare Statuspunkte und reduzierte Bewegungen für das Therapieansatz-Karussell umsetzen
+- [x] Karussell mit zugänglichen Alternativtexten und manuellen Vor-/Zurück-Steuerelementen ausstatten
+- [x] Automatische Prüfung für Hero-Bildquelle, fünf Karussellbilder und entfernte Platzhalter ergänzen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [ ] Hero und Karussell auf Desktop und Mobil auf Bildwechsel, Lesbarkeit und Interaktion visuell prüfen
+- [ ] Finalen Physiotherapie-Karussell-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Zitrone und Faszien in exakt identischen Containerdimensionen anhand der aktuellen Faszien-Größe darstellen
+- [x] Automatische Prüfung für gleiche Biomechanik-Containergrößen ergänzen
+
+- [x] Bilderreihe „Was ist medizinisches Training?“ in der bestehenden Trainingsseite durch ein automatisches Karussell im Physiotherapie-Stil ersetzen
+- [x] Bestehende Trainingsbilder, sanfte Übergänge, Statuspunkte und manuelle Steuerelemente im Trainings-Karussell beibehalten beziehungsweise ergänzen
+- [x] Automatische Prüfung für Trainings-Karussell, Bildquellen und entfernte Bilderreihe ergänzen
+
+- [x] Karriere-Hero-Platzhalter und bereitgestellte Seilzug-Bildquelle prüfen
+- [x] Platzhalter „Karriere beim Physiowerk Bodensee“ auf `/karriere/` durch das bereitgestellte Seilzugfoto ersetzen
+- [x] Karriere-Hero-Foto mit zugänglichem Alternativtext und bestehendem responsiven Hero-Zuschnitt darstellen
+- [x] Automatische Prüfung für die Karriere-Hero-Bildquelle und den entfernten Platzhalter ergänzen
+
+- [x] Platzhalter „Teamfoto Karriere“ durch die vollflächig rote Herz-Variante ohne weißen Rand ersetzen
+- [x] Automatische Prüfung für die vollflächig rote Herzdarstellung im Karriere-Teamfoto ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Korrigierte Biomechanik-Bilder auf Desktop und Mobil visuell prüfen
 - [x] Finalen Biomechanik-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen

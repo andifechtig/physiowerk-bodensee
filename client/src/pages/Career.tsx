@@ -1,8 +1,10 @@
 import { Check } from "lucide-react";
 import { ArrowLink, PageHero, SectionHeading } from "@/components/PageElements";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Seo } from "@/components/Seo";
 import { CONTACT, SEO } from "@/site-config";
+
+const CAREER_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/BjmnaxpzwbfZKOwc.webp";
+const CAREER_HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png";
 
 const benefits = ["moderne, helle Praxisräume", "abwechslungsreicher Mix aus Therapie & Training", "wertschätzendes Miteinander", "Zeit für Qualität statt Fließband", "faire Arbeitszeiten & Fortbildungssupport"] as const;
 
@@ -13,7 +15,7 @@ export default function Career() {
       <PageHero
         title="Werde Teil unseres Teams!"
         intro="Physiotherapie mit Herz, Know-how und modernem Umfeld."
-        media={<MediaPlaceholder width={800} height={534} filename="Physiowerk_Bodensee©patrickdunst-042-0349.jpg" description="Karriere beim Physiowerk Bodensee" dark />}
+        media={<img className="career-hero-photo" src={CAREER_HERO_IMAGE_URL} alt="Andreas beim Training mit einer Patientin am Seilzug" width="800" height="534" decoding="async" fetchPriority="high" />}
       />
 
       <section className="content-section">
@@ -36,7 +38,7 @@ export default function Career() {
             <SectionHeading eyebrow="Deine Chance" title="Gesucht: Physiotherapeut:in (m/w/d)" />
             <p className="lead-copy">Vollzeit, Teilzeit oder Wiedereinstieg.<br />Du bringst Interesse an moderner Therapie, Motivation und Freude am Umgang mit Menschen mit? Perfekt!</p>
           </div>
-          <MediaPlaceholder width={800} height={518} filename="Karriere-Bodensee-Jobs-Physiotherapeut.jpg" description="Teamfoto Karriere" />
+          <img className="career-team-heart" src={CAREER_HEART_IMAGE_URL} alt="Rotes Herz als Symbol für eine Karriere im Physiowerk Bodensee" width="1200" height="1200" loading="lazy" decoding="async" />
         </div>
       </section>
 

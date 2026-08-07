@@ -1,15 +1,17 @@
 import { Check } from "lucide-react";
 import { ContactCta, PageHero, SectionHeading } from "@/components/PageElements";
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { TreatmentImageCarousel } from "@/components/TreatmentImageCarousel";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
+const PHYSIOTHERAPY_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/GkQILUktqlJZyduB.webp";
+
 const therapyImages = [
-  ["paar-trainiert-zusammen-im-fitnessstudio-1.jpg", 800, 441, "Gemeinsames Training im Fitnessstudio"],
-  ["Therapieansatz-Slides_0000_2U5A2992.jpg", 800, 539, "Therapieansatz"],
-  ["Therapieansatz-Slides_0001_Physiowerk_Bodensee©patrickdunst-051-0371.jpg", 800, 539, "Therapie am Seilzug"],
-  ["Therapieansatz-Slides_0003_Physiowerk_Bodensee©patrickdunst-003-0060.jpg", 800, 539, "Physiotherapeutische Behandlung"],
-  ["Therapieansatz-Slides_0005_2U5A4005.jpg", 800, 539, "Klangschalen"],
+  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/aSNziaOgvcZJGxOH.webp", alt: "Andreas mit Trainingsstange vor der Kletterwand", objectPosition: "50% 28%" },
+  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mbKyRwtlOANsaJAN.webp", alt: "Klangschalen auf einer Holzbank", objectPosition: "50% 50%" },
+  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mRiGoOlvsOqmywSR.webp", alt: "Physiotherapeutische Behandlung des Rückens", objectPosition: "50% 45%" },
+  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/LvZMfNGauYHNvPpc.webp", alt: "Therapeut mit Patientin am Keiser Seilzug", objectPosition: "50% 32%" },
+  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ZKXgJjLSkzRbLOPG.webp", alt: "Behandlungsraum mit roter Therapieliege", objectPosition: "50% 50%" },
 ] as const;
 
 const BIOMECHANICS_MEDIA = {
@@ -38,7 +40,7 @@ export default function Physiotherapy() {
         title={<>Ursachen erkennen.<br />Bewegung zurückgewinnen.</>}
         intro="Wir kombinieren klassische Physiotherapie mit moderner Biomechanik – für nachhaltige Ergebnisse und echte Lebensqualität."
         booking
-        media={<MediaPlaceholder width={800} height={441} filename="paar-trainiert-zusammen-im-fitnessstudio-1.jpg" description="Physiotherapie und Bewegung" dark />}
+        media={<img className="physiotherapy-hero-photo" src={PHYSIOTHERAPY_HERO_IMAGE_URL} alt="Manuelle Nackenbehandlung im Physiowerk Bodensee" width="800" height="441" decoding="async" fetchPriority="high" />}
       />
 
       <section className="content-section">
@@ -48,11 +50,7 @@ export default function Physiotherapy() {
             title="Im Physiowerk Bodensee steht der Mensch im Mittelpunkt."
             intro={<>Wir behandeln nicht nur Symptome, sondern analysieren die Bewegungsursachen – präzise, ganzheitlich und individuell.<br />Unser Ziel: Schmerzfrei bewegen – heute, morgen und langfristig.</>}
           />
-          <div className="media-strip">
-            {therapyImages.map(([filename, width, height, description]) => (
-              <MediaPlaceholder key={filename} filename={filename} width={width} height={height} description={description} />
-            ))}
-          </div>
+          <TreatmentImageCarousel images={therapyImages} label="Bilder unseres Therapieansatzes" />
         </div>
       </section>
 
@@ -70,24 +68,12 @@ export default function Physiotherapy() {
             </blockquote>
           </div>
           <div className="biomechanics-media">
-            <img
-              className="biomechanics-original-image biomechanics-original-image-citrus"
-              src={BIOMECHANICS_MEDIA.citrus}
-              alt="Zitronenscheibe"
-              width="488"
-              height="479"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              className="biomechanics-original-image biomechanics-original-image-fascia"
-              src={BIOMECHANICS_MEDIA.fascia}
-              alt="Anatomische Darstellung von Faszien im Querschnitt"
-              width="419"
-              height="480"
-              loading="lazy"
-              decoding="async"
-            />
+            <div className="biomechanics-original-media">
+              <img className="biomechanics-original-image" src={BIOMECHANICS_MEDIA.citrus} alt="Zitronenscheibe" width="488" height="479" loading="lazy" decoding="async" />
+            </div>
+            <div className="biomechanics-original-media">
+              <img className="biomechanics-original-image" src={BIOMECHANICS_MEDIA.fascia} alt="Anatomische Darstellung von Faszien im Querschnitt" width="419" height="480" loading="lazy" decoding="async" />
+            </div>
           </div>
         </div>
       </section>
