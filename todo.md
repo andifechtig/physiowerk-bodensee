@@ -298,5 +298,5 @@
 - [x] Automatische Prüfung für fehlende Platzhalter-Klassen und die größere Bilddarstellung ergänzen
 - [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
 - [x] Korrigierte Biomechanik-Bilder auf Desktop und Mobil visuell prüfen
-- [ ] Finalen Biomechanik-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Finalen Biomechanik-Korrektur-Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 - [x] Automatische Prüfung für die Datenschutz-Hero-Bildquelle und den entfernten Platzhalter ergänzen
