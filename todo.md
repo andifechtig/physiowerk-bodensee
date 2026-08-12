@@ -343,4 +343,6 @@
 - [x] Faszien-Bild auf `/physiotherapie/` mit unveränderter Containergröße und `object-fit: contain` vollständig ohne Beschnitt darstellen
 - [x] Zitronen-Bild auf `/physiotherapie/` mit `object-fit: contain` vollständig und um etwa 25 % größer darstellen
 - [x] Automatische Prüfung für fehlendes `object-fit: cover`, vollständige Faszien-Sichtbarkeit und die vergrößerte Zitrone ergänzen
-- [ ] Korrigierte Biomechanik-Bilder testen, Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+- [x] Korrigierte Biomechanik-Bilder testen, Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
+
+- [x] Vollständigen Projektquellcode ohne `node_modules` als ZIP-Archiv unter `/home/ubuntu/physiowerk-bodensee-source.zip` exportieren
