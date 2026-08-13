@@ -63,8 +63,17 @@ export const contactRouter = router({
       await updateContactDeliveryStatus(submissionId, "emailed");
     } else if (ownerNotified) {
       await updateContactDeliveryStatus(submissionId, "owner_notified");
+    } else if (emailDelivery.reason === "not_configured") {
+      // Ohne SMTP-Konfiguration ist die Anfrage vollständig gespeichert, aber
+      // noch nicht versandt. Das ist kein Fehlerfall, sondern der erwartete
+      // Zustand beim Self-Hosting ohne Mailserver.
+      await updateContactDeliveryStatus(submissionId, "pending");
+      console.warn(
+        "[Contact] Anfrage gespeichert, aber kein SMTP konfiguriert – bitte SMTP_* Variablen setzen."
+      );
     } else {
       await updateContactDeliveryStatus(submissionId, "failed");
+      console.error("[Contact] Zustellung fehlgeschlagen", emailDelivery.reason);
     }
 
     return { success: true } as const;

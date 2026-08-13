@@ -3,10 +3,19 @@ import fs from "fs";
 import { type Server } from "http";
 import { nanoid } from "nanoid";
 import path from "path";
-import { createServer as createViteServer } from "vite";
-import viteConfig from "../../vite.config";
 
+/**
+ * Vite und die Vite-Konfiguration werden ausschließlich zur Laufzeit im
+ * Development-Modus geladen. Dadurch enthält das Produktions-Bundle keine
+ * Verweise auf Build-Werkzeuge, die im Container nicht installiert sind.
+ */
 export async function setupVite(app: Express, server: Server) {
+  const { createServer: createViteServer } = await import("vite");
+  // Der Pfad wird bewusst über eine Variable aufgelöst, damit der Bundler die
+  // Vite-Konfiguration nicht in das Produktions-Bundle aufnimmt.
+  const viteConfigPath = path.resolve(import.meta.dirname, "../..", "vite.config.ts");
+  const { default: viteConfig } = await import(viteConfigPath);
+
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
