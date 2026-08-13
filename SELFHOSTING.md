@@ -65,3 +65,12 @@ pnpm test      # 49 automatisierte Tests
 ```
 
 Die Testsuite prüft unter anderem, dass keine Verweise auf plattformspezifische CDN- oder Storage-Pfade mehr im Frontend existieren.
+
+## Coolify: Nixpacks und automatischer GitHub-Deploy
+
+Für die Coolify-Anwendung ist **Nixpacks** mit den folgenden Befehlen hinterlegt: `pnpm install`, `pnpm run build` und `pnpm run start`. Der Health-Check verwendet den Pfad `/health` auf Port `3000`. Die Variablen `NODE_ENV`, `PORT`, `HOST`, `DATABASE_URL` und `VITE_APP_TITLE` werden in Coolify verwaltet.
+
+Automatische Deployments bei einem Push auf den Branch `main` erfolgen über einen signierten GitHub-Push-Webhook. Die Zieladresse lautet `http://178.104.199.81:8000/webhooks/source/github/events/manual`; der Signaturschlüssel ist ausschließlich in GitHub und Coolify hinterlegt und darf nicht in das Repository aufgenommen werden.
+
+> Nach jeder Änderung an `main` startet Coolify den Nixpacks-Build aus dem GitHub-Repository. Ein erfolgreicher Build muss anschließend als `running:healthy` erscheinen.
+
