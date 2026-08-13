@@ -150,7 +150,18 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+// Self-Hosting: Editor-/Preview-Plugins der Manus-Plattform werden nur im
+// Development geladen. Im Produktionsbuild entfallen sie vollständig, damit die
+// Seite ohne plattformspezifische Laufzeit ausgeliefert wird.
+const isProductionBuild = process.env.NODE_ENV === "production";
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  ...(isProductionBuild
+    ? []
+    : [jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()]),
+];
 
 export default defineConfig({
   plugins,

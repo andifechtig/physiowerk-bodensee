@@ -46,7 +46,8 @@ export function GoogleReviewsWidget() {
             <p className="eyebrow">Google-Rezensionen</p>
             <h2 id="google-reviews-heading">Erfahrungen mit dem Physiowerk Bodensee</h2>
             <p>
-              Aktuelle Rezensionen werden bei jedem Seitenaufruf direkt von Google Places geladen.
+              Ausgewählte Bewertungen unserer Patientinnen und Patienten aus dem Google-Business-Profil
+              des Physiowerk Bodensee.
             </p>
           </div>
 
@@ -67,7 +68,7 @@ export function GoogleReviewsWidget() {
         {query.isPending ? (
           <div className="google-reviews-loading" role="status" aria-live="polite">
             <RefreshCw aria-hidden="true" />
-            <span>Aktuelle Google-Rezensionen werden geladen.</span>
+            <span>Google-Rezensionen werden geladen.</span>
           </div>
         ) : null}
 
@@ -120,9 +121,8 @@ export function GoogleReviewsWidget() {
         {query.data ? (
           <div className="google-reviews-footer">
             <span>
-              Live abgerufen: {new Date(query.data.fetchedAt).toLocaleString("de-DE", {
-                dateStyle: "medium",
-                timeStyle: "short",
+              Stand der Bewertungen: {new Date(query.data.fetchedAt).toLocaleDateString("de-DE", {
+                dateStyle: "long",
               })}
             </span>
             <a href={googleMapsUrl} target="_blank" rel="noreferrer">

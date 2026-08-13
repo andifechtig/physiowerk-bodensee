@@ -2,17 +2,17 @@ import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 import { PageHero, SectionHeading, ArrowLink, ContactCta } from "@/components/PageElements";
 
-const TEAM_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/rSQQTljhWGQMIZzP.webp";
-const HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png";
+const TEAM_HERO_IMAGE_URL = "/images/rSQQTljhWGQMIZzP.webp";
+const HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png";
 
 const team = [
-  { name: "Andreas Fechtig", role: "Inhaber und Physiotherapeut", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/PoWYIAWoCZSqpiFF.webp" },
-  { name: "Laura Knapp", role: "Inhaberin und Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ZjKXnqXaALGOqQDC.webp" },
-  { name: "Lea Jäger", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/raIDLFFsURHnKBUj.webp" },
-  { name: "Madeleine Seitz", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/YkAPXyQZvEqpJLkk.webp" },
-  { name: "Luise Schwab", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/HTwmBqkaovwHeJZo.webp" },
-  { name: "Selina Lanz", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/SOJwLGJAfyoLtAtQ.webp" },
-  { name: "Stefanie Ruhstorfer", role: "Physiotherapeutin", imageUrl: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/HNYcFjfSLlQBCSZN.webp" },
+  { name: "Andreas Fechtig", role: "Inhaber und Physiotherapeut", imageUrl: "/images/PoWYIAWoCZSqpiFF.webp" },
+  { name: "Laura Knapp", role: "Inhaberin und Physiotherapeutin", imageUrl: "/images/ZjKXnqXaALGOqQDC.webp" },
+  { name: "Lea Jäger", role: "Physiotherapeutin", imageUrl: "/images/raIDLFFsURHnKBUj.webp" },
+  { name: "Madeleine Seitz", role: "Physiotherapeutin", imageUrl: "/images/YkAPXyQZvEqpJLkk.webp" },
+  { name: "Luise Schwab", role: "Physiotherapeutin", imageUrl: "/images/HTwmBqkaovwHeJZo.webp" },
+  { name: "Selina Lanz", role: "Physiotherapeutin", imageUrl: "/images/SOJwLGJAfyoLtAtQ.webp" },
+  { name: "Stefanie Ruhstorfer", role: "Physiotherapeutin", imageUrl: "/images/HNYcFjfSLlQBCSZN.webp" },
 ];
 
 export default function Team() {
@@ -63,7 +63,7 @@ export default function Team() {
             <SectionHeading eyebrow="Räumlichkeiten" title="Helle Räume. Moderne Ausstattung. Persönliche Atmosphäre." />
             <p>Unsere Praxis bietet helle, moderne Behandlungsräume und einen bestens ausgestatteten Trainingsbereich. Hochwertige medizinische Geräte, funktionelle Trainingsflächen und eine angenehme Atmosphäre schaffen ideale Bedingungen für effektive Therapie und gezieltes Training.</p>
           </div>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/VRoTnjFtrEORAoel.webp" alt="Heller Behandlungsraum mit roter Therapieliege" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
+          <img src="/images/VRoTnjFtrEORAoel.webp" alt="Heller Behandlungsraum mit roter Therapieliege" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '2.8rem' }} />
         </div>
       </section>
 

@@ -10,14 +10,14 @@ import { Seo } from "@/components/Seo";
 import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { SEO, THERACONNECT } from "@/site-config";
 
-const CAREER_HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png";
+const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png";
 const HOME_MEDIA = {
-  heroTherapy: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
-  boneIllustration: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/OHHoxsvHutuBBXuv.svg",
-  boneModel: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/YQeESqWyCJYEgyZk.webp",
-  medicalTraining: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
-  ropeTherapy: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/zqBCyoEGBifCsLze.webp",
-  lauraAndLea: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/CePFuZnJCcjyUzGR.webp",
+  heroTherapy: "/images/tTQDcPvqnXwIiMoX.webp",
+  boneIllustration: "/images/OHHoxsvHutuBBXuv.svg",
+  boneModel: "/images/YQeESqWyCJYEgyZk.webp",
+  medicalTraining: "/images/AuoAGnYdQvFitYcA.webp",
+  ropeTherapy: "/images/zqBCyoEGBifCsLze.webp",
+  lauraAndLea: "/images/CePFuZnJCcjyUzGR.webp",
 } as const;
 
 const focusCards = [

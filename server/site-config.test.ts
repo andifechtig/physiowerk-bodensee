@@ -78,7 +78,7 @@ describe("stable site routes", () => {
     const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(home).toContain('const CAREER_HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png"');
+    expect(home).toContain('const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png"');
     expect(home).toContain('className="career-banner-heart"');
     expect(home).toContain('alt="Rotes Herz als Symbol für Karriere im Physiowerk Bodensee"');
     expect(home).not.toContain('filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark');
@@ -89,12 +89,12 @@ describe("stable site routes", () => {
     const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
     const mediaUrls = [
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/OHHoxsvHutuBBXuv.svg",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/YQeESqWyCJYEgyZk.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/zqBCyoEGBifCsLze.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/CePFuZnJCcjyUzGR.webp",
+      "/images/tTQDcPvqnXwIiMoX.webp",
+      "/images/OHHoxsvHutuBBXuv.svg",
+      "/images/YQeESqWyCJYEgyZk.webp",
+      "/images/AuoAGnYdQvFitYcA.webp",
+      "/images/zqBCyoEGBifCsLze.webp",
+      "/images/CePFuZnJCcjyUzGR.webp",
     ];
 
     mediaUrls.forEach(url => expect(home).toContain(url));
@@ -152,7 +152,7 @@ describe("stable site routes", () => {
     const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(training).toContain('const TRAINING_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XeGaePDfCrPpepHM.webp"');
+    expect(training).toContain('const TRAINING_HERO_IMAGE_URL = "/images/XeGaePDfCrPpepHM.webp"');
     expect(training).toContain('className="training-hero-photo"');
     expect(training).toContain('alt="Trainingsraum mit Kraftgeräten im Physiowerk Bodensee"');
     expect(training).not.toContain('filename="paar-trainiert-zusammen-im-fitnessstudio-2.jpg" description="Medizinisches Training" dark');
@@ -163,14 +163,14 @@ describe("stable site routes", () => {
     const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
     const carouselUrls = [
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/aSNziaOgvcZJGxOH.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mbKyRwtlOANsaJAN.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mRiGoOlvsOqmywSR.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/LvZMfNGauYHNvPpc.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ZKXgJjLSkzRbLOPG.webp",
+      "/images/aSNziaOgvcZJGxOH.webp",
+      "/images/mbKyRwtlOANsaJAN.webp",
+      "/images/mRiGoOlvsOqmywSR.webp",
+      "/images/LvZMfNGauYHNvPpc.webp",
+      "/images/ZKXgJjLSkzRbLOPG.webp",
     ];
 
-    expect(physiotherapy).toContain('const PHYSIOTHERAPY_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/GkQILUktqlJZyduB.webp"');
+    expect(physiotherapy).toContain('const PHYSIOTHERAPY_HERO_IMAGE_URL = "/images/GkQILUktqlJZyduB.webp"');
     expect(physiotherapy).toContain('className="physiotherapy-hero-photo"');
     expect(physiotherapy).toContain('alt="Manuelle Nackenbehandlung im Physiowerk Bodensee"');
     expect(physiotherapy).toContain('images={therapyImages} label="Bilder unseres Therapieansatzes"');
@@ -183,10 +183,10 @@ describe("stable site routes", () => {
   it("uses supplied career hero and the full-bleed heart image in the career opportunity", () => {
     const career = readFileSync(new URL("../client/src/pages/Career.tsx", import.meta.url), "utf8");
 
-    expect(career).toContain('const CAREER_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/BjmnaxpzwbfZKOwc.webp"');
+    expect(career).toContain('const CAREER_HERO_IMAGE_URL = "/images/BjmnaxpzwbfZKOwc.webp"');
     expect(career).toContain('className="career-hero-photo"');
     expect(career).toContain('alt="Andreas beim Training mit einer Patientin am Seilzug"');
-    expect(career).toContain('const CAREER_HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png"');
+    expect(career).toContain('const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png"');
     expect(career).toContain('className="career-team-heart"');
     expect(career).toContain('alt="Rotes Herz als Symbol für eine Karriere im Physiowerk Bodensee"');
     expect(career).not.toContain('filename="Physiowerk_Bodensee©patrickdunst-042-0349.jpg"');
@@ -197,7 +197,7 @@ describe("stable site routes", () => {
     const contact = readFileSync(new URL("../client/src/pages/Contact.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(contact).toContain('const CONTACT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/wGgICEiGwgJWmdPo.PNG"');
+    expect(contact).toContain('const CONTACT_HERO_IMAGE_URL = "/images/wGgICEiGwgJWmdPo.PNG"');
     expect(contact).toContain('className="contact-hero-photo"');
     expect(contact).toContain('alt="Rezeptübergabe am Empfangstisch im Physiowerk Bodensee"');
     expect(contact).not.toContain('filename="Teamseite-Header-Physiowerk-Bodensee.jpg" description="Physiowerk Bodensee Team" dark');
@@ -208,7 +208,7 @@ describe("stable site routes", () => {
     const contact = readFileSync(new URL("../client/src/pages/Contact.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(contact).toContain('const CONTACT_MESSAGE_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XqWXZETIrfFmZHjk.webp"');
+    expect(contact).toContain('const CONTACT_MESSAGE_IMAGE_URL = "/images/XqWXZETIrfFmZHjk.webp"');
     expect(contact).toContain('className="contact-message-photo"');
     expect(contact).toContain('alt="Offener Briefkasten als Symbol für Ihre Nachricht an das Physiowerk Bodensee"');
     expect(contact).not.toContain('filename="Therapieansatz-Slides_0001_Physiowerk_Bodensee©patrickdunst-051-0371.jpg" description="Therapie am Seilzug"');
@@ -218,7 +218,7 @@ describe("stable site routes", () => {
   it("uses the supplied exterior photo in the imprint hero", () => {
     const imprint = readFileSync(new URL("../client/src/pages/Imprint.tsx", import.meta.url), "utf8");
 
-    expect(imprint).toContain('const IMPRINT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XrFqmLOCULpwHzPO.webp"');
+    expect(imprint).toContain('const IMPRINT_HERO_IMAGE_URL = "/images/XrFqmLOCULpwHzPO.webp"');
     expect(imprint).toContain('className="imprint-hero-photo"');
     expect(imprint).toContain('alt="Außenansicht des Gebäudes vom Physiowerk Bodensee"');
     expect(imprint).not.toContain('filename="Fitness-Slides_0001_Person-entfernen.jpg" description="Trainingsfläche" dark');
@@ -227,7 +227,7 @@ describe("stable site routes", () => {
   it("uses the supplied security-shield image in the privacy hero", () => {
     const privacy = readFileSync(new URL("../client/src/pages/Privacy.tsx", import.meta.url), "utf8");
 
-    expect(privacy).toContain('const PRIVACY_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ghJaoCMtCZLrNjqV.jpg"');
+    expect(privacy).toContain('const PRIVACY_HERO_IMAGE_URL = "/images/ghJaoCMtCZLrNjqV.jpg"');
     expect(privacy).toContain('className="privacy-hero-photo"');
     expect(privacy).toContain('alt="Digitales Sicherheits-Schild als Symbol für Datenschutz"');
     expect(privacy).not.toContain('filename="physiowerk-eingang.jpg" description="Eingang des Physiowerk Bodensee" dark');
@@ -237,15 +237,15 @@ describe("stable site routes", () => {
     const physiotherapy = readFileSync(new URL("../client/src/pages/Physiotherapy.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(physiotherapy).toContain('citrus: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg"');
-    expect(physiotherapy).toContain('fascia: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg"');
+    expect(physiotherapy).toContain('citrus: "/images/tCNnCFqldOpYbfHM.jpg"');
+    expect(physiotherapy).toContain('fascia: "/images/NnZNqSAhjozokZik.jpg"');
     expect(physiotherapy).toContain('className="biomechanics-original-media"');
     expect(physiotherapy).toContain('className="biomechanics-original-image biomechanics-citrus-image"');
     expect(physiotherapy).toContain('className="biomechanics-original-image" src={BIOMECHANICS_MEDIA.fascia}');
     expect(physiotherapy).toContain('alt="Zitronenscheibe"');
     expect(physiotherapy).toContain('alt="Anatomische Darstellung von Faszien im Querschnitt"');
-    expect(physiotherapy).not.toContain('/manus-storage/zitrone-freigestellt_f38caacb.png');
-    expect(physiotherapy).not.toContain('/manus-storage/faszien-freigestellt_e32c873c.png');
+    expect(physiotherapy).not.toContain('/brand/zitrone-freigestellt_f38caacb.png');
+    expect(physiotherapy).not.toContain('/brand/faszien-freigestellt_e32c873c.png');
     expect((physiotherapy.match(/className="biomechanics-original-media"/g) ?? [])).toHaveLength(2);
     expect(styles).toContain('.biomechanics-original-media { width: min(100%, 430px); aspect-ratio: 1; display: grid; place-items: center; justify-self: center; overflow: visible; }');
     expect(styles).toContain('.biomechanics-original-image { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; border-radius: 0; background: transparent; }');
@@ -259,7 +259,7 @@ describe("stable site routes", () => {
     const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
     const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
-    const heartAsset = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png";
+    const heartAsset = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png";
 
     expect(home).toContain(`const CAREER_HEART_IMAGE_URL = "${heartAsset}"`);
     expect(team).toContain(`const HEART_IMAGE_URL = "${heartAsset}"`);
@@ -273,12 +273,12 @@ describe("stable site routes", () => {
     const training = readFileSync(new URL("../client/src/pages/Training.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
     const mediaUrls = [
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/UzDHxMoJusXefqjq.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/jGeWTBVLCnPOjJRZ.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/EnImqxDUZmssYGSm.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/RgpHEMAJBiaCmWIE.webp",
+      "/images/UzDHxMoJusXefqjq.webp",
+      "/images/jGeWTBVLCnPOjJRZ.webp",
+      "/images/EnImqxDUZmssYGSm.webp",
+      "/images/AuoAGnYdQvFitYcA.webp",
+      "/images/tTQDcPvqnXwIiMoX.webp",
+      "/images/RgpHEMAJBiaCmWIE.webp",
     ];
 
     mediaUrls.forEach(url => expect(training).toContain(url));
@@ -293,13 +293,13 @@ describe("stable site routes", () => {
     const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
     const portraits = [
-      ["Andreas Fechtig", "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/PoWYIAWoCZSqpiFF.webp"],
-      ["Laura Knapp", "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ZjKXnqXaALGOqQDC.webp"],
-      ["Lea Jäger", "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/raIDLFFsURHnKBUj.webp"],
-      ["Madeleine Seitz", "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/YkAPXyQZvEqpJLkk.webp"],
-      ["Luise Schwab", "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/HTwmBqkaovwHeJZo.webp"],
-      ["Selina Lanz", "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/SOJwLGJAfyoLtAtQ.webp"],
-      ["Stefanie Ruhstorfer", "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/HNYcFjfSLlQBCSZN.webp"],
+      ["Andreas Fechtig", "/images/PoWYIAWoCZSqpiFF.webp"],
+      ["Laura Knapp", "/images/ZjKXnqXaALGOqQDC.webp"],
+      ["Lea Jäger", "/images/raIDLFFsURHnKBUj.webp"],
+      ["Madeleine Seitz", "/images/YkAPXyQZvEqpJLkk.webp"],
+      ["Luise Schwab", "/images/HTwmBqkaovwHeJZo.webp"],
+      ["Selina Lanz", "/images/SOJwLGJAfyoLtAtQ.webp"],
+      ["Stefanie Ruhstorfer", "/images/HNYcFjfSLlQBCSZN.webp"],
     ];
     const names = portraits.map(([name]) => name);
 
@@ -323,7 +323,7 @@ describe("stable site routes", () => {
     const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(team).toContain('const TEAM_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/rSQQTljhWGQMIZzP.webp"');
+    expect(team).toContain('const TEAM_HERO_IMAGE_URL = "/images/rSQQTljhWGQMIZzP.webp"');
     expect(team).toContain('className="team-hero-photo"');
     expect(team).toContain('alt="Empfangsbereich des Physiowerk Bodensee in Meckenbeuren"');
     expect(team).not.toContain('description="Team und Praxis in Meckenbeuren"');
@@ -332,7 +332,7 @@ describe("stable site routes", () => {
 
   it("keeps the TheraConnect downloads and QR asset exact", () => {
     expect(THERACONNECT).toEqual({
-      qrCode: "/manus-storage/theracode-qr_3bdbe30f.png",
+      qrCode: "/brand/theracode-qr_3bdbe30f.png",
       googlePlay: "https://play.google.com/store/apps/details?id=de.sovdwaer.theraconnect",
       appStore: "https://apps.apple.com/de/iphone/today",
     });

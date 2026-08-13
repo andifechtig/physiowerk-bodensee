@@ -6,8 +6,8 @@ import { PracticeMap } from "@/components/PracticeMap";
 import { Seo } from "@/components/Seo";
 import { CONTACT, OPENING_HOURS, SEO } from "@/site-config";
 
-const CONTACT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/wGgICEiGwgJWmdPo.PNG";
-const CONTACT_MESSAGE_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XqWXZETIrfFmZHjk.webp";
+const CONTACT_HERO_IMAGE_URL = "/images/wGgICEiGwgJWmdPo.PNG";
+const CONTACT_MESSAGE_IMAGE_URL = "/images/XqWXZETIrfFmZHjk.webp";
 
 export default function Contact() {
   return (

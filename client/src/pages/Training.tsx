@@ -4,36 +4,36 @@ import { TreatmentImageCarousel } from "@/components/TreatmentImageCarousel";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
-const TRAINING_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XeGaePDfCrPpepHM.webp";
+const TRAINING_HERO_IMAGE_URL = "/images/XeGaePDfCrPpepHM.webp";
 
 const trainingImages = [
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/UzDHxMoJusXefqjq.webp",
+    src: "/images/UzDHxMoJusXefqjq.webp",
     alt: "Panorama des Trainingsraums mit Kletterwand und Trainingsgeräten",
     objectPosition: "50% 50%",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/jGeWTBVLCnPOjJRZ.webp",
+    src: "/images/jGeWTBVLCnPOjJRZ.webp",
     alt: "Andreas mit Trainingsstange vor der Kletterwand",
     objectPosition: "50% 30%",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/EnImqxDUZmssYGSm.webp",
+    src: "/images/EnImqxDUZmssYGSm.webp",
     alt: "Keiser Bike in Nahaufnahme",
     objectPosition: "50% 50%",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/AuoAGnYdQvFitYcA.webp",
+    src: "/images/AuoAGnYdQvFitYcA.webp",
     alt: "Keiser Bikes und Trainingsgeräte im medizinischen Trainingsraum",
     objectPosition: "50% 50%",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tTQDcPvqnXwIiMoX.webp",
+    src: "/images/tTQDcPvqnXwIiMoX.webp",
     alt: "Therapie-Szene am Seilzug mit Patientin und Therapeut",
     objectPosition: "50% 45%",
   },
   {
-    src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/RgpHEMAJBiaCmWIE.webp",
+    src: "/images/RgpHEMAJBiaCmWIE.webp",
     alt: "Therapeut korrigiert eine Übung an Seilzug und Sprossenwand",
     objectPosition: "50% 35%",
   },

@@ -4,19 +4,19 @@ import { TreatmentImageCarousel } from "@/components/TreatmentImageCarousel";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
-const PHYSIOTHERAPY_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/GkQILUktqlJZyduB.webp";
+const PHYSIOTHERAPY_HERO_IMAGE_URL = "/images/GkQILUktqlJZyduB.webp";
 
 const therapyImages = [
-  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/aSNziaOgvcZJGxOH.webp", alt: "Andreas mit Trainingsstange vor der Kletterwand", objectPosition: "50% 28%" },
-  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mbKyRwtlOANsaJAN.webp", alt: "Klangschalen auf einer Holzbank", objectPosition: "50% 50%" },
-  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/mRiGoOlvsOqmywSR.webp", alt: "Physiotherapeutische Behandlung des Rückens", objectPosition: "50% 45%" },
-  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/LvZMfNGauYHNvPpc.webp", alt: "Therapeut mit Patientin am Keiser Seilzug", objectPosition: "50% 32%" },
-  { src: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/ZKXgJjLSkzRbLOPG.webp", alt: "Behandlungsraum mit roter Therapieliege", objectPosition: "50% 50%" },
+  { src: "/images/aSNziaOgvcZJGxOH.webp", alt: "Andreas mit Trainingsstange vor der Kletterwand", objectPosition: "50% 28%" },
+  { src: "/images/mbKyRwtlOANsaJAN.webp", alt: "Klangschalen auf einer Holzbank", objectPosition: "50% 50%" },
+  { src: "/images/mRiGoOlvsOqmywSR.webp", alt: "Physiotherapeutische Behandlung des Rückens", objectPosition: "50% 45%" },
+  { src: "/images/LvZMfNGauYHNvPpc.webp", alt: "Therapeut mit Patientin am Keiser Seilzug", objectPosition: "50% 32%" },
+  { src: "/images/ZKXgJjLSkzRbLOPG.webp", alt: "Behandlungsraum mit roter Therapieliege", objectPosition: "50% 50%" },
 ] as const;
 
 const BIOMECHANICS_MEDIA = {
-  citrus: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/tCNnCFqldOpYbfHM.jpg",
-  fascia: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/NnZNqSAhjozokZik.jpg",
+  citrus: "/images/tCNnCFqldOpYbfHM.jpg",
+  fascia: "/images/NnZNqSAhjozokZik.jpg",
 } as const;
 
 const services = [

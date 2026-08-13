@@ -3,8 +3,8 @@ import { ArrowLink, PageHero, SectionHeading } from "@/components/PageElements";
 import { Seo } from "@/components/Seo";
 import { CONTACT, SEO } from "@/site-config";
 
-const CAREER_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/BjmnaxpzwbfZKOwc.webp";
-const CAREER_HEART_IMAGE_URL = "/manus-storage/physiowerk-herz-vollflaechig_cdd7affc.png";
+const CAREER_HERO_IMAGE_URL = "/images/BjmnaxpzwbfZKOwc.webp";
+const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png";
 
 const benefits = ["moderne, helle Praxisräume", "abwechslungsreicher Mix aus Therapie & Training", "wertschätzendes Miteinander", "Zeit für Qualität statt Fließband", "faire Arbeitszeiten & Fortbildungssupport"] as const;
 

@@ -3,7 +3,7 @@ import { PageHero } from "@/components/PageElements";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
 
-const IMPRINT_HERO_IMAGE_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663456215423/XrFqmLOCULpwHzPO.webp";
+const IMPRINT_HERO_IMAGE_URL = "/images/XrFqmLOCULpwHzPO.webp";
 
 export default function Imprint() {
   return (

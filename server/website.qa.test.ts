@@ -65,12 +65,29 @@ describe("website quality contracts", () => {
     expect(Object.values(CANONICAL_REDIRECTS)).toEqual(Object.values(SEO).slice(1).map(entry => entry.path));
   });
 
-  it("keeps deployable public files small and free of media binaries", () => {
+  it("bundles all media assets locally so no external CDN is required", () => {
     const files = filesBelow(publicRoot);
     const mediaExtensions = new Set([".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".mp4", ".webm"]);
-    expect(files.filter(file => mediaExtensions.has(extname(file).toLowerCase()))).toEqual([]);
-    expect(files.filter(file => statSync(file).size > 100_000).map(file => relative(publicRoot, file))).toEqual([]);
-    expect(Object.values(BRAND_ASSETS).every(url => url.startsWith("/manus-storage/"))).toBe(true);
+    const mediaFiles = files.filter(file => mediaExtensions.has(extname(file).toLowerCase()));
+
+    // Self-Hosting: Alle Medien liegen als lokale Assets unter client/public/{brand,images}.
+    expect(mediaFiles.length).toBeGreaterThan(0);
+    for (const file of mediaFiles) {
+      const rel = relative(publicRoot, file);
+      expect(rel.startsWith("brand/") || rel.startsWith("images/")).toBe(true);
+      expect(statSync(file).size).toBeGreaterThan(0);
+    }
+
+    expect(Object.values(BRAND_ASSETS).every(url => url.startsWith("/brand/"))).toBe(true);
+  });
+
+  it("never references the Manus CDN or storage proxy in client sources", () => {
+    const clientFiles = filesBelow(sourceRoot).filter(file => /\.(ts|tsx|css)$/.test(file));
+    for (const file of [...clientFiles, join(clientRoot, "index.html")]) {
+      const content = readFileSync(file, "utf8");
+      expect(content).not.toContain("files.manuscdn.com");
+      expect(content).not.toContain("/manus-storage/");
+    }
   });
 
   it("keeps the HTML entry document clean and mountable", () => {
@@ -115,7 +132,7 @@ describe("website quality contracts", () => {
     expect(COACHING_WHATSAPP_URL).toBe(
       "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.",
     );
-    expect(THERACONNECT.qrCode).toBe("/manus-storage/theracode-qr_3bdbe30f.png");
+    expect(THERACONNECT.qrCode).toBe("/brand/theracode-qr_3bdbe30f.png");
     expect(THERACONNECT.googlePlay).toContain("de.sovdwaer.theraconnect");
     expect(THERACONNECT.appStore).toBe("https://apps.apple.com/de/iphone/today");
   });

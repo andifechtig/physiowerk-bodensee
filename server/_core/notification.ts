@@ -68,18 +68,12 @@ export async function notifyOwner(
 ): Promise<boolean> {
   const { title, content } = validatePayload(payload);
 
-  if (!ENV.forgeApiUrl) {
-    throw new TRPCError({
-      code: "INTERNAL_SERVER_ERROR",
-      message: "Notification service URL is not configured.",
-    });
-  }
-
-  if (!ENV.forgeApiKey) {
-    throw new TRPCError({
-      code: "INTERNAL_SERVER_ERROR",
-      message: "Notification service API key is not configured.",
-    });
+  // Self-Hosting: Ist kein Notification-Dienst konfiguriert, wird der Aufruf
+  // still übersprungen. Aufrufer behandeln `false` als "nicht zugestellt" und
+  // greifen auf E-Mail-Versand zurück, statt die Anfrage abzubrechen.
+  if (!ENV.forgeApiUrl || !ENV.forgeApiKey) {
+    console.info("[Notification] Kein Notification-Dienst konfiguriert – Benachrichtigung übersprungen.");
+    return false;
   }
 
   const endpoint = buildEndpointUrl(ENV.forgeApiUrl);

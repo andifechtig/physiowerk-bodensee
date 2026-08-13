@@ -13,8 +13,8 @@ export const CONTACT = {
 } as const;
 
 export const BRAND_ASSETS = {
-  logo: "/manus-storage/physiowerk-bodensee-logo_e5ea2a63.svg",
-  favicon: "/manus-storage/physiowerk-bodensee-favicon_102ddb57.svg",
+  logo: "/brand/physiowerk-bodensee-logo_e5ea2a63.svg",
+  favicon: "/brand/physiowerk-bodensee-favicon_102ddb57.svg",
 } as const;
 
 /** Zentrale THEORG/TheraConnect-Konfiguration. */
@@ -29,7 +29,7 @@ export const COACHING_WHATSAPP_URL =
   "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.";
 
 export const THERACONNECT = {
-  qrCode: "/manus-storage/theracode-qr_3bdbe30f.png",
+  qrCode: "/brand/theracode-qr_3bdbe30f.png",
   googlePlay: "https://play.google.com/store/apps/details?id=de.sovdwaer.theraconnect",
   appStore: "https://apps.apple.com/de/iphone/today",
 } as const;
