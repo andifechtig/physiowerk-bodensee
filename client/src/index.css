@@ -126,7 +126,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .career-banner-grid { grid-template-columns: 1fr .6fr; }
 .biomechanics-grid { grid-template-columns: 1fr .8fr; }
 .philosophy-grid, .career-benefits-grid { grid-template-columns: 1.2fr .8fr; align-items: end; }
-.contact-page-grid { grid-template-columns: 1fr .85fr; align-items: start; }
+.contact-page-grid { grid-template-columns: 1fr 1fr; align-items: start; }
 .contact-message-photo { width: 100%; aspect-ratio: 800 / 539; display: block; object-fit: cover; object-position: center; border-radius: clamp(1.75rem, 4vw, 4.5rem); background: var(--paper-soft); }
 .mission-grid .media-placeholder, .rooms-grid .media-placeholder, .opportunity-grid .media-placeholder, .career-banner .media-placeholder { min-height: 0; }
 .mission-grid .arrow-link, .career-banner .arrow-link { margin-top: 1.5rem; color: var(--brand); }
@@ -247,11 +247,11 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .application-cta .section-heading { margin-bottom: 1rem; }
 .application-cta .arrow-link { margin-top: 1rem; }
 
-.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
 .contact-form label { display: flex; flex-direction: column; gap: .5rem; color: var(--ink); font-size: .82rem; font-weight: 600; }
 .contact-form label:nth-of-type(4), .contact-form .consent-field, .contact-form .form-message, .contact-form .button { grid-column: 1 / -1; }
-.contact-form input:not([type="checkbox"]), .contact-form textarea { width: 100%; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: 1rem; color: var(--ink); background: var(--paper); }
-.contact-form textarea { min-height: 160px; resize: vertical; }
+.contact-form input:not([type="checkbox"]), .contact-form textarea { width: 100%; padding: .75rem 1rem; border: 1px solid var(--line); border-radius: .75rem; color: var(--ink); background: var(--paper); font-size: .88rem; }
+.contact-form textarea { min-height: 120px; resize: vertical; }
 .contact-form .consent-field { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: .8rem; color: var(--muted); font-size: .75rem; font-weight: 400; }
 .contact-form .consent-field input { width: 1.1rem; height: 1.1rem; margin-top: .2rem; accent-color: var(--brand); }
 .button-primary { width: fit-content; border: 0; color: var(--paper); background: var(--brand); cursor: pointer; }
