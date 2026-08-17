@@ -16,7 +16,6 @@ export default function Contact() {
       <PageHero
         title={<>Wir sind für Dich da –<br />nimm Kontakt auf.</>}
         intro="Ob Termin, Frage oder Beratung – wir freuen uns, von Dir zu hören."
-        booking
         media={
           <img
             className="contact-hero-photo"
