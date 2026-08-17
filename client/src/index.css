@@ -265,7 +265,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .form-message-error { color: #8a1420; background: #fff0f1; }
 .form-message-success { display: flex; align-items: center; gap: .6rem; color: #1b6346; background: #edf9f3; }
 .form-message-success svg { width: 1.1rem; height: 1.1rem; }
-.contact-detail-list { display: flex; flex-direction: column; margin-top: 2rem; border-top: 1px solid var(--line); }
+.contact-detail-list { display: flex; flex-direction: column; margin-top: 3.5rem; border-top: 1px solid var(--line); }
 .contact-detail-list a { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .contact-detail-list svg { width: 1.15rem; color: var(--brand); }
 .contact-hours { margin-top: 2.5rem; }
