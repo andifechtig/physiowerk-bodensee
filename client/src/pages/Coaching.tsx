@@ -35,7 +35,7 @@ import { Seo } from "@/components/Seo";
 import { COACHING_WHATSAPP_URL, SEO } from "@/site-config";
 
 const problems = [
-  "Du warst schon bei 5 Ärzten und 3 Physiotherapeuten — aber nichts hilft langfristig.",
+  "Du warst schon bei 5 Ärzten und 3 Physiotherapeuten, aber nichts hilft langfristig.",
   "Du bekommst 6x Krankengymnastik verschrieben, aber nach 3 Wochen ist alles wie vorher.",
   "Du hast Angst, dass deine Schmerzen dich ein Leben lang begleiten werden.",
 ] as const;
@@ -44,7 +44,7 @@ const solutionPoints = [
   [Target, "Ursachenanalyse statt Symptombehandlung"],
   [UserRoundCheck, "1:1 Betreuung durch Andreas persönlich"],
   [CalendarCheck, "6 Monate für nachhaltige Veränderung"],
-  [MonitorSmartphone, "Online + Offline — flexibel und individuell"],
+  [MonitorSmartphone, "Online und offline. Flexibel und individuell."],
 ] as const;
 
 const programSteps = [
@@ -54,7 +54,7 @@ const programSteps = [
   },
   {
     title: "Analyse & Diagnostik",
-    text: "Biomechanische Analyse deiner Bewegungsmuster, Haltung und Beschwerden — die Grundlage für deinen individuellen Plan.",
+    text: "Biomechanische Analyse deiner Bewegungsmuster, Haltung und Beschwerden. Das ist die Grundlage für deinen individuellen Plan.",
   },
   {
     title: "Individueller Trainingsplan",
@@ -62,7 +62,7 @@ const programSteps = [
   },
   {
     title: "6 Monate Betreuung",
-    text: "Regelmäßige 1:1 Calls, angepasste Trainingspläne, Video-Module und WhatsApp-Support — ich begleite dich den gesamten Weg.",
+    text: "Regelmäßige 1:1 Calls, angepasste Trainingspläne, Video-Module und WhatsApp-Support. Ich begleite dich den gesamten Weg.",
   },
 ] as const;
 
@@ -70,7 +70,7 @@ const programFeatures = [
   [Video, "1:1 Video-Calls", "Regelmäßige persönliche Gespräche für Analyse, Anpassung und Motivation."],
   [Dumbbell, "Individuelle Trainingspläne", "Auf dich zugeschnittene Übungen, die sich mit deinem Fortschritt weiterentwickeln."],
   [PlayCircle, "Video-Kurse & Module", "Lernmodule zum Selbststudium, jederzeit abrufbar in deinem Tempo."],
-  [MessageCircle, "WhatsApp-Support", "Schnelle Antworten auf deine Fragen — direkt von Andreas."],
+  [MessageCircle, "WhatsApp-Support", "Schnelle Antworten auf deine Fragen, direkt von Andreas."],
   [Smartphone, "App-Zugang", "Alle Trainings, Videos und Pläne übersichtlich in einer App."],
   [Stethoscope, "Vor-Ort-Termine", "Optional: Persönliche Termine in der Praxis am Bodensee."],
 ] as const;
@@ -132,7 +132,7 @@ export default function Coaching() {
             <p className="coaching-kicker">Schmerzfrei Jetzt</p>
             <h1>Schmerzfrei Jetzt. Deine 6 Monate in ein neues Leben.</h1>
             <p className="coaching-hero-intro">
-              Das ganzheitliche Coaching-Programm von Andreas Fechtig — biomechanisch fundiert,
+              Das ganzheitliche Coaching-Programm von Andreas Fechtig: biomechanisch fundiert,
               persönlich betreut, nachhaltig wirksam.
             </p>
             <WhatsAppCta light>Infogespräch sichern</WhatsAppCta>
@@ -168,7 +168,7 @@ export default function Coaching() {
           <div className="coaching-heading coaching-heading-light">
             <p className="coaching-eyebrow">Die Lösung</p>
             <h2>Dein Weg zu nachhaltiger Veränderung</h2>
-            <p>„Schmerzfrei Jetzt“ ist kein schneller Fix. Es ist ein 6-monatiges Coaching-Programm, das an der Wurzel deiner Probleme ansetzt — biomechanisch fundiert und ganzheitlich betreut.</p>
+            <p>„Schmerzfrei Jetzt“ ist kein schneller Fix. Es ist ein 6-monatiges Coaching-Programm, das an der Wurzel deiner Probleme ansetzt. Biomechanisch fundiert und ganzheitlich betreut.</p>
           </div>
           <div className="coaching-solution-grid">
             {solutionPoints.map(([Icon, title]) => (

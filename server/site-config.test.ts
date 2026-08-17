@@ -29,6 +29,11 @@ describe("stable site routes", () => {
 
   it("keeps the primary navigation on canonical paths", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
+    expect(NAVIGATION).toContainEqual({
+      label: "Medizinisches Training",
+      href: "/medizinisches-training-und-fitness/",
+    });
+    expect(NAVIGATION.some(entry => entry.label === "Medizinisches Training und Fitness")).toBe(false);
     expect(NAVIGATION.at(-1)).toEqual({ label: "Kurse", href: "/kurse/" });
   });
 
@@ -69,7 +74,7 @@ describe("stable site routes", () => {
     expect(siteLayout).toContain('aria-label={`Physiowerk Bodensee auf ${item.label}`}');
     expect(siteLayout).toContain('rel="noopener noreferrer"');
     expect(siteLayout).toContain('item.label === "Instagram"');
-    expect(styles).toContain('.social-link { min-height: 44px; display: inline-flex;');
+    expect(styles).toContain('.social-link { min-height: 40px; display: inline-flex;');
     expect(styles).toContain('.social-link-icon { width: 1.15rem; height: 1.15rem; }');
     expect(styles).toContain('.social-link:hover { border-color: var(--brand);');
   });
@@ -105,7 +110,7 @@ describe("stable site routes", () => {
     expect(home).not.toContain('filename="Rechteck-35.jpg"');
     expect(home).not.toContain('filename="Knochen-1.svg"');
     expect(home).not.toContain('filename="Karriere-Bodensee-Jobs-Physiotherapeut.jpg"');
-    expect(styles).toContain('.home-hero-photo { width: 100%; min-height: 220px; aspect-ratio: 1; object-fit: cover;');
+    expect(styles).toContain('.home-hero-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%;');
     expect(styles).toContain('.focus-card-image { width: 100%; aspect-ratio: 746 / 450; object-fit: cover;');
     expect(styles).toContain('.mission-grid-photo { width: 100%; aspect-ratio: 1382 / 894; object-fit: cover;');
   });
@@ -135,13 +140,17 @@ describe("stable site routes", () => {
     expect(training.indexOf('name: "24 Monate"')).toBeLessThan(training.indexOf('name: "EGYM Wellpass"'));
     expect(physiotherapy).toContain("Krankengymnastik am Gerät (KGG)");
     expect(physiotherapy).toContain("maximal drei Personen");
-    expect(courses).toContain("Online-Präventionskurse – bis zu 100 % gefördert");
+    expect(courses).toContain("Online-Präventionskurse: bis zu 100 % gefördert");
     expect(courses).toContain('const FUNDING_FORM_URL = "https://krankenkassen-cashback.typeform.com/Physiowerk"');
+    expect(courses).toContain('href="#foerderung-pruefen"');
+    expect(courses).toContain('id="foerderung-pruefen"');
+    expect(courses).toContain('className="courses-typeform"');
+    expect(courses).toContain('src={FUNDING_FORM_URL}');
+    expect(courses).toContain('title="Kostenlose Förderprüfung für Online-Präventionskurse"');
     expect(courses).toContain("href={FUNDING_FORM_URL}");
     expect(courses).toContain('target="_blank"');
     expect(courses).toContain('rel="noopener noreferrer"');
-    expect(courses).not.toContain("#foerderung-pruefen");
-    expect((courses.match(/<FundingCta label=/g) ?? [])).toHaveLength(4);
+    expect((courses.match(/<FundingCta label=/g) ?? [])).toHaveLength(5);
     expect(courses).toContain("Kostenlos · unverbindlich · in weniger als 30 Sekunden");
     expect(courses).toContain("Unser unabhängiger Förderpartner");
     expect(courses).not.toContain("Prävention digital");
@@ -191,6 +200,74 @@ describe("stable site routes", () => {
     expect(career).toContain('alt="Rotes Herz als Symbol für eine Karriere im Physiowerk Bodensee"');
     expect(career).not.toContain('filename="Physiowerk_Bodensee©patrickdunst-042-0349.jpg"');
     expect(career).not.toContain('filename="Karriere-Bodensee-Jobs-Physiotherapeut.jpg"');
+    expect(career).toContain('title="Karriere mit Herz und Perspektive"');
+    expect(career).toContain('title="Physiotherapeut:in gesucht"');
+    expect((career.match(/mailto:\$\{CONTACT\.applicationEmail\}/g) ?? [])).toHaveLength(5);
+  });
+
+  it("keeps the new homepage conversion path compact and visible", () => {
+    const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+
+    expect(home).toContain("Aktiv und schmerzfrei.");
+    expect(home).toContain("5,0 bei 44 Google-Bewertungen");
+    expect(home).toContain("Persönliche Betreuung");
+    expect(home).toContain("Für Kasse und Privat");
+    expect(home).toContain('className="booking-button-light home-hero-booking"');
+    expect(home).toContain('className="site-shell home-inline-booking"');
+    expect(home).toContain('className="why-copy"');
+    expect(home).not.toContain("Physiotherapie, Biomechanik und medizinisches Training in Meckenbeuren");
+    expect(styles).toContain('.home-hero-grid { position: relative; isolation: isolate;');
+    expect(styles).toContain('.home-hero-grid::after { position: absolute;');
+    expect(styles).toContain('.home-hero-booking { min-height: 48px;');
+  });
+
+  it("embeds Typeform with compact course headings and prominent red CTAs", () => {
+    const courses = readFileSync(new URL("../client/src/pages/Courses.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/courses.css", import.meta.url), "utf8");
+
+    expect(courses).toContain("Flexibel trainieren, wann und wo es Ihnen passt");
+    expect(courses).toContain("Für wen sind Online-Präventionskurse geeignet?");
+    expect(courses).not.toContain("Ihr Kurs. Ihr Tempo. Ihr Zuhause.");
+    expect(styles).toContain('.courses-funding-cta .arrow-link { min-height: 48px;');
+    expect(styles).toContain('.courses-typeform { width: 100%; height: 720px;');
+    expect(styles).toContain('.courses-steps-section .courses-heading h2 { font-size: clamp(1.9rem, 3.2vw, 3.15rem); }');
+  });
+
+  it("removes Manus chrome and decorative dash artifacts from marketing pages", () => {
+    const viteConfig = readFileSync(new URL("../vite.config.ts", import.meta.url), "utf8");
+    const packageJson = readFileSync(new URL("../package.json", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+    const marketingFiles = [
+      "../client/src/pages/Home.tsx",
+      "../client/src/pages/Courses.tsx",
+      "../client/src/pages/Career.tsx",
+      "../client/src/pages/Coaching.tsx",
+      "../client/src/pages/AppPage.tsx",
+      "../client/src/pages/Physiotherapy.tsx",
+      "../client/src/pages/Training.tsx",
+      "../client/src/pages/Team.tsx",
+      "../client/src/components/SiteLayout.tsx",
+      "../client/src/components/PageElements.tsx",
+    ];
+
+    expect(viteConfig).not.toContain("vitePluginManusRuntime");
+    expect(packageJson).not.toContain("vite-plugin-manus-runtime");
+    expect(styles).toContain('[data-manus-badge], [class*="manus-badge"], [aria-label="Made with Manus"] { display: none !important; }');
+    marketingFiles.forEach(path => {
+      expect(readFileSync(new URL(path, import.meta.url), "utf8")).not.toMatch(/[—–]/);
+    });
+  });
+
+  it("keeps the contact page source unchanged while compacting the footer", () => {
+    const contact = readFileSync(new URL("../client/src/pages/Contact.tsx", import.meta.url), "utf8");
+    const footer = readFileSync(new URL("../client/src/components/SiteLayout.tsx", import.meta.url), "utf8");
+    const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
+
+    expect(contact).toContain("Wir sind für Dich da –");
+    expect(contact).toContain("Ob Termin, Frage oder Beratung – wir freuen uns, von Dir zu hören.");
+    expect(footer).toContain("Persönlich betreut. Nachhaltig in Bewegung.");
+    expect(styles).toContain('.site-footer { padding: clamp(2.8rem, 5vw, 4.5rem) 0 1.2rem;');
   });
 
   it("uses the supplied reception-desk photo in the first contact hero placement", () => {

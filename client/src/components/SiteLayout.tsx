@@ -35,7 +35,7 @@ function Header() {
         Zum Inhalt springen
       </a>
       <div className="site-shell header-inner">
-        <Link href="/" className="brand-link" aria-label="Physiowerk Bodensee – Startseite">
+        <Link href="/" className="brand-link" aria-label="Physiowerk Bodensee, Startseite">
           <img
             src={BRAND_ASSETS.logo}
             width="202"
@@ -116,12 +116,10 @@ function Footer() {
           <p className="footer-eyebrow" id="footer-about-heading">
             Physiowerk Bodensee
           </p>
-          <h2>Deine Praxis für Physiotherapie, Biomechanik und medizinisches Training in Meckenbeuren.</h2>
+          <h2>Persönlich betreut. Nachhaltig in Bewegung.</h2>
           <p>
-            Wir bieten individuelle Behandlungen für Rücken, Gelenke, Muskeln und
-            Bewegungseinschränkungen. Unsere erfahrenen Physiotherapeut:innen kombinieren moderne
-            Analyseverfahren mit praxisnaher Betreuung für nachhaltige Ergebnisse – für mehr
-            Beweglichkeit, Kraft und Lebensqualität.
+            Physiotherapie, Biomechanik und medizinisches Training in Meckenbeuren. Individuell,
+            erfahren und mit einem klaren Blick auf Deine Ziele.
           </p>
         </section>
 

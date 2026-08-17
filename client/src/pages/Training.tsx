@@ -91,7 +91,7 @@ export default function Training() {
       <Seo {...SEO.training} />
       <PageHero
         title={<>Gezieltes Training.<br />Therapeutisch betreut.</>}
-        intro="Baue Kraft, Stabilität und Mobilität auf – mit medizinisch begleitetem Training im Physiowerk Bodensee."
+        intro="Baue Kraft, Stabilität und Mobilität mit medizinisch begleitetem Training im Physiowerk Bodensee auf."
         booking
         media={
           <img

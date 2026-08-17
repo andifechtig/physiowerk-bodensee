@@ -24,7 +24,7 @@ const services = [
   ["Manuelle Therapie (MT)", "Mobilisation spezifischer Gelenke auf Basis physiotherapeutischer Aus- und Weiterbildungen."],
   ["Lymphdrainage (MLD)", "Therapie zur Entwässerung des Körpers von Ödemen/Flüssigkeitseinlagerungen unterschiedlicher Art."],
   ["Bobath (KG ZNS)", "Physiotherapie für Neurologische Themen rund um das zentrale und periphere Nervensystems (Schlaganfall, Paresen, MS ect)."],
-  ["Krankengymnastik am Gerät (KGG)", "KGG ist ein gerätegestütztes Training unter physiotherapeutischer Anleitung. Ziel ist es, Kraft, Ausdauer, Koordination und Beweglichkeit zu verbessern. Die Leistung wird vom Arzt über eine Heilmittelverordnung verordnet und findet in unserem Trainingsbereich mit medizinischen Trainingsgeräten statt – einzeln oder in Kleingruppen mit maximal drei Personen."],
+  ["Krankengymnastik am Gerät (KGG)", "KGG ist ein gerätegestütztes Training unter physiotherapeutischer Anleitung. Ziel ist es, Kraft, Ausdauer, Koordination und Beweglichkeit zu verbessern. Die Leistung wird vom Arzt über eine Heilmittelverordnung verordnet und findet in unserem Trainingsbereich mit medizinischen Trainingsgeräten statt. Trainiert wird einzeln oder in Kleingruppen mit maximal drei Personen."],
   ["Faszientherapie (Strukturelle Integration)", "Ganzheitliche Behandlung des Bewegungsapparats mit Hinblick auf die Faszialen Strukturen nach Dr. Ida Rolf. 10er Serie (Selbstzahlerleistung)."],
   ["Kinesiotaping", "Taping bei Verletzungen oder Schmerzen (Entlastung der betroffenen Strukturen)."],
   ["Elektrotherapie/Ultraschalltherapie/Fango", "Zusatzleistungen auf den Physio-Rezepten."],
@@ -38,7 +38,7 @@ export default function Physiotherapy() {
       <Seo {...SEO.physiotherapie} />
       <PageHero
         title={<>Ursachen erkennen.<br />Bewegung zurückgewinnen.</>}
-        intro="Wir kombinieren klassische Physiotherapie mit moderner Biomechanik – für nachhaltige Ergebnisse und echte Lebensqualität."
+        intro="Wir kombinieren klassische Physiotherapie mit moderner Biomechanik. Für nachhaltige Ergebnisse und echte Lebensqualität."
         booking
         media={<img className="physiotherapy-hero-photo" src={PHYSIOTHERAPY_HERO_IMAGE_URL} alt="Manuelle Nackenbehandlung im Physiowerk Bodensee" width="800" height="441" decoding="async" fetchPriority="high" />}
       />
@@ -48,7 +48,7 @@ export default function Physiotherapy() {
           <SectionHeading
             eyebrow="Unser Therapieansatz"
             title="Im Physiowerk Bodensee steht der Mensch im Mittelpunkt."
-            intro={<>Wir behandeln nicht nur Symptome, sondern analysieren die Bewegungsursachen – präzise, ganzheitlich und individuell.<br />Unser Ziel: Schmerzfrei bewegen – heute, morgen und langfristig.</>}
+            intro={<>Wir behandeln nicht nur Symptome, sondern analysieren Bewegungsursachen präzise, ganzheitlich und individuell.<br />Unser Ziel: schmerzfrei bewegen. Heute, morgen und langfristig.</>}
           />
           <TreatmentImageCarousel images={therapyImages} label="Bilder unseres Therapieansatzes" />
         </div>
@@ -59,7 +59,7 @@ export default function Physiotherapy() {
           <div>
             <SectionHeading
               eyebrow="Biomechanische Analyse"
-              title="Bewegung verstehen – mit moderner Biomechanik."
+              title="Bewegung verstehen mit moderner Biomechanik."
               intro="Mit geschultem Auge und ganzheitlichem Verständnis analysieren wir Bewegungsabläufe, Gelenkwinkel und Muskelaktivität. Das ermöglicht präzise Diagnosen und maßgeschneiderte Therapiepläne."
             />
             <blockquote>

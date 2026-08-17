@@ -22,7 +22,7 @@ import { SEO, THERACONNECT } from "@/site-config";
 
 const features = [
   [CalendarCheck, "Termine einsehen und verwalten"],
-  [Repeat2, "Termine online buchen – auch Serientermine"],
+  [Repeat2, "Termine online buchen, auch Serientermine"],
   [XCircle, "Termine absagen"],
   [BellRing, "Push-Benachrichtigungen für Terminangebote"],
   [ShieldCheck, "Sichere Verbindung zu unserer Praxis"],
@@ -90,7 +90,7 @@ export default function AppPage() {
         <div className="site-shell app-hero-grid">
           <div className="app-hero-copy">
             <p className="app-eyebrow">TheraConnect</p>
-            <h1>TheraConnect App – Ihre digitale Praxis in der Tasche</h1>
+            <h1>TheraConnect App: Ihre digitale Praxis in der Tasche</h1>
             <p>
               Mit unserer TheraConnect App haben Sie die Möglichkeit, Ihre Termine bequem online zu
               verwalten, einzusehen und direkt zu buchen. Mehr Flexibilität und Kontrolle über Ihre

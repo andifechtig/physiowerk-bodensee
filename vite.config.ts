@@ -4,7 +4,6 @@ import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "node:path";
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
-import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
@@ -150,9 +149,9 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-// Self-Hosting: Editor-/Preview-Plugins der Manus-Plattform werden nur im
-// Development geladen. Im Produktionsbuild entfallen sie vollständig, damit die
-// Seite ohne plattformspezifische Laufzeit ausgeliefert wird.
+// Self-Hosting: Nur lokale Entwicklungsdiagnostik laden. Die Plattform-Runtime
+// wird bewusst nicht eingebunden, damit kein externes Badge oder Editor-Chrome
+// in Vorschau oder Produktion erscheint.
 const isProductionBuild = process.env.NODE_ENV === "production";
 
 const plugins = [
@@ -160,7 +159,7 @@ const plugins = [
   tailwindcss(),
   ...(isProductionBuild
     ? []
-    : [jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()]),
+    : [jsxLocPlugin(), vitePluginManusDebugCollector()]),
 ];
 
 export default defineConfig({

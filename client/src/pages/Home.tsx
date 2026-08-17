@@ -1,4 +1,4 @@
-import { Activity, BadgeCheck, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, Smartphone, UsersRound } from "lucide-react";
+import { Activity, BadgeCheck, Dumbbell, HeartHandshake, HeartPulse, SearchCheck, Sparkles, Smartphone, Star, Stethoscope, UserRoundCheck, UsersRound } from "lucide-react";
 import {
   ArrowLink,
   BookingSection,
@@ -6,6 +6,7 @@ import {
   Eyebrow,
   SectionHeading,
 } from "@/components/PageElements";
+import { BookingLink } from "@/components/SiteLayout";
 import { Seo } from "@/components/Seo";
 import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { SEO, THERACONNECT } from "@/site-config";
@@ -23,14 +24,14 @@ const HOME_MEDIA = {
 const focusCards = [
   {
     title: "Physiotherapie & Biomechanik",
-    text: "Ursachen erkennen, gezielt behandeln – für langfristige Beschwerdefreiheit.",
+    text: "Ursachen erkennen und gezielt behandeln. Für langfristige Beschwerdefreiheit.",
     href: "/physiotherapie/",
     imageUrl: HOME_MEDIA.boneModel,
     description: "Knochenmodell aus der physiotherapeutischen Praxis",
   },
   {
-    title: "Medizinisches Training und Fitness",
-    text: "Aufbau, Stabilität und Fitness – individuell betreut, effektiv und sicher.",
+    title: "Medizinisches Training",
+    text: "Kraft, Stabilität und Fitness. Individuell betreut, effektiv und sicher.",
     href: "/medizinisches-training-und-fitness/",
     imageUrl: HOME_MEDIA.medicalTraining,
     description: "Keiser Bikes und Trainingsgeräte im medizinischen Trainingsraum",
@@ -51,6 +52,12 @@ const benefits = [
   [Activity, "Interdisziplinäres Team aus Physiotherapie & Training"],
   [Sparkles, "Zentrale Lage im Bodenseekreis"],
   [Dumbbell, "Hochwertige Ausstattung und funktionelle Trainingsflächen"],
+] as const;
+
+const heroTrustSignals = [
+  [Star, "5,0 bei 44 Google-Bewertungen"],
+  [UserRoundCheck, "Persönliche Betreuung"],
+  [Stethoscope, "Für Kasse und Privat"],
 ] as const;
 
 const conditions = {
@@ -99,13 +106,23 @@ export default function Home() {
             fetchPriority="high"
           />
           <div className="home-hero-copy">
-            <h1>Physiotherapie, Biomechanik und medizinisches Training in Meckenbeuren</h1>
-            <p>
-              Wir bringen Dich wieder in Bewegung – individuell, nachhaltig und mit modernsten Methoden aus Physiotherapie, Biomechanik und ganzheitlichem Training.
-              <br />
-              Kassen- & Privatpatienten willkommen!
+            <p className="home-hero-eyebrow">Physiotherapie in Meckenbeuren</p>
+            <h1>Aktiv und schmerzfrei.</h1>
+            <p className="home-hero-intro">
+              Mit physiotherapeutischer Erfahrung, biomechanischer Expertise und persönlicher
+              Betreuung bringen wir Dich gezielt zurück in Bewegung.
             </p>
-            <ArrowLink href="/kontakt/">Jetzt Termin vereinbaren</ArrowLink>
+            <div className="home-hero-actions">
+              <BookingLink className="booking-button-light home-hero-booking" />
+            </div>
+            <div className="home-hero-trust" aria-label="Vertrauenssignale">
+              {heroTrustSignals.map(([Icon, label]) => (
+                <div className="home-hero-trust-item" key={label}>
+                  <Icon aria-hidden="true" />
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -114,8 +131,8 @@ export default function Home() {
         <div className="site-shell focus-intro-grid">
           <SectionHeading
             eyebrow="Unsere Schwerpunkte"
-            title="Dein Körper im Fokus – von Therapie bis Training."
-            intro="Im Physiowerk Bodensee verbinden wir fundierte Physiotherapie mit biomechanischer Analyse und modernem medizinischem Training. Ob akute Beschwerden, Rehabilitation nach Verletzungen oder gezielte Prävention – wir entwickeln gemeinsam mit Dir ein Konzept, das dir wirklich hilft."
+            title="Gezielte Therapie. Nachhaltige Bewegung."
+            intro="Wir verbinden fundierte Physiotherapie, biomechanische Analyse und medizinisches Training. Gemeinsam entwickeln wir den Weg, der zu Deinen Beschwerden und Zielen passt."
           />
           <img
             className="focus-intro-bone-illustration"
@@ -147,13 +164,20 @@ export default function Home() {
             </article>
           ))}
         </div>
+        <div className="site-shell home-inline-booking">
+          <div>
+            <strong>Du möchtest wieder sicher in Bewegung kommen?</strong>
+            <span>Reserviere Deinen Termin direkt online.</span>
+          </div>
+          <BookingLink />
+        </div>
       </section>
 
       <section className="home-coaching-teaser">
         <div className="site-shell home-coaching-teaser-grid">
           <div>
             <p className="eyebrow eyebrow-light">Neu im Physiowerk Bodensee</p>
-            <h2>NEU: Schmerzfrei Jetzt — Dein 6-Monats-Coaching</h2>
+            <h2>Schmerzfrei Jetzt: 6 Monate persönliche Begleitung</h2>
             <p>Das ganzheitliche Coaching-Programm für nachhaltige Schmerzfreiheit. Biomechanisch fundiert, persönlich betreut von Andreas Fechtig.</p>
             <ArrowLink href="/coaching/">Mehr erfahren</ArrowLink>
           </div>
@@ -173,7 +197,7 @@ export default function Home() {
             <p className="eyebrow">Neu: TheraConnect App</p>
             <h2>Ihre Termine. Direkt auf Ihrem Smartphone.</h2>
             <p>
-              Termine einsehen, online buchen und verwalten – sicher verbunden mit dem Physiowerk
+              Termine einsehen, online buchen und verwalten. Sicher verbunden mit dem Physiowerk
               Bodensee.
             </p>
             <ArrowLink href="/app/">App kennenlernen</ArrowLink>
@@ -197,10 +221,10 @@ export default function Home() {
           </div>
           <div>
             <p className="eyebrow eyebrow-light">ZPP-Kurse</p>
-            <h2>Zertifizierte Prävention – vor Ort und digital</h2>
+            <h2>Online-Prävention mit bis zu 100 % Förderung</h2>
             <p>
-              Gesundheitsfördernde Kurse mit möglicher Bezuschussung durch Ihre Krankenkasse. Lernen
-              Sie auch unser digitales Angebot „Prävention digital“ kennen.
+              Zertifizierte Online-Kurse für Ihre Gesundheit. Lassen Sie kostenlos prüfen, welche
+              Erstattung über Ihre Krankenkasse möglich ist.
             </p>
             <ArrowLink href="/kurse/">Kurse entdecken</ArrowLink>
           </div>
@@ -210,18 +234,21 @@ export default function Home() {
       <GoogleReviewsWidget />
 
       <div className="marquee" aria-label="Physiotherapie, Biomechanik, medizinisches Training, Fitness">
-        <span>Physiotherapie — Biomechanik — medizinisches Training — Fitness —</span>
-        <span aria-hidden="true">Physiotherapie — Biomechanik — medizinisches Training — Fitness —</span>
+        <span>Physiotherapie · Biomechanik · medizinisches Training · Fitness</span>
+        <span aria-hidden="true">Physiotherapie · Biomechanik · medizinisches Training · Fitness</span>
       </div>
 
       <section className="content-section content-section-dark">
         <div className="site-shell why-grid">
-          <SectionHeading
-            eyebrow="Warum zum Physiowerk Bodensee?"
-            title="Mehr als Therapie – wir begleiten Dich auf Deinem Weg zur Bewegung."
-            intro="Bei uns steht der Mensch im Mittelpunkt. Wir analysieren Bewegungsabläufe, erkennen Ursachen und entwickeln ein individuelles Trainings- und Therapiekonzept. So erreichst Du nicht nur schnelle, sondern nachhaltige Ergebnisse."
-            light
-          />
+          <div className="why-copy">
+            <SectionHeading
+              eyebrow="Warum Physiowerk?"
+              title="Mehr als Therapie. Nachhaltig in Bewegung."
+              intro="Wir analysieren Bewegungsabläufe, erkennen Ursachen und entwickeln Dein individuelles Therapie- und Trainingskonzept."
+              light
+            />
+            <BookingLink className="booking-button-light" />
+          </div>
           <div className="benefit-grid">
             {benefits.map(([Icon, text]) => (
               <article key={text}>
@@ -246,15 +273,10 @@ export default function Home() {
           />
           <div>
             <Eyebrow>Team & Praxis</Eyebrow>
-            <h2>
-              Die Praxis,
-              <br />
-              das Team und unsere Mission
-            </h2>
+            <h2>Unsere Praxis. Unser Team. Deine Bewegung.</h2>
             <p>
-              Unser Ziel ist es, das Problem bei der Wurzel zu packen.
-              <br />
-              Wir suchen gemeinsam die Ursache für deine Beschwerden. Nicht immer liegt diese offensichtlich auf der Hand, bzw. der Grund für deine Beschwerden nicht zwingend beim aktuellen Problem selbst.
+              Unser Ziel ist es, Beschwerden an der Ursache zu verstehen. Gemeinsam betrachten wir
+              Deinen Körper ganzheitlich und entwickeln einen nachvollziehbaren Weg zurück zu mehr Bewegung.
             </p>
             <ArrowLink href="/team-praxis/">Mehr erfahren</ArrowLink>
           </div>

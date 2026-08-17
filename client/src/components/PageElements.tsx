@@ -13,20 +13,25 @@ export function PageHero({
   intro,
   media,
   booking = false,
+  actions,
+  className = "",
 }: {
   title: ReactNode;
   intro: ReactNode;
   media: ReactNode;
   booking?: boolean;
+  actions?: ReactNode;
+  className?: string;
 }) {
   return (
-    <section className="page-hero">
+    <section className={`page-hero ${className}`.trim()}>
       <div className="site-shell page-hero-grid">
         <div className="page-hero-media">{media}</div>
         <div className="page-hero-copy">
           <h1>{title}</h1>
           <p>{intro}</p>
           {booking ? <BookingLink className="booking-button-light" /> : null}
+          {actions}
         </div>
       </div>
     </section>
@@ -85,7 +90,7 @@ export function ContactCta() {
             Neustart in Bewegung?
           </h2>
           <p>
-            Egal ob akute Beschwerden, chronische Schmerzen oder einfach der Wunsch nach mehr Beweglichkeit – wir sind für Dich da. Melde Dich jetzt für ein unverbindliches Erstgespräch oder direkt zur Therapie an.
+            Egal ob akute Beschwerden, chronische Schmerzen oder der Wunsch nach mehr Beweglichkeit: Wir sind für Dich da. Melde Dich jetzt für ein unverbindliches Erstgespräch oder direkt zur Therapie an.
           </p>
           <BookingLink className="booking-button-light" />
         </div>

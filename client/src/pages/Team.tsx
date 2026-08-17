@@ -20,8 +20,8 @@ export default function Team() {
     <>
       <Seo {...SEO.team} />
       <PageHero
-        title={<>Bewegung ist Leben –<br />und unsere Leidenschaft</>}
-        intro="Wir sind das Physiowerk Bodensee – ein Team aus erfahrenen Therapeut:innen, das Menschen in Bewegung bringt."
+        title={<>Bewegung ist Leben.<br />Unsere Leidenschaft.</>}
+        intro="Wir sind das Physiowerk Bodensee. Ein Team aus erfahrenen Therapeut:innen, das Menschen in Bewegung bringt."
         media={<img className="team-hero-photo" src={TEAM_HERO_IMAGE_URL} alt="Empfangsbereich des Physiowerk Bodensee in Meckenbeuren" decoding="async" fetchPriority="high" />}
       />
 

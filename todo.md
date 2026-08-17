@@ -346,3 +346,27 @@
 - [x] Korrigierte Biomechanik-Bilder testen, Checkpoint erstellen und die Website erneut öffentlich veröffentlichen
 
 - [x] Vollständigen Projektquellcode ohne `node_modules` als ZIP-Archiv unter `/home/ubuntu/physiowerk-bodensee-source.zip` exportieren
+
+- [x] GitHub-Branch `main` als alleinige Quellbasis für die neue Überarbeitung verwenden
+- [x] Kontaktseite und ihre Inhalte bei sämtlichen Änderungen unverändert lassen
+- [x] Desktop-Navigation einzeilig und kompakter gestalten sowie „Medizinisches Training und Fitness“ zu „Medizinisches Training“ kürzen
+- [x] Startseiten-Hero in ein bildüberlagerndes Layout mit nutzenorientierter Überschrift in höchstens zwei Zeilen umbauen
+- [x] Kurzen überzeugenden Hero-Begleittext zu Erfahrung, Expertise und persönlicher Betreuung ergänzen
+- [x] Google-Bewertung `5,0 / 44 Bewertungen` und weitere belastbare Vertrauenssignale im Hero darstellen
+- [x] Terminbuchungs-CTA im sichtbaren Startseiten-Hero für Desktop und Mobil prominent platzieren
+- [x] „Made with Manus“-Banner vollständig entfernen oder zuverlässig ausblenden
+- [x] Unbeabsichtigte Gedankenstrich- und Trennstrichartefakte auf allen Seiten entfernen, ohne notwendige sprachliche Zeichensetzung zu beschädigen
+- [x] Kursseiten-Überschriften deutlich verkleinern und auf kompakte Zeilenlängen optimieren
+- [x] Kurs-Headline „Ihr Kurs. Ihr Tempo. Ihr Zuhause.“ natürlich und nutzenorientiert ersetzen
+- [x] Mehr auffällige rote Förderprüfungs-CTAs auf der Kursseite integrieren
+- [x] Typeform-Förderprüfung direkt und responsiv als Iframe auf `/kurse/` einbetten
+- [x] Zielgruppenüberschrift „Für wen sind die …“ auf der Kursseite kleiner darstellen
+- [x] Karriere-Headlines kompakter gestalten und zusätzliche Bewerbungs-CTAs integrieren
+- [x] Footer in Inhalt, Höhe und Abständen deutlich kompakter gestalten
+- [x] Startseiten-Headlines in den unteren Bereichen auf höchstens zwei Zeilen kürzen
+- [x] Regelmäßige Terminbuchungs-CTAs entlang der Startseite ergänzen
+- [x] Mobile Startseite mit kompaktem Hero und sofort sichtbarem CTA optimieren
+- [x] Automatisierte Tests an Navigation, Hero, Vertrauenssignale, Kurs-Iframe, CTAs, Footer und Bannerentfernung anpassen
+- [x] Vollständige Test-Suite, TypeScript-Prüfung und Produktionsbuild erfolgreich ausführen
+- [x] Geänderte Seiten auf Desktop und Mobil prüfen, ohne die Kontaktseite zu verändern
+- [ ] Änderungen nach `main` pushen und Coolify-Deployment auf der Live-Website verifizieren

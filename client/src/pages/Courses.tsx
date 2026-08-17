@@ -19,7 +19,7 @@ const onlineCourseBenefits = [
   {
     icon: Laptop,
     title: "Flexibel online teilnehmen",
-    text: "Alle Kurseinheiten sind bereits für Sie aufgezeichnet. So können Sie selbst entscheiden, wann und wo Sie trainieren möchten – ganz ohne feste Kurszeiten.",
+    text: "Alle Kurseinheiten sind bereits für Sie aufgezeichnet. So entscheiden Sie selbst, wann und wo Sie trainieren. Ganz ohne feste Kurszeiten.",
   },
   {
     icon: UsersRound,
@@ -42,7 +42,7 @@ const audienceBenefits = [
   {
     icon: BadgeCheck,
     title: "Neue Schwerpunkte entdecken",
-    text: "Ob Krafttraining, Mobility, Yoga oder Ernährung – entdecken Sie verschiedene Gesundheitsbereiche und finden Sie den Schwerpunkt, der zu Ihren persönlichen Zielen passt.",
+    text: "Ob Krafttraining, Mobility, Yoga oder Ernährung: Entdecken Sie den Gesundheitsbereich, der zu Ihren persönlichen Zielen passt.",
   },
   {
     icon: Laptop,
@@ -72,13 +72,7 @@ const fundingBenefits = [
 function FundingCta({ label }: { label: string }) {
   return (
     <div className="courses-funding-cta">
-      <a
-        className="arrow-link"
-        href={FUNDING_FORM_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`${label} (öffnet in einem neuen Tab)`}
-      >
+      <a className="arrow-link" href="#foerderung-pruefen">
         <span>{label}</span>
         <ArrowRight aria-hidden="true" />
       </a>
@@ -100,7 +94,7 @@ export default function Courses() {
               <span>§20 SGB V</span>
             </div>
             <p className="courses-eyebrow">Zertifizierte Online-Präventionskurse</p>
-            <h1>Online-Präventionskurse – bis zu 100 % gefördert</h1>
+            <h1>Online-Präventionskurse: bis zu 100 % gefördert</h1>
             <p className="courses-hero-intro">
               Entdecken Sie zertifizierte Online-Präventionskurse aus verschiedenen Gesundheitsbereichen
               und lassen Sie kostenlos prüfen, welche Förderung über Ihre Krankenkasse für Sie möglich ist.
@@ -119,7 +113,7 @@ export default function Courses() {
         <div className="site-shell">
           <div className="courses-heading">
             <p className="courses-eyebrow">Online-Präventionskurse</p>
-            <h2>Ihr Kurs. Ihr Tempo. Ihr Zuhause.</h2>
+            <h2>Flexibel trainieren, wann und wo es Ihnen passt</h2>
             <p>
               Die zertifizierten Online-Präventionskurse sind bereits vollständig aufgezeichnet und können
               bequem von zu Hause absolviert werden. Machen Sie die Übungen direkt mit und führen Sie die
@@ -143,7 +137,7 @@ export default function Courses() {
         <div className="site-shell courses-refund-grid">
           <div>
             <p className="courses-eyebrow courses-eyebrow-light">Individuelle Förderprüfung</p>
-            <h2>Gesundheit fördern und Kosten erstatten lassen</h2>
+            <h2>Gesundheit fördern. Kosten erstatten lassen.</h2>
             <p>
               Je nach Krankenkasse und gewähltem Präventionskurs ist eine Erstattung von bis zu 100 % der
               Kurskosten möglich. Unser unabhängiger Förderpartner prüft Ihre individuelle Situation kostenlos
@@ -171,7 +165,7 @@ export default function Courses() {
         <div className="site-shell">
           <div className="courses-heading">
             <p className="courses-eyebrow">Flexibel in den Alltag integrierbar</p>
-            <h2>Für wen sind die Online-Präventionskurse interessant?</h2>
+            <h2>Für wen sind Online-Präventionskurse geeignet?</h2>
             <p>
               Die Online-Präventionskurse eignen sich für alle, die aktiv etwas für ihre Gesundheit tun möchten
               und dabei Wert auf eine flexible Durchführung legen. Je nach persönlichem Ziel stehen
@@ -187,6 +181,41 @@ export default function Courses() {
               </article>
             ))}
           </div>
+          <FundingCta label="Förderung jetzt kostenlos prüfen" />
+        </div>
+      </section>
+
+      <section className="courses-form-section" id="foerderung-pruefen">
+        <div className="site-shell courses-form-grid">
+          <div className="courses-form-copy">
+            <p className="courses-eyebrow">Kostenlose Förderprüfung</p>
+            <h2>Ihre Förderung in 30 Sekunden prüfen</h2>
+            <p>
+              Beantworten Sie wenige kurze Fragen. Anschließend bespricht unser unabhängiger
+              Förderpartner persönlich mit Ihnen, welcher Kurs und welche Erstattung möglich sind.
+            </p>
+            <a
+              className="courses-form-fallback"
+              href={FUNDING_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Förderprüfung in neuem Fenster öffnen
+              <ArrowRight aria-hidden="true" />
+            </a>
+          </div>
+          <div className="courses-typeform-shell">
+            <iframe
+              className="courses-typeform"
+              src={FUNDING_FORM_URL}
+              title="Kostenlose Förderprüfung für Online-Präventionskurse"
+              width="100%"
+              height="720"
+              loading="lazy"
+              allow="camera; microphone; autoplay; encrypted-media"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
         </div>
       </section>
 
@@ -194,7 +223,7 @@ export default function Courses() {
         <div className="site-shell courses-registration-grid">
           <div>
             <p className="courses-eyebrow courses-eyebrow-light">Kostenlose Förderprüfung</p>
-            <h2>Jetzt Ihre persönliche Förderung prüfen lassen</h2>
+            <h2>Persönliche Förderung jetzt prüfen</h2>
             <p>
               Füllen Sie einfach unsere kurze Abfrage aus. Anschließend meldet sich unser unabhängiger
               Förderpartner persönlich bei Ihnen und prüft gemeinsam mit Ihnen den passenden Präventionskurs

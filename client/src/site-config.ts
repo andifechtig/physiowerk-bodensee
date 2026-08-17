@@ -50,7 +50,7 @@ export const CANONICAL_REDIRECTS: Record<string, string> = {
 export const NAVIGATION = [
   { label: "Physiotherapie", href: "/physiotherapie/" },
   {
-    label: "Medizinisches Training und Fitness",
+    label: "Medizinisches Training",
     href: "/medizinisches-training-und-fitness/",
   },
   { label: "Team & Praxis", href: "/team-praxis/" },
