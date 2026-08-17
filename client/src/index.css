@@ -127,7 +127,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .biomechanics-grid { grid-template-columns: 1fr .8fr; }
 .philosophy-grid, .career-benefits-grid { grid-template-columns: 1.2fr .8fr; align-items: end; }
 .contact-page-grid { grid-template-columns: 1fr 1fr; align-items: start; }
-.contact-page-grid > div:last-child { padding-top: 2.8rem; }
+.contact-page-grid > div:last-child { padding-top: 4.5rem; }
 .contact-message-photo { width: 100%; aspect-ratio: 800 / 539; display: block; object-fit: cover; object-position: center; border-radius: clamp(1.75rem, 4vw, 4.5rem); background: var(--paper-soft); }
 .mission-grid .media-placeholder, .rooms-grid .media-placeholder, .opportunity-grid .media-placeholder, .career-banner .media-placeholder { min-height: 0; }
 .mission-grid .arrow-link, .career-banner .arrow-link { margin-top: 1.5rem; color: var(--brand); }
@@ -265,7 +265,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .form-message-error { color: #8a1420; background: #fff0f1; }
 .form-message-success { display: flex; align-items: center; gap: .6rem; color: #1b6346; background: #edf9f3; }
 .form-message-success svg { width: 1.1rem; height: 1.1rem; }
-.contact-detail-list { display: flex; flex-direction: column; margin-top: 3.5rem; border-top: 1px solid var(--line); }
+.contact-detail-list { display: flex; flex-direction: column; margin-top: 4.5rem; border-top: 1px solid var(--line); }
 .contact-detail-list a { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
 .contact-detail-list svg { width: 1.15rem; color: var(--brand); }
 .contact-hours { margin-top: 2.5rem; }
