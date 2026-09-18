@@ -3,7 +3,7 @@ import { SEO } from "@/site-config";
 import { PageHero, SectionHeading, ArrowLink, ContactCta } from "@/components/PageElements";
 
 const TEAM_HERO_IMAGE_URL = "/images/rSQQTljhWGQMIZzP.webp";
-const HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png";
+const HEART_IMAGE_URL = "/brand/physiowerk-herz-1000.webp";
 
 const team = [
   { name: "Andreas Fechtig", role: "Inhaber und Physiotherapeut", imageUrl: "/images/PoWYIAWoCZSqpiFF.webp" },
@@ -20,7 +20,7 @@ export default function Team() {
     <>
       <Seo {...SEO.team} />
       <PageHero
-        title={<>Bewegung ist Leben.<br />Unsere Leidenschaft.</>}
+        title={<>Team und Praxis<br />in Meckenbeuren.</>}
         intro="Wir sind das Physiowerk Bodensee. Ein Team aus erfahrenen Therapeut:innen, das Menschen in Bewegung bringt."
         media={<img className="team-hero-photo" src={TEAM_HERO_IMAGE_URL} alt="Empfangsbereich des Physiowerk Bodensee in Meckenbeuren" decoding="async" fetchPriority="high" />}
       />

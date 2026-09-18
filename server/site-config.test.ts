@@ -83,7 +83,7 @@ describe("stable site routes", () => {
     const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(home).toContain('const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png"');
+    expect(home).toContain('const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-1000.webp"');
     expect(home).toContain('className="career-banner-heart"');
     expect(home).toContain('alt="Rotes Herz als Symbol für Karriere im Physiowerk Bodensee"');
     expect(home).not.toContain('filename="Gruppe-99.svg" description="Anatomische Herzdekoration" dark');
@@ -195,7 +195,7 @@ describe("stable site routes", () => {
     expect(career).toContain('const CAREER_HERO_IMAGE_URL = "/images/BjmnaxpzwbfZKOwc.webp"');
     expect(career).toContain('className="career-hero-photo"');
     expect(career).toContain('alt="Andreas beim Training mit einer Patientin am Seilzug"');
-    expect(career).toContain('const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png"');
+    expect(career).toContain('const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-1000.webp"');
     expect(career).toContain('className="career-team-heart"');
     expect(career).toContain('alt="Rotes Herz als Symbol für eine Karriere im Physiowerk Bodensee"');
     expect(career).not.toContain('filename="Physiowerk_Bodensee©patrickdunst-042-0349.jpg"');
@@ -209,7 +209,7 @@ describe("stable site routes", () => {
     const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(home).toContain("Aktiv und schmerzfrei.");
+    expect(home).toContain("Physiotherapie in Meckenbeuren.");
     expect(home).toContain("5,0 bei 44 Google-Bewertungen");
     expect(home).toContain("Persönliche Betreuung");
     expect(home).toContain("Für Kasse und Privat");
@@ -264,7 +264,7 @@ describe("stable site routes", () => {
     const footer = readFileSync(new URL("../client/src/components/SiteLayout.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(contact).toContain("Wir sind für Dich da –");
+    expect(contact).toContain("Kontakt und Anfahrt");
     expect(contact).toContain("Ob Termin, Frage oder Beratung – wir freuen uns, von Dir zu hören.");
     expect(footer).toContain("Persönlich betreut. Nachhaltig in Bewegung.");
     expect(styles).toContain('.site-footer { padding: clamp(2.8rem, 5vw, 4.5rem) 0 1.2rem;');
@@ -274,7 +274,7 @@ describe("stable site routes", () => {
     const contact = readFileSync(new URL("../client/src/pages/Contact.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
 
-    expect(contact).toContain('const CONTACT_HERO_IMAGE_URL = "/images/wGgICEiGwgJWmdPo.PNG"');
+    expect(contact).toContain('const CONTACT_HERO_IMAGE_URL = "/images/kontakt-empfang-677.webp"');
     expect(contact).toContain('className="contact-hero-photo"');
     expect(contact).toContain('alt="Rezeptübergabe am Empfangstisch im Physiowerk Bodensee"');
     expect(contact).not.toContain('filename="Teamseite-Header-Physiowerk-Bodensee.jpg" description="Physiowerk Bodensee Team" dark');
@@ -336,7 +336,7 @@ describe("stable site routes", () => {
     const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
     const team = readFileSync(new URL("../client/src/pages/Team.tsx", import.meta.url), "utf8");
     const styles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf8");
-    const heartAsset = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png";
+    const heartAsset = "/brand/physiowerk-herz-1000.webp";
 
     expect(home).toContain(`const CAREER_HEART_IMAGE_URL = "${heartAsset}"`);
     expect(team).toContain(`const HEART_IMAGE_URL = "${heartAsset}"`);

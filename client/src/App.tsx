@@ -1,5 +1,5 @@
 import NotFound from "@/pages/NotFound";
-import { lazy, Suspense, useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { SiteLayout } from "./components/SiteLayout";
@@ -7,20 +7,11 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import { CANONICAL_REDIRECTS } from "./site-config";
 
-const AppPage = lazy(() => import("./pages/AppPage"));
-const Career = lazy(() => import("./pages/Career"));
-const Coaching = lazy(() => import("./pages/Coaching"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Courses = lazy(() => import("./pages/Courses"));
-const Imprint = lazy(() => import("./pages/Imprint"));
-const Physiotherapy = lazy(() => import("./pages/Physiotherapy"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Team = lazy(() => import("./pages/Team"));
-const Training = lazy(() => import("./pages/Training"));
+import { AppPage, Career, Coaching, Contact, Courses, Imprint, Physiotherapy, Privacy, Team, Training } from "./routes";
 
 function CanonicalRedirect({ to }: { to: string }) {
   useEffect(() => {
-    window.history.replaceState(null, "", to);
+    window.history.replaceState(null, "", to + window.location.search + window.location.hash);
     window.dispatchEvent(new PopStateEvent("popstate"));
   }, [to]);
   return null;
@@ -41,16 +32,16 @@ function Router() {
       <Suspense fallback={<div className="route-loading" role="status">Seite wird geladen</div>}>
         <Switch>
           <Route path="/" component={Home} />
-          <Route path="/physiotherapie/" component={Physiotherapy} />
-          <Route path="/medizinisches-training-und-fitness/" component={Training} />
-          <Route path="/team-praxis/" component={Team} />
-          <Route path="/karriere/" component={Career} />
-          <Route path="/coaching/" component={Coaching} />
-          <Route path="/app/" component={AppPage} />
-          <Route path="/kurse/" component={Courses} />
-          <Route path="/kontakt/" component={Contact} />
-          <Route path="/impressum/" component={Imprint} />
-          <Route path="/datenschutzerklaerung/" component={Privacy} />
+          <Route path="/physiotherapie/" component={Physiotherapy.Component} />
+          <Route path="/medizinisches-training-und-fitness/" component={Training.Component} />
+          <Route path="/team-praxis/" component={Team.Component} />
+          <Route path="/karriere/" component={Career.Component} />
+          <Route path="/coaching/" component={Coaching.Component} />
+          <Route path="/app/" component={AppPage.Component} />
+          <Route path="/kurse/" component={Courses.Component} />
+          <Route path="/kontakt/" component={Contact.Component} />
+          <Route path="/impressum/" component={Imprint.Component} />
+          <Route path="/datenschutzerklaerung/" component={Privacy.Component} />
           {Object.entries(CANONICAL_REDIRECTS).map(([from, to]) => (
             <Route key={from} path={from}>
               {() => <CanonicalRedirect to={to} />}

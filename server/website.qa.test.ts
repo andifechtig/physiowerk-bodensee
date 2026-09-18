@@ -44,7 +44,7 @@ describe("website quality contracts", () => {
     expect(unknown).toEqual([]);
   });
 
-  it("keeps SEO metadata and sitemap complete for all nine pages", () => {
+  it("keeps SEO metadata and sitemap complete for all eleven pages", () => {
     const entries = Object.values(SEO);
     expect(entries).toHaveLength(11);
     expect(new Set(entries.map(entry => entry.title)).size).toBe(entries.length);
@@ -93,17 +93,18 @@ describe("website quality contracts", () => {
   it("keeps the HTML entry document clean and mountable", () => {
     const html = readFileSync(join(clientRoot, "index.html"), "utf8");
     expect(html).toContain('<html lang="de">');
-    expect(html).toContain('<div id="root"></div>');
+    expect(html).toContain('<div id="root"><!--app-html--></div>');
+    expect(html).toContain('<!--app-head-->');
     expect(html).toContain('type="module" src="/src/main.tsx"');
     expect(html).not.toMatch(/^@@$|^[+-](?!\+|-)/m);
     expect(html.trimEnd().endsWith("</html>")).toBe(true);
   });
 
   it("keeps non-home routes lazy-loaded", () => {
-    const app = readFileSync(join(sourceRoot, "App.tsx"), "utf8");
+    const app = readFileSync(join(sourceRoot, "routes.tsx"), "utf8");
     const lazyPages = ["AppPage", "Career", "Coaching", "Contact", "Courses", "Imprint", "Physiotherapy", "Privacy", "Team", "Training"];
     for (const page of lazyPages) {
-      expect(app).toContain(`const ${page} = lazy(() => import("./pages/${page}"))`);
+      expect(app).toContain(`const ${page} = preloadable(() => import("./pages/${page}"))`);
     }
   });
 

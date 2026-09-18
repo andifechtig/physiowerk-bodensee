@@ -5,7 +5,7 @@ import { PracticeMap } from "@/components/PracticeMap";
 import { Seo } from "@/components/Seo";
 import { CONTACT, SEO } from "@/site-config";
 
-const CONTACT_HERO_IMAGE_URL = "/images/wGgICEiGwgJWmdPo.PNG";
+const CONTACT_HERO_IMAGE_URL = "/images/kontakt-empfang-677.webp";
 const CONTACT_MESSAGE_IMAGE_URL = "/images/XqWXZETIrfFmZHjk.webp";
 
 export default function Contact() {
@@ -13,12 +13,14 @@ export default function Contact() {
     <>
       <Seo {...SEO.contact} />
       <PageHero
-        title={<>Wir sind für Dich da –<br />nimm Kontakt auf.</>}
+        title={<>Kontakt und Anfahrt<br />in Meckenbeuren.</>}
         intro="Ob Termin, Frage oder Beratung – wir freuen uns, von Dir zu hören."
         media={
           <img
             className="contact-hero-photo"
             src={CONTACT_HERO_IMAGE_URL}
+            srcSet="/images/kontakt-empfang-480.webp 480w, /images/kontakt-empfang-677.webp 677w"
+            sizes="(max-width: 800px) 100vw, 50vw"
             alt="Rezeptübergabe am Empfangstisch im Physiowerk Bodensee"
             width="800"
             height="539"

@@ -11,7 +11,7 @@ import { Seo } from "@/components/Seo";
 import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { SEO, THERACONNECT } from "@/site-config";
 
-const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-vollflaechig_cdd7affc.png";
+const CAREER_HEART_IMAGE_URL = "/brand/physiowerk-herz-1000.webp";
 const HOME_MEDIA = {
   heroTherapy: "/images/tTQDcPvqnXwIiMoX.webp",
   boneIllustration: "/images/OHHoxsvHutuBBXuv.svg",
@@ -106,11 +106,11 @@ export default function Home() {
             fetchPriority="high"
           />
           <div className="home-hero-copy">
-            <p className="home-hero-eyebrow">Physiotherapie in Meckenbeuren</p>
-            <h1>Aktiv und schmerzfrei.</h1>
+            <p className="home-hero-eyebrow">Physiowerk Bodensee</p>
+            <h1>Physiotherapie in Meckenbeuren.</h1>
             <p className="home-hero-intro">
               Mit physiotherapeutischer Erfahrung, biomechanischer Expertise und persönlicher
-              Betreuung bringen wir Dich gezielt zurück in Bewegung.
+              Betreuung begleiten wir Dich in unserer Praxis in Meckenbeuren im Bodenseekreis zurück in Bewegung.
             </p>
             <div className="home-hero-actions">
               <BookingLink className="booking-button-light home-hero-booking" />
@@ -159,7 +159,7 @@ export default function Home() {
               <div>
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
-                <ArrowLink href={card.href}>Mehr erfahren</ArrowLink>
+                <ArrowLink href={card.href}>{card.title} kennenlernen</ArrowLink>
               </div>
             </article>
           ))}
@@ -179,7 +179,7 @@ export default function Home() {
             <p className="eyebrow eyebrow-light">Neu im Physiowerk Bodensee</p>
             <h2>Schmerzfrei Jetzt: 6 Monate persönliche Begleitung</h2>
             <p>Das ganzheitliche Coaching-Programm für nachhaltige Schmerzfreiheit. Biomechanisch fundiert, persönlich betreut von Andreas Fechtig.</p>
-            <ArrowLink href="/coaching/">Mehr erfahren</ArrowLink>
+            <ArrowLink href="/coaching/">Coaching kennenlernen</ArrowLink>
           </div>
           <div className="home-coaching-teaser-mark" aria-hidden="true">
             <HeartPulse />
@@ -278,7 +278,7 @@ export default function Home() {
               Unser Ziel ist es, Beschwerden an der Ursache zu verstehen. Gemeinsam betrachten wir
               Deinen Körper ganzheitlich und entwickeln einen nachvollziehbaren Weg zurück zu mehr Bewegung.
             </p>
-            <ArrowLink href="/team-praxis/">Mehr erfahren</ArrowLink>
+            <ArrowLink href="/team-praxis/">Unser Team und die Praxis</ArrowLink>
           </div>
         </div>
       </section>

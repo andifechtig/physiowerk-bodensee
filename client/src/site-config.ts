@@ -81,67 +81,59 @@ export type SeoConfig = {
 };
 
 export const SEO: Record<string, SeoConfig> = {
-  home: {
-    title: "Startseite - Physiowerk Bodensee",
-    description:
-      "Wir bringen Dich wieder in Bewegung – individuell, nachhaltig und mit modernsten Methoden aus Physiotherapie, Biomechanik und ganzheitlichem Training.",
-    path: "/",
+  "home": {
+    "title": "Physiotherapie Meckenbeuren | Physiowerk Bodensee",
+    "description": "Physiotherapie, Biomechanik und medizinisches Training in Meckenbeuren. Persönliche Betreuung für Kasse und Privat. Termin online oder telefonisch anfragen.",
+    "path": "/"
   },
-  physiotherapie: {
-    title: "Physiotherapie - Physiowerk Bodensee",
-    description:
-      "Wir kombinieren klassische Physiotherapie mit moderner Biomechanik – für nachhaltige Ergebnisse und echte Lebensqualität.",
-    path: "/physiotherapie/",
+  "physiotherapie": {
+    "title": "Physiotherapie & Biomechanik in Meckenbeuren",
+    "description": "Physiotherapie in Meckenbeuren: Krankengymnastik, manuelle Therapie, Lymphdrainage und KGG im Physiowerk Bodensee. Erfahre mehr über unsere Behandlung.",
+    "path": "/physiotherapie/"
   },
-  training: {
-    title: "Medizinisches Training und Fitness - Physiowerk Bodensee",
-    description:
-      "Baue Kraft, Stabilität und Mobilität auf – mit medizinisch begleitetem Training im Physiowerk Bodensee.",
-    path: "/medizinisches-training-und-fitness/",
+  "training": {
+    "title": "Medizinisches Training Meckenbeuren | Physiowerk",
+    "description": "Medizinisches Training und Fitness in Meckenbeuren: KGG, T-RENA und individuell betreutes Training für Kraft, Stabilität und Beweglichkeit.",
+    "path": "/medizinisches-training-und-fitness/"
   },
-  team: {
-    title: "Team & Praxis - Physiowerk Bodensee",
-    description:
-      "Wir sind das Physiowerk Bodensee – ein Team aus erfahrenen Therapeut:innen, das Menschen in Bewegung bringt.",
-    path: "/team-praxis/",
+  "team": {
+    "title": "Team & Praxis in Meckenbeuren | Physiowerk Bodensee",
+    "description": "Lerne unser Physiotherapie-Team und die Praxis in Meckenbeuren kennen. Persönliche Betreuung, biomechanische Analyse und medizinisches Training.",
+    "path": "/team-praxis/"
   },
-  career: {
-    title: "Karriere - Physiowerk Bodensee",
-    description: "Physiotherapie mit Herz, Know-how und modernem Umfeld.",
-    path: "/karriere/",
+  "career": {
+    "title": "Physiotherapie-Jobs Meckenbeuren | Physiowerk Bodensee",
+    "description": "Arbeiten als Physiotherapeut:in in Meckenbeuren: Lerne unser Team, die Praxis und Deine Bewerbungsmöglichkeiten beim Physiowerk Bodensee kennen.",
+    "path": "/karriere/"
   },
-  coaching: {
-    title: "Schmerzfrei Jetzt Coaching - Physiowerk Bodensee",
-    description:
-      "Das ganzheitliche 6-Monats-Coaching von Andreas Fechtig – biomechanisch fundiert, persönlich betreut und nachhaltig ausgerichtet.",
-    path: "/coaching/",
+  "coaching": {
+    "title": "Coaching mit Andreas Fechtig | Physiowerk Bodensee",
+    "description": "Schmerzfrei Jetzt: sechs Monate persönliche Begleitung durch Andreas Fechtig im Physiowerk Bodensee. Biomechanisch fundiertes Coaching kennenlernen.",
+    "path": "/coaching/"
   },
-  app: {
-    title: "TheraConnect App - Physiowerk Bodensee",
-    description:
-      "Termine bequem online verwalten, einsehen und buchen – mit der TheraConnect App und dem Praxiscode des Physiowerk Bodensee.",
-    path: "/app/",
+  "app": {
+    "title": "TheraConnect: Termine verwalten | Physiowerk Bodensee",
+    "description": "Mit der TheraConnect-App Termine beim Physiowerk Bodensee in Meckenbeuren einsehen, online buchen und verwalten. Praxiscode und Anleitung finden.",
+    "path": "/app/"
   },
-  courses: {
-    title: "ZPP-Präventionskurse - Physiowerk Bodensee",
-    description:
-      "Zertifizierte Präventionskurse nach §20 SGB V vor Ort und digital – mit möglicher Bezuschussung durch die Krankenkasse.",
-    path: "/kurse/",
+  "courses": {
+    "title": "Online-Präventionskurse §20 | Physiowerk Bodensee",
+    "description": "Zertifizierte Online-Präventionskurse nach §20 SGB V beim Physiowerk Bodensee. Informiere Dich über die Kurse und mögliche Krankenkassen-Zuschüsse.",
+    "path": "/kurse/"
   },
-  contact: {
-    title: "Kontakt - Physiowerk Bodensee",
-    description: "Ob Termin, Frage oder Beratung – wir freuen uns, von Dir zu hören.",
-    path: "/kontakt/",
+  "contact": {
+    "title": "Kontakt & Anfahrt Meckenbeuren | Physiowerk Bodensee",
+    "description": "Physiowerk Bodensee, Tettnanger Straße 14, 88074 Meckenbeuren. Kontakt, Anfahrt und Öffnungszeiten. Termin online buchen oder unter 07542 2919731 anfragen.",
+    "path": "/kontakt/"
   },
-  imprint: {
-    title: "Impressum - Physiowerk Bodensee",
-    description: "Physiowerk Bodensee GmbH, Tettnanger Straße 14, 88074 Meckenbeuren.",
-    path: "/impressum/",
+  "imprint": {
+    "title": "Impressum | Physiowerk Bodensee GmbH",
+    "description": "Impressum der Physiowerk Bodensee GmbH, Tettnanger Straße 14, 88074 Meckenbeuren. Angaben zum Unternehmen und Kontaktmöglichkeiten.",
+    "path": "/impressum/"
   },
-  privacy: {
-    title: "Datenschutzerklärung - Physiowerk Bodensee",
-    description:
-      "Die Hinweise geben einen Überblick darüber, was mit Ihren personenbezogenen Daten beim Besuch dieser Website passiert.",
-    path: "/datenschutzerklaerung/",
-  },
+  "privacy": {
+    "title": "Datenschutzerklärung | Physiowerk Bodensee",
+    "description": "Datenschutzerklärung des Physiowerk Bodensee: Informationen zur Verarbeitung personenbezogener Daten beim Besuch und bei der Nutzung dieser Website.",
+    "path": "/datenschutzerklaerung/"
+  }
 };

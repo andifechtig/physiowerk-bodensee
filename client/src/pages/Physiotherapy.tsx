@@ -37,7 +37,7 @@ export default function Physiotherapy() {
     <>
       <Seo {...SEO.physiotherapie} />
       <PageHero
-        title={<>Ursachen erkennen.<br />Bewegung zurückgewinnen.</>}
+        title={<>Physiotherapie & Biomechanik<br />in Meckenbeuren.</>}
         intro="Wir kombinieren klassische Physiotherapie mit moderner Biomechanik. Für nachhaltige Ergebnisse und echte Lebensqualität."
         booking
         media={<img className="physiotherapy-hero-photo" src={PHYSIOTHERAPY_HERO_IMAGE_URL} alt="Manuelle Nackenbehandlung im Physiowerk Bodensee" width="800" height="441" decoding="async" fetchPriority="high" />}
