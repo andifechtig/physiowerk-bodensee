@@ -93,6 +93,39 @@ export default function Physiotherapy() {
         </div>
       </section>
 
+      <section className="content-section content-section-soft">
+        <div className="site-shell">
+          <SectionHeading
+            eyebrow="Information zu Kassenrezepten"
+            title="Gesetzliche Zuzahlung"
+            intro={
+              <>
+                Für ein Physiotherapie-Rezept der gesetzlichen Krankenkasse zahlen Patientinnen und Patienten ab 18 Jahren ohne gültige Befreiung 10 % der Behandlungskosten plus 10 € je Verordnung, wenn die erste Behandlung bis einschließlich 31.12.2026 stattfindet. Die Zuzahlung ist höchstens so hoch wie die Kosten der tatsächlich erbrachten Behandlung. Für Verordnungen, bei denen die erste Behandlung ab 01.01.2027 stattfindet, beträgt die Pauschale 15 € je Verordnung.
+                <br />
+                <br />
+                Kinder und Jugendliche unter 18 Jahren sind zuzahlungsfrei. Wenn Sie Ihre Belastungsgrenze erreicht haben, können Sie bei Ihrer Krankenkasse eine Befreiungsbescheinigung beantragen. Die Grenze liegt grundsätzlich bei 2 % der jährlichen Bruttoeinnahmen zum Lebensunterhalt, bei schwerwiegend chronisch Kranken unter gesetzlichen Voraussetzungen bei 1 %.
+                <br />
+                <br />
+                Die gesamte Zuzahlung ist am ersten Behandlungstag fällig – zu Beginn Ihrer Behandlungsserie. Bitte bringen Sie eine gültige Befreiungsbescheinigung mit.
+              </>
+            }
+          />
+          <p className="physiotherapy-copayment-sources">
+            Rechtsgrundlagen: {" "}
+            <a href="https://www.gesetze-im-internet.de/sgb_5/__32.html" target="_blank" rel="noreferrer">
+              §§ 32, 61 und 62 SGB V
+            </a>{" "}
+            <a href="https://www.gkv-heilmittel.de/fuer_heilmittelerbringer/vertraege/vertraege.jsp" target="_blank" rel="noreferrer">
+              Physiotherapie-Vertrag, § 8
+            </a>{" "}
+            <a href="https://www.recht.bund.de/eli/bund/bgbl-1/2026/228" target="_blank" rel="noreferrer">
+              Änderung ab 2027 (Bundesgesetzblatt)
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
       <section className="content-section content-section-dark">
         <div className="site-shell">
           <SectionHeading eyebrow="Therapieablauf" title="Schritt für Schritt" light />
