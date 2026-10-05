@@ -138,7 +138,7 @@ export default function Coaching() {
           </div>
           <div className="coaching-hero-panel" aria-label="Coaching-Kennzahlen">
             <div><strong>20+</strong><span>Jahre Erfahrung</span></div>
-            <div><strong>5.000+</strong><span>Behandlungen</span></div>
+            <div><strong>5.000+</strong><span>Behandlungen pro Jahr</span></div>
             <div><strong>6</strong><span>Monate Betreuung</span></div>
           </div>
         </div>
