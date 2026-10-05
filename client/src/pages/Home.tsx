@@ -177,8 +177,8 @@ export default function Home() {
         <div className="site-shell home-coaching-teaser-grid">
           <div>
             <p className="eyebrow eyebrow-light">Neu im Physiowerk Bodensee</p>
-            <h2>Schmerzfrei Jetzt: 6 Monate persönliche Begleitung</h2>
-            <p>Das ganzheitliche Coaching-Programm für nachhaltige Schmerzfreiheit. Biomechanisch fundiert, persönlich betreut von Andreas Fechtig.</p>
+            <h2>Physiowerk Gesundheitscoaching</h2>
+            <p>Sechs Monate persönliche Begleitung mit Bewegung, Training und alltagsnahen Impulsen.</p>
             <ArrowLink href="/coaching/">Coaching kennenlernen</ArrowLink>
           </div>
           <div className="home-coaching-teaser-mark" aria-hidden="true">

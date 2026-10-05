@@ -26,7 +26,7 @@ export const BOOKING_CONFIG = {
 } as const;
 
 export const COACHING_WHATSAPP_URL =
-  "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.";
+  "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Physiowerk%20Gesundheitscoaching%22.";
 
 export const THERACONNECT = {
   qrCode: "/brand/theracode-qr_3bdbe30f.png",
@@ -107,8 +107,8 @@ export const SEO: Record<string, SeoConfig> = {
     "path": "/karriere/"
   },
   "coaching": {
-    "title": "Coaching mit Andreas Fechtig | Physiowerk Bodensee",
-    "description": "Schmerzfrei Jetzt: sechs Monate persönliche Begleitung durch Andreas Fechtig im Physiowerk Bodensee. Biomechanisch fundiertes Coaching kennenlernen.",
+    "title": "Physiowerk Gesundheitscoaching | Physiowerk Bodensee",
+    "description": "Sechs Monate persönliche Begleitung mit Bewegung, Training und alltagsnahen Impulsen. Coaching-Angebot im Physiowerk Bodensee.",
     "path": "/coaching/"
   },
   "app": {

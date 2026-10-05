@@ -41,9 +41,9 @@ const problems = [
 ] as const;
 
 const solutionPoints = [
-  [Target, "Ursachenanalyse statt Symptombehandlung"],
+  [Target, "Biomechanische Analyse und Bewegung"],
   [UserRoundCheck, "1:1 Betreuung durch Andreas persönlich"],
-  [CalendarCheck, "6 Monate für nachhaltige Veränderung"],
+  [CalendarCheck, "6 Monate persönliche Begleitung"],
   [MonitorSmartphone, "Online und offline. Flexibel und individuell."],
 ] as const;
 
@@ -81,7 +81,7 @@ const comparison = [
   ["Betreuung", "Nur in der Praxis", "Online + Offline"],
   ["Trainingsplan", "Standardübungen", "Individuell angepasst"],
   ["Support", "Nur zum Termin", "WhatsApp + App"],
-  ["Nachhaltigkeit", "Oft kurzfristig", "Langfristige Veränderung"],
+  ["Alltagsbezug", "Behandlungstermine", "Alltagsnahe Impulse"],
 ] as const;
 
 const audiences = [
@@ -94,8 +94,8 @@ const audiences = [
 ] as const;
 
 const faqs = [
-  ["Warum dauert das Coaching 6 Monate?", "Nachhaltige Veränderung braucht Zeit. 6 Monate ist das Minimum, um Muster zu durchbrechen, neue Gewohnheiten zu etablieren und echte Ergebnisse zu sehen."],
-  ["Ist das Coaching für mich geeignet?", "Ideal bei chronischen Schmerzen, nach OP, oder wenn du langfristige Veränderung statt schnelle Fixes suchst."],
+  ["Warum dauert das Coaching 6 Monate?", "Das Angebot ist auf sechs Monate ausgelegt. Die persönliche Begleitung umfasst Gespräche, Trainingsplanung und alltagsnahe Impulse."],
+  ["Ist das Coaching für mich geeignet?", "Das Coaching richtet sich an Personen, die über mehrere Monate Unterstützung bei Bewegung und Training im Alltag suchen. Ob es zu deiner Situation passt, klären wir im Infogespräch."],
   ["Wie läuft das Coaching ab?", "Umfassende Analyse, individueller Trainingsplan, regelmäßige 1:1 Video-Calls, Video-Module, WhatsApp-Support. Optional Vor-Ort-Termine."],
   ["Kann ich das Coaching online machen?", "Ja, komplett online möglich. Vor-Ort-Termine optional."],
   ["Wie viel kostet das Coaching?", "Preise im kostenlosen Infogespräch. Verschiedene Optionen je nach Bedarf."],
@@ -129,11 +129,10 @@ export default function Coaching() {
               <span>6-Monats-Programm</span>
               <span>⚡ Nur 3 Plätze/Monat</span>
             </div>
-            <p className="coaching-kicker">Schmerzfrei Jetzt</p>
-            <h1>Schmerzfrei Jetzt. Deine 6 Monate in ein neues Leben.</h1>
+            <p className="coaching-kicker">Sechs Monate persönliche Begleitung</p>
+            <h1>Physiowerk Gesundheitscoaching</h1>
             <p className="coaching-hero-intro">
-              Das ganzheitliche Coaching-Programm von Andreas Fechtig: biomechanisch fundiert,
-              persönlich betreut, nachhaltig wirksam.
+              Sechs Monate persönliche Begleitung mit Bewegung, Training und alltagsnahen Impulsen.
             </p>
             <WhatsAppCta light>Infogespräch sichern</WhatsAppCta>
           </div>
@@ -166,9 +165,9 @@ export default function Coaching() {
       <section className="coaching-section coaching-solution">
         <div className="site-shell">
           <div className="coaching-heading coaching-heading-light">
-            <p className="coaching-eyebrow">Die Lösung</p>
-            <h2>Dein Weg zu nachhaltiger Veränderung</h2>
-            <p>„Schmerzfrei Jetzt“ ist kein schneller Fix. Es ist ein 6-monatiges Coaching-Programm, das an der Wurzel deiner Probleme ansetzt. Biomechanisch fundiert und ganzheitlich betreut.</p>
+            <p className="coaching-eyebrow">Das Angebot</p>
+            <h2>Bewegung, Training und alltagsnahe Impulse</h2>
+            <p>Das Physiowerk Gesundheitscoaching umfasst sechs Monate persönliche Begleitung. Die Inhalte werden auf die jeweilige Situation abgestimmt.</p>
           </div>
           <div className="coaching-solution-grid">
             {solutionPoints.map(([Icon, title]) => (
@@ -229,7 +228,7 @@ export default function Coaching() {
                 <TableRow>
                   <TableHead><span className="sr-only">Vergleich</span></TableHead>
                   <TableHead>Klassisch</TableHead>
-                  <TableHead>Schmerzfrei Jetzt</TableHead>
+                  <TableHead>Gesundheitscoaching</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -282,7 +281,7 @@ export default function Coaching() {
           <div>
             <p className="coaching-eyebrow">Dein erster Schritt</p>
             <h2>Bereit für den ersten Schritt?</h2>
-            <p>Sichere dir dein kostenloses Infogespräch mit Andreas. Unverbindlich, persönlich und ohne Risiko.</p>
+            <p>Sichere dir dein kostenloses Infogespräch mit Andreas. Unverbindlich und persönlich.</p>
           </div>
           <WhatsAppCta light>Jetzt Infogespräch sichern</WhatsAppCta>
         </div>

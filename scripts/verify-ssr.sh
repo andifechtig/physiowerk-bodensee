@@ -268,7 +268,7 @@ check "/physiotherapie/" "Schritt für Schritt" "Physiotherapie & Biomechanik" o
 check "/medizinisches-training-und-fitness/" "Training, Nachsorge und Prävention" "Medizinisches Training Meckenbeuren" ogimage
 check "/team-praxis/" "Menschen, die Menschen bewegen" "Team & Praxis" ogimage
 check "/karriere/" "Gute Arbeit braucht gute Bedingungen" "Physiotherapie-Jobs" ogimage
-check "/coaching/" "Vier Schritte. Ein klares Ziel." "Coaching mit Andreas Fechtig" ogimage
+check "/coaching/" "Vier Schritte. Ein klares Ziel." "Physiowerk Gesundheitscoaching" ogimage
 check "/app/" "In fünf Schritten startklar" "TheraConnect: Termine verwalten" ogimage
 check "/kurse/" "Flexibel trainieren, wann und wo es Ihnen passt" "Online-Präventionskurse" ogimage
 check "/kontakt/" "Nachricht senden" "Kontakt & Anfahrt" ogimage

@@ -131,7 +131,7 @@ describe("website quality contracts", () => {
     expect(bookingSection).toContain('width="100%"');
     expect(bookingSection).toContain('loading="lazy"');
     expect(COACHING_WHATSAPP_URL).toBe(
-      "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.",
+      "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Physiowerk%20Gesundheitscoaching%22.",
     );
     expect(THERACONNECT.qrCode).toBe("/brand/theracode-qr_3bdbe30f.png");
     expect(THERACONNECT.googlePlay).toContain("de.sovdwaer.theraconnect");

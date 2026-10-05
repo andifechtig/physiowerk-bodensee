@@ -54,7 +54,23 @@ describe("stable site routes", () => {
 
   it("uses the exact coaching WhatsApp conversation URL", () => {
     expect(COACHING_WHATSAPP_URL).toBe(
-      "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Schmerzfrei%20Jetzt%22.",
+      "https://wa.me/4917680148726?text=Hallo%20Andreas%2C%20ich%20bin%20interessiert%20am%20Coaching%20Programm%20%22Physiowerk%20Gesundheitscoaching%22.",
+    );
+  });
+
+  it("uses the approved neutral coaching title in page content, navigation and metadata", () => {
+    const home = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf8");
+    const coachingPage = readFileSync(new URL("../client/src/pages/Coaching.tsx", import.meta.url), "utf8");
+
+    expect(SEO.coaching.title).toBe("Physiowerk Gesundheitscoaching | Physiowerk Bodensee");
+    expect(SEO.coaching.description).toBe(
+      "Sechs Monate persönliche Begleitung mit Bewegung, Training und alltagsnahen Impulsen. Coaching-Angebot im Physiowerk Bodensee.",
+    );
+    expect(NAVIGATION).toContainEqual({ label: "Coaching", href: "/coaching/" });
+    expect(home).toContain("<h2>Physiowerk Gesundheitscoaching</h2>");
+    expect(coachingPage).toContain("<h1>Physiowerk Gesundheitscoaching</h1>");
+    expect(coachingPage).toContain(
+      "Sechs Monate persönliche Begleitung mit Bewegung, Training und alltagsnahen Impulsen.",
     );
   });
 
