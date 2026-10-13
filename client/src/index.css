@@ -387,12 +387,13 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 
 .coaching-hero { position: relative; overflow: hidden; color: var(--paper); background: var(--ink); }
 .coaching-hero::before { position: absolute; inset: 0; content: ""; background: radial-gradient(circle at 78% 25%, color-mix(in srgb, var(--brand) 70%, transparent), transparent 32%), linear-gradient(135deg, transparent 0 58%, color-mix(in srgb, var(--brand) 18%, transparent) 58% 100%); pointer-events: none; }
-.coaching-hero-grid { position: relative; min-height: 720px; display: grid; grid-template-columns: 1.25fr .55fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); padding-block: clamp(5rem, 10vw, 9rem); }
+.coaching-hero-grid { position: relative; min-height: 720px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(18rem, .6fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); padding-block: clamp(5rem, 10vw, 9rem); }
+.coaching-hero-copy { min-width: 0; }
 .coaching-badges { display: flex; flex-wrap: wrap; gap: .65rem; margin-bottom: 2rem; }
 .coaching-badges span { padding: .65rem 1rem; border: 1px solid color-mix(in srgb, white 30%, transparent); border-radius: 999px; color: var(--paper); background: color-mix(in srgb, white 7%, transparent); font-size: .78rem; font-weight: 600; }
 .coaching-badges span:last-child { border-color: var(--brand); background: var(--brand); }
 .coaching-kicker, .coaching-eyebrow { margin: 0 0 1rem; color: var(--brand); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.coaching-hero h1 { max-width: 850px; margin: 0; font-size: clamp(3.2rem, 6.5vw, 7rem); font-weight: 400; line-height: .9; letter-spacing: -.05em; }
+.coaching-hero h1 { max-width: 850px; margin: 0; font-size: clamp(3.2rem, 5.1vw, 5rem); font-weight: 400; line-height: .9; letter-spacing: -.05em; }
 .coaching-hero-intro { max-width: 720px; margin: 2rem 0; color: color-mix(in srgb, white 78%, transparent); font-size: clamp(1.05rem, 1.7vw, 1.35rem); line-height: 1.5; }
 .coaching-whatsapp-cta { width: fit-content; min-height: 52px; display: inline-flex; align-items: center; gap: .7rem; padding: .85rem 1.25rem; border: 1px solid #168b4b; border-radius: 999px; color: white; background: #168b4b; font-weight: 700; transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out); }
 .coaching-whatsapp-cta:hover { background: #10753e; }
@@ -404,7 +405,7 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .coaching-hero-panel { display: flex; flex-direction: column; border: 1px solid color-mix(in srgb, white 17%, transparent); border-radius: 3rem; overflow: hidden; background: color-mix(in srgb, white 5%, transparent); backdrop-filter: blur(10px); }
 .coaching-hero-panel div { display: flex; flex-direction: column; padding: 1.8rem 2rem; border-bottom: 1px solid color-mix(in srgb, white 15%, transparent); }
 .coaching-hero-panel div:last-child { border-bottom: 0; }
-.coaching-hero-panel strong { color: var(--brand); font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 400; line-height: 1; }
+.coaching-hero-panel strong { color: var(--brand); font-size: clamp(2.25rem, 3.6vw, 3.75rem); font-weight: 400; line-height: 1; white-space: nowrap; }
 .coaching-hero-panel span { margin-top: .45rem; color: color-mix(in srgb, white 72%, transparent); }
 
 .coaching-section { padding: clamp(5.5rem, 10vw, 9rem) 0; }
@@ -478,7 +479,8 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
   .home-coaching-teaser-mark { width: min(280px, 70vw); }
   .coaching-hero-grid { min-height: auto; }
   .coaching-hero-panel { display: grid; grid-template-columns: repeat(3, 1fr); }
-  .coaching-hero-panel div { border-right: 1px solid color-mix(in srgb, white 15%, transparent); border-bottom: 0; }
+  .coaching-hero-panel div { padding: 1.25rem .9rem; border-right: 1px solid color-mix(in srgb, white 15%, transparent); border-bottom: 0; }
+  .coaching-hero-panel strong { font-size: clamp(1.8rem, 5vw, 3.3rem); }
   .coaching-solution-grid { grid-template-columns: repeat(2, 1fr); }
   .coaching-feature-grid { grid-template-columns: repeat(2, 1fr); }
   .coaching-final-cta-grid { align-items: start; }
@@ -486,9 +488,10 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 
 @media (max-width: 640px) {
   .coaching-hero-grid { padding-block: 4rem; }
-  .coaching-hero h1 { font-size: clamp(3rem, 14vw, 4.4rem); }
+  .coaching-hero h1 { font-size: clamp(1.8rem, 9.5vw, 3rem); }
   .coaching-hero-panel { grid-template-columns: 1fr; }
-  .coaching-hero-panel div { border-right: 0; border-bottom: 1px solid color-mix(in srgb, white 15%, transparent); }
+  .coaching-hero-panel div { padding: 1.4rem 1.5rem; border-right: 0; border-bottom: 1px solid color-mix(in srgb, white 15%, transparent); }
+  .coaching-hero-panel strong { font-size: clamp(2.5rem, 10vw, 3.25rem); }
   .coaching-solution-grid, .coaching-feature-grid { grid-template-columns: 1fr; }
   .coaching-steps li { grid-template-columns: 48px 1fr; }
   .coaching-steps li > svg { display: none; }
