@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import { ContactCta, PageHero, SectionHeading } from "@/components/PageElements";
+import { ArrowLink, ContactCta, PageHero, SectionHeading } from "@/components/PageElements";
 import { TreatmentImageCarousel } from "@/components/TreatmentImageCarousel";
 import { Seo } from "@/components/Seo";
 import { SEO } from "@/site-config";
@@ -25,9 +25,7 @@ const services = [
   ["Lymphdrainage (MLD)", "Therapie zur Entwässerung des Körpers von Ödemen/Flüssigkeitseinlagerungen unterschiedlicher Art."],
   ["Bobath (KG ZNS)", "Physiotherapie für Neurologische Themen rund um das zentrale und periphere Nervensystems (Schlaganfall, Paresen, MS ect)."],
   ["Krankengymnastik am Gerät (KGG)", "KGG ist ein gerätegestütztes Training unter physiotherapeutischer Anleitung. Ziel ist es, Kraft, Ausdauer, Koordination und Beweglichkeit zu verbessern. Die Leistung wird vom Arzt über eine Heilmittelverordnung verordnet und findet in unserem Trainingsbereich mit medizinischen Trainingsgeräten statt. Trainiert wird einzeln oder in Kleingruppen mit maximal drei Personen."],
-  ["Faszientherapie (Strukturelle Integration)", "Ganzheitliche Behandlung des Bewegungsapparats mit Hinblick auf die Faszialen Strukturen nach Dr. Ida Rolf. 10er Serie (Selbstzahlerleistung)."],
-  ["Kinesiotaping", "Taping bei Verletzungen oder Schmerzen (Entlastung der betroffenen Strukturen)."],
-  ["Elektrotherapie/Ultraschalltherapie/Fango", "Zusatzleistungen auf den Physio-Rezepten."],
+  ["Elektrotherapie/Ultraschalltherapie", "Ergänzende Anwendungen je nach Heilmittelverordnung."],
 ] as const;
 
 const process = ["Erstgespräch & Anamnese", "Bewegungsanalyse & Befund", "Individuelle Therapieplanung", "Kontinuierliche Betreuung & Re-Checks"] as const;
@@ -90,6 +88,10 @@ export default function Physiotherapy() {
               </article>
             ))}
           </div>
+          <div className="physio-selfpay-link">
+            <p>Sie interessieren sich für private Einzelbehandlungen, Rolfing oder Personal Training?</p>
+            <ArrowLink href="/selbstzahlerangebote/">Selbstzahlerangebote ansehen</ArrowLink>
+          </div>
         </div>
       </section>
 
@@ -106,7 +108,7 @@ export default function Physiotherapy() {
                 Kinder und Jugendliche unter 18 Jahren sind zuzahlungsfrei. Wenn Sie Ihre Belastungsgrenze erreicht haben, können Sie bei Ihrer Krankenkasse eine Befreiungsbescheinigung beantragen. Die Grenze liegt grundsätzlich bei 2 % der jährlichen Bruttoeinnahmen zum Lebensunterhalt, bei schwerwiegend chronisch Kranken unter gesetzlichen Voraussetzungen bei 1 %.
                 <br />
                 <br />
-                Die gesamte Zuzahlung ist am ersten Behandlungstag fällig – zu Beginn Ihrer Behandlungsserie. Bitte bringen Sie eine gültige Befreiungsbescheinigung mit.
+                Die gesamte Zuzahlung ist am ersten Behandlungstag fällig, zu Beginn Ihrer Behandlungsserie. Bitte bringen Sie eine gültige Befreiungsbescheinigung mit.
               </>
             }
           />

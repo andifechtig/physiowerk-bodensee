@@ -1,0 +1,49 @@
+/* Selbstzahler-Angebotsübersicht */
+.selfpay-hero { position: relative; overflow: hidden; color: var(--paper); background: var(--ink); }
+.selfpay-hero::before { position: absolute; inset: 0; content: ""; background: radial-gradient(circle at 78% 30%, color-mix(in srgb, var(--brand) 68%, transparent), transparent 32%), linear-gradient(135deg, transparent 0 60%, color-mix(in srgb, var(--brand) 18%, transparent) 60% 100%); pointer-events: none; }
+.selfpay-hero-grid { position: relative; min-height: 520px; display: grid; grid-template-columns: 1.25fr .55fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); padding-block: clamp(4.5rem, 8vw, 7rem); }
+.selfpay-eyebrow { margin: 0 0 1rem; color: color-mix(in srgb, white 76%, transparent); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.selfpay-hero h1 { max-width: 900px; margin: 0; font-size: clamp(3rem, 6vw, 6rem); font-weight: 400; line-height: .94; letter-spacing: -.05em; }
+.selfpay-hero-intro { max-width: 760px; margin: 1.8rem 0; color: color-mix(in srgb, white 82%, transparent); font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.5; }
+.selfpay-hero-link { min-height: 48px; display: inline-flex; align-items: center; gap: .65rem; padding: .8rem 1.2rem; border: 1px solid var(--paper); border-radius: 999px; color: var(--brand); background: var(--paper); font-size: .95rem; font-weight: 600; }
+.selfpay-hero-link:hover { border-color: var(--brand); color: var(--paper); background: var(--brand); }
+.selfpay-hero-link svg { width: 1.1rem; height: 1.1rem; }
+.selfpay-hero-mark { width: min(100%, 260px); aspect-ratio: 1; display: grid; place-items: center; align-content: center; gap: 1rem; justify-self: center; border: 1px solid color-mix(in srgb, white 30%, transparent); border-radius: 50%; color: var(--paper); background: color-mix(in srgb, var(--brand) 72%, var(--ink)); text-align: center; }
+.selfpay-hero-mark svg { width: 3.2rem; height: 3.2rem; }
+.selfpay-hero-mark span { font-size: 1.1rem; line-height: 1.35; }
+.selfpay-offer-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+.selfpay-offer-card { position: relative; min-height: 245px; padding: 1.65rem; border: 1px solid var(--line); border-radius: 1.6rem; background: var(--paper); }
+.selfpay-offer-icon { width: 48px; height: 48px; display: grid; place-items: center; margin-bottom: 1.25rem; border-radius: 50%; color: var(--paper); background: var(--brand); }
+.selfpay-offer-icon svg { width: 1.25rem; height: 1.25rem; }
+.selfpay-offer-badge { position: absolute; top: 1.65rem; right: 1.4rem; padding: .38rem .75rem; border-radius: 999px; color: var(--paper); background: var(--brand); font-size: .72rem; font-weight: 700; }
+.selfpay-offer-card h3 { margin: 0; color: var(--brand); font-size: 1.18rem; font-weight: 500; line-height: 1.25; }
+.selfpay-offer-detail { margin: .45rem 0 0; color: var(--ink); font-size: .86rem; font-weight: 600; }
+.selfpay-offer-description { margin: .8rem 0 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+.selfpay-price-note { margin: 1.5rem 0 0; color: var(--muted); font-size: .9rem; }
+.selfpay-courses-section { padding: clamp(4.5rem, 8vw, 7rem) 0; color: var(--paper); background: var(--brand); }
+.selfpay-courses-grid { display: grid; grid-template-columns: .45fr 1.55fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+.selfpay-courses-seal { width: min(100%, 250px); aspect-ratio: 1; display: grid; place-items: center; align-content: center; gap: 1rem; justify-self: center; border: 1px solid color-mix(in srgb, white 38%, transparent); border-radius: 50%; background: color-mix(in srgb, var(--ink) 16%, transparent); }
+.selfpay-courses-seal svg { width: 3.1rem; height: 3.1rem; }
+.selfpay-courses-seal span { font-size: 1.05rem; }
+.selfpay-courses-section h2 { max-width: 850px; margin: 0; font-size: clamp(2.2rem, 4.6vw, 4.6rem); font-weight: 400; line-height: .98; letter-spacing: -.035em; }
+.selfpay-courses-section > .site-shell > div > p:not(.selfpay-eyebrow) { max-width: 720px; color: color-mix(in srgb, white 82%, transparent); line-height: 1.55; }
+.selfpay-courses-link { width: fit-content; display: inline-flex; align-items: center; gap: .65rem; margin-top: .8rem; padding: .8rem 1.1rem; border: 1px solid var(--paper); border-radius: 999px; color: var(--brand); background: var(--paper); font-size: .92rem; font-weight: 600; }
+.selfpay-courses-link:hover { border-color: var(--ink); color: var(--paper); background: var(--ink); }
+.selfpay-courses-link svg { width: 1.05rem; height: 1.05rem; }
+.physio-selfpay-link { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 2rem; margin-top: 2rem; padding: 1.3rem 1.5rem; border: 1px solid var(--line); border-radius: 1.3rem; background: var(--paper-soft); }
+.physio-selfpay-link p { margin: 0; color: var(--muted); }
+.physio-selfpay-link .arrow-link { color: var(--brand); }
+.condition-grid .arrow-link { margin-top: 1rem; color: var(--brand); }
+@media (max-width: 980px) {
+  .selfpay-hero-grid { min-height: auto; grid-template-columns: 1fr; }
+  .selfpay-hero-mark { display: none; }
+  .selfpay-courses-grid { grid-template-columns: 1fr; }
+  .selfpay-courses-seal { width: 150px; justify-self: start; }
+}
+@media (max-width: 720px) {
+  .selfpay-hero h1 { font-size: clamp(2.8rem, 12vw, 4rem); }
+  .selfpay-offer-grid { grid-template-columns: 1fr; }
+  .selfpay-offer-card { min-height: auto; }
+  .selfpay-courses-link { width: 100%; justify-content: center; text-align: center; }
+  .physio-selfpay-link { align-items: flex-start; flex-direction: column; }
+}

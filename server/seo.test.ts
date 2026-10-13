@@ -18,7 +18,7 @@ describe("local SEO contracts", () => {
   });
   it("keeps the existing domain and route scheme", () => {
     expect(SITE_ORIGIN).toBe("https://www.physiowerk-bodensee.de");
-    expect(Object.values(SEO)).toHaveLength(11);
+    expect(Object.values(SEO)).toHaveLength(12);
   });
   it("uses the real town in main service titles", () => {
     for (const key of ["home", "physiotherapie", "training", "team", "contact", "career"]) {

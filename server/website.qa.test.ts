@@ -44,9 +44,28 @@ describe("website quality contracts", () => {
     expect(unknown).toEqual([]);
   });
 
-  it("keeps SEO metadata and sitemap complete for all eleven pages", () => {
+  it("lists the requested self-pay treatments and training packages", () => {
+    const selfpay = readFileSync(join(sourceRoot, "pages", "SelfPay.tsx"), "utf8");
+    for (const offer of [
+      "Strukturelle Integration / Rolfing",
+      "Krankengymnastik",
+      "Manuelle Therapie",
+      "Narbenbehandlung",
+      "Massage",
+      "Fango",
+      "Kinesio-Tape",
+      "Funktionelles Personal Krafttraining",
+      "10 × 60 Minuten",
+      "Sparpaket",
+      "ZPP-zertifizierte Onlinekurse",
+    ]) {
+      expect(selfpay).toContain(offer);
+    }
+  });
+
+  it("keeps SEO metadata and sitemap complete for all twelve pages", () => {
     const entries = Object.values(SEO);
-    expect(entries).toHaveLength(11);
+    expect(entries).toHaveLength(12);
     expect(new Set(entries.map(entry => entry.title)).size).toBe(entries.length);
     for (const entry of entries) {
       expect(entry.title.length).toBeGreaterThan(15);
@@ -61,7 +80,7 @@ describe("website quality contracts", () => {
 
   it("keeps navigation canonical and redirect coverage complete", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
-    expect(Object.keys(CANONICAL_REDIRECTS)).toHaveLength(10);
+    expect(Object.keys(CANONICAL_REDIRECTS)).toHaveLength(11);
     expect(Object.values(CANONICAL_REDIRECTS)).toEqual(Object.values(SEO).slice(1).map(entry => entry.path));
   });
 
@@ -102,7 +121,7 @@ describe("website quality contracts", () => {
 
   it("keeps non-home routes lazy-loaded", () => {
     const app = readFileSync(join(sourceRoot, "routes.tsx"), "utf8");
-    const lazyPages = ["AppPage", "Career", "Coaching", "Contact", "Courses", "Imprint", "Physiotherapy", "Privacy", "Team", "Training"];
+    const lazyPages = ["AppPage", "Career", "Coaching", "Contact", "Courses", "Imprint", "Physiotherapy", "Privacy", "SelfPay", "Team", "Training"];
     for (const page of lazyPages) {
       expect(app).toContain(`const ${page} = preloadable(() => import("./pages/${page}"))`);
     }

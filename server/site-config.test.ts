@@ -15,6 +15,7 @@ describe("stable site routes", () => {
     expect(Object.values(SEO).map(entry => entry.path)).toEqual([
       "/",
       "/physiotherapie/",
+      "/selbstzahlerangebote/",
       "/medizinisches-training-und-fitness/",
       "/team-praxis/",
       "/karriere/",
@@ -33,6 +34,7 @@ describe("stable site routes", () => {
       label: "Medizinisches Training",
       href: "/medizinisches-training-und-fitness/",
     });
+    expect(NAVIGATION).toContainEqual({ label: "Selbstzahler", href: "/selbstzahlerangebote/" });
     expect(NAVIGATION.some(entry => entry.label === "Medizinisches Training und Fitness")).toBe(false);
     expect(NAVIGATION.at(-1)).toEqual({ label: "Kurse", href: "/kurse/" });
   });
@@ -40,6 +42,7 @@ describe("stable site routes", () => {
   it("redirects every non-slash URL to its canonical trailing-slash route", () => {
     expect(CANONICAL_REDIRECTS).toEqual({
       "/physiotherapie": "/physiotherapie/",
+      "/selbstzahlerangebote": "/selbstzahlerangebote/",
       "/medizinisches-training-und-fitness": "/medizinisches-training-und-fitness/",
       "/team-praxis": "/team-praxis/",
       "/karriere": "/karriere/",
@@ -261,6 +264,7 @@ describe("stable site routes", () => {
       "../client/src/pages/Coaching.tsx",
       "../client/src/pages/AppPage.tsx",
       "../client/src/pages/Physiotherapy.tsx",
+      "../client/src/pages/SelfPay.tsx",
       "../client/src/pages/Training.tsx",
       "../client/src/pages/Team.tsx",
       "../client/src/components/SiteLayout.tsx",

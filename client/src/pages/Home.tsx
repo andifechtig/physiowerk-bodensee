@@ -73,12 +73,12 @@ const conditions = {
     "Schwindel",
     "Und viele mehr",
   ],
-  "Selbstzahler Angebot": [
-    "Unspezifische Rückenschmerzen (Syndrome)",
-    "Bandscheibenprolaps /-vorfälle",
-    "Skoliose",
-    "CMD craniomandibuläre Dysfunktion",
-    "Ödeme",
+  "Selbstzahlerleistungen": [
+    "Strukturelle Integration / Rolfing",
+    "Krankengymnastik & Manuelle Therapie",
+    "Narbenbehandlung, Massage & Fango",
+    "Kinesio-Tape",
+    "Funktionelles Personal Krafttraining",
   ],
   "Angebot Kassenleistungen": [
     "KG Krankengymnastik",
@@ -294,6 +294,9 @@ export default function Home() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              {title === "Selbstzahlerleistungen" ? (
+                <ArrowLink href="/selbstzahlerangebote/">Alle Selbstzahlerangebote</ArrowLink>
+              ) : null}
             </article>
           ))}
         </div>
