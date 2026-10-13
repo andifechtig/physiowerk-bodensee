@@ -81,6 +81,7 @@ const conditions = {
     "Ödeme",
   ],
   "Angebot Kassenleistungen": [
+    "KG Krankengymnastik",
     "Manuelle Therapie",
     "Atem Physiotherapie",
     "T-RENA (Trainingstherapeutische Rehabilitationsnachsorge)",
