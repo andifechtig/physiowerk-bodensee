@@ -18,7 +18,7 @@ describe("local SEO contracts", () => {
   });
   it("keeps the existing domain and route scheme", () => {
     expect(SITE_ORIGIN).toBe("https://www.physiowerk-bodensee.de");
-    expect(Object.values(SEO)).toHaveLength(12);
+    expect(Object.values(SEO)).toHaveLength(11);
   });
   it("uses the real town in main service titles", () => {
     for (const key of ["home", "physiotherapie", "training", "team", "contact", "career"]) {
@@ -28,6 +28,8 @@ describe("local SEO contracts", () => {
   it("redirects only known local paths and preserves query parameters", () => {
     expect(redirectForUrl('/Kontakt//?utm_source=x')).toBe('/kontakt/?utm_source=x');
     expect(redirectForUrl('/index.html?x=1')).toBe('/?x=1');
+    expect(redirectForUrl('/selbstzahlerangebote/')).toBe('/#selbstzahlerangebote');
+    expect(redirectForUrl('/selbstzahlerangebote?utm_source=x')).toBe('/?utm_source=x#selbstzahlerangebote');
     expect(redirectForUrl('/kontakt/')).toBeUndefined();
     expect(redirectForUrl('//evil.example/')).toBeUndefined();
     expect(redirectForUrl('/missing/')).toBeUndefined();

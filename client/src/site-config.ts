@@ -36,7 +36,6 @@ export const THERACONNECT = {
 
 export const CANONICAL_REDIRECTS: Record<string, string> = {
   "/physiotherapie": "/physiotherapie/",
-  "/selbstzahlerangebote": "/selbstzahlerangebote/",
   "/medizinisches-training-und-fitness": "/medizinisches-training-und-fitness/",
   "/team-praxis": "/team-praxis/",
   "/karriere": "/karriere/",
@@ -50,7 +49,6 @@ export const CANONICAL_REDIRECTS: Record<string, string> = {
 
 export const NAVIGATION = [
   { label: "Physiotherapie", href: "/physiotherapie/" },
-  { label: "Selbstzahler", href: "/selbstzahlerangebote/" },
   {
     label: "Medizinisches Training",
     href: "/medizinisches-training-und-fitness/",
@@ -92,11 +90,6 @@ export const SEO: Record<string, SeoConfig> = {
     "title": "Physiotherapie & Biomechanik in Meckenbeuren",
     "description": "Physiotherapie in Meckenbeuren: Krankengymnastik, manuelle Therapie, Lymphdrainage und KGG im Physiowerk Bodensee. Erfahre mehr über unsere Behandlung.",
     "path": "/physiotherapie/"
-  },
-  "selfpay": {
-    "title": "Selbstzahlerangebote | Physiowerk Bodensee Meckenbeuren",
-    "description": "Selbstzahlerangebote in Meckenbeuren: Rolfing, Krankengymnastik, manuelle Therapie, Narbenbehandlung, Massage, Fango, Kinesio-Tape und Personal Training.",
-    "path": "/selbstzahlerangebote/"
   },
   "training": {
     "title": "Medizinisches Training Meckenbeuren | Physiowerk",

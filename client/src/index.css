@@ -3,7 +3,6 @@
 @import "./app.css";
 @import "./courses.css";
 @import "./reviews.css";
-@import "./selfpay.css";
 
 :root {
   --brand: #e63746;
@@ -172,6 +171,11 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
 .condition-grid h2 { margin: 0 0 1.5rem; color: var(--brand); font-size: 1.55rem; font-weight: 400; }
 .condition-grid ul, .legal-page ul { margin: 0; padding-left: 1.15rem; color: var(--muted); }
 .condition-grid li + li, .legal-page li + li { margin-top: .65rem; }
+.condition-grid .condition-selfpay-list { list-style: disc; }
+.condition-grid .arrow-link { margin-top: 1rem; color: var(--brand); }
+.physio-selfpay-link { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 2rem; margin-top: 2rem; padding: 1.3rem 1.5rem; border: 1px solid var(--line); border-radius: 1.3rem; background: var(--paper-soft); }
+.physio-selfpay-link p { margin: 0; color: var(--muted); }
+.physio-selfpay-link .arrow-link { color: var(--brand); }
 
 .booking-section { padding: clamp(5rem, 8vw, 8rem) 0; background: var(--paper); }
 .booking-section h2 { margin-bottom: 2rem; }
@@ -361,6 +365,10 @@ button:active, .booking-button:active, .button:active { transform: scale(0.97); 
   .contact-hours > div { grid-template-columns: 1fr; gap: .2rem; }
   .theorg-iframe-shell, .practice-map { min-height: 300px; border-radius: 2rem; }
   .theorg-iframe { height: 750px; }
+}
+
+@media (max-width: 720px) {
+  .physio-selfpay-link { align-items: flex-start; flex-direction: column; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -90,7 +90,7 @@ export default function Physiotherapy() {
           </div>
           <div className="physio-selfpay-link">
             <p>Sie interessieren sich für private Einzelbehandlungen, Rolfing oder Personal Training?</p>
-            <ArrowLink href="/selbstzahlerangebote/">Selbstzahlerangebote ansehen</ArrowLink>
+            <ArrowLink href="/#selbstzahlerangebote">Zu den Selbstzahlerangeboten</ArrowLink>
           </div>
         </div>
       </section>

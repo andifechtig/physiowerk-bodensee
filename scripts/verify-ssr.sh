@@ -261,11 +261,10 @@ check_301() {
 }
 
 echo "== SSR crawler verification against $BASE =="
-# All twelve public routes: content needles are body-only, not metadata.
+# All eleven public routes: content needles are body-only, not metadata.
 # Primary content is static; reviews deliberately remain client-fetched (no state flag).
 check "/" "Gezielte Therapie. Nachhaltige Bewegung." "Physiotherapie Meckenbeuren" ogimage
 check "/physiotherapie/" "Schritt für Schritt" "Physiotherapie & Biomechanik" ogimage
-check "/selbstzahlerangebote/" "Selbstzahlerangebote in Meckenbeuren" "Selbstzahlerangebote" ogimage
 check "/medizinisches-training-und-fitness/" "Training, Nachsorge und Prävention" "Medizinisches Training Meckenbeuren" ogimage
 check "/team-praxis/" "Menschen, die Menschen bewegen" "Team & Praxis" ogimage
 check "/karriere/" "Gute Arbeit braucht gute Bedingungen" "Physiotherapie-Jobs" ogimage
@@ -279,7 +278,8 @@ check "/physiotherapie/?utm_source=test?extra=1" "Schritt für Schritt" "Physiot
 check "/kontakt/?" "Nachricht senden" "Kontakt & Anfahrt" ogimage
 check_301 "/index.html" "/"
 check_301 "/physiotherapie" "/physiotherapie/"
-check_301 "/selbstzahlerangebote" "/selbstzahlerangebote/"
+check_301 "/selbstzahlerangebote" "/#selbstzahlerangebote"
+check_301 "/selbstzahlerangebote/" "/#selbstzahlerangebote"
 check_301 "/Kontakt//?utm_source=test" "/kontakt/?utm_source=test"
 check_404 "/definitely-not-a-route"
 check_404 "/404"

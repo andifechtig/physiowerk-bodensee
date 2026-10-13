@@ -31,6 +31,7 @@ describe("website quality contracts", () => {
       ...Object.values(SEO).map(entry => entry.path),
       ...Object.keys(CANONICAL_REDIRECTS),
       ...Object.values(CANONICAL_REDIRECTS),
+      "/#selbstzahlerangebote",
       "/404",
       BOOKING_CONFIG.directUrl,
     ]);
@@ -44,28 +45,40 @@ describe("website quality contracts", () => {
     expect(unknown).toEqual([]);
   });
 
-  it("lists the requested self-pay treatments and training packages", () => {
-    const selfpay = readFileSync(join(sourceRoot, "pages", "SelfPay.tsx"), "utf8");
+  it("lists every self-pay offer separately in the homepage box and links the ZPP courses", () => {
+    const home = readFileSync(join(sourceRoot, "pages", "Home.tsx"), "utf8");
+    const selfpay = home.match(/"Selbstzahlerleistungen": \[([\s\S]*?)\n  \],/)?.[1] ?? "";
     for (const offer of [
-      "Strukturelle Integration / Rolfing",
+      "Strukturelle Integration / Rolfing, Einzelsitzung (1 h)",
+      "Strukturelle Integration / Rolfing, 10er-Serie (Sparpaket)",
       "Krankengymnastik",
       "Manuelle Therapie",
-      "Narbenbehandlung",
+      "Narbenbehandlung (1 h)",
       "Massage",
       "Fango",
       "Kinesio-Tape",
-      "Funktionelles Personal Krafttraining",
-      "10 × 60 Minuten",
-      "Sparpaket",
-      "ZPP-zertifizierte Onlinekurse",
+      "Funktionelles Personal Krafttraining (60 min)",
+      "Personal Training, 10 × 60 min (Sparpaket)",
     ]) {
       expect(selfpay).toContain(offer);
     }
+    expect(selfpay).not.toContain("Narbenbehandlung, Massage");
+    expect(home).toContain('<ArrowLink href="/kurse/">ZPP-zertifizierte Onlinekurse ansehen</ArrowLink>');
+    expect(home).toContain('id="selbstzahlerangebote"');
+    expect(home).not.toContain('href="/selbstzahlerangebote/"');
   });
 
-  it("keeps SEO metadata and sitemap complete for all twelve pages", () => {
+  it("keeps KG Krankengymnastik first and adds KG-Gerät to statutory services", () => {
+    const home = readFileSync(join(sourceRoot, "pages", "Home.tsx"), "utf8");
+    const statutory = home.match(/"Angebot Kassenleistungen": \[([\s\S]*?)\n  \],/)?.[1] ?? "";
+    const items = [...statutory.matchAll(/^\s*"([^"]+)",?$/gm)].map(match => match[1]);
+    expect(items[0]).toBe("KG Krankengymnastik");
+    expect(items).toContain("Krankengymnastik am Gerät (KGG)");
+  });
+
+  it("keeps SEO metadata and sitemap complete for all eleven pages", () => {
     const entries = Object.values(SEO);
-    expect(entries).toHaveLength(12);
+    expect(entries).toHaveLength(11);
     expect(new Set(entries.map(entry => entry.title)).size).toBe(entries.length);
     for (const entry of entries) {
       expect(entry.title.length).toBeGreaterThan(15);
@@ -80,7 +93,7 @@ describe("website quality contracts", () => {
 
   it("keeps navigation canonical and redirect coverage complete", () => {
     expect(NAVIGATION.every(entry => entry.href.endsWith("/"))).toBe(true);
-    expect(Object.keys(CANONICAL_REDIRECTS)).toHaveLength(11);
+    expect(Object.keys(CANONICAL_REDIRECTS)).toHaveLength(10);
     expect(Object.values(CANONICAL_REDIRECTS)).toEqual(Object.values(SEO).slice(1).map(entry => entry.path));
   });
 
@@ -121,7 +134,7 @@ describe("website quality contracts", () => {
 
   it("keeps non-home routes lazy-loaded", () => {
     const app = readFileSync(join(sourceRoot, "routes.tsx"), "utf8");
-    const lazyPages = ["AppPage", "Career", "Coaching", "Contact", "Courses", "Imprint", "Physiotherapy", "Privacy", "SelfPay", "Team", "Training"];
+    const lazyPages = ["AppPage", "Career", "Coaching", "Contact", "Courses", "Imprint", "Physiotherapy", "Privacy", "Team", "Training"];
     for (const page of lazyPages) {
       expect(app).toContain(`const ${page} = preloadable(() => import("./pages/${page}"))`);
     }

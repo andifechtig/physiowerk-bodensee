@@ -7,7 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import { CANONICAL_REDIRECTS } from "./site-config";
 
-import { AppPage, Career, Coaching, Contact, Courses, Imprint, Physiotherapy, Privacy, SelfPay, Team, Training } from "./routes";
+import { AppPage, Career, Coaching, Contact, Courses, Imprint, Physiotherapy, Privacy, Team, Training } from "./routes";
 
 function CanonicalRedirect({ to }: { to: string }) {
   useEffect(() => {
@@ -33,7 +33,6 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/physiotherapie/" component={Physiotherapy.Component} />
-          <Route path="/selbstzahlerangebote/" component={SelfPay.Component} />
           <Route path="/medizinisches-training-und-fitness/" component={Training.Component} />
           <Route path="/team-praxis/" component={Team.Component} />
           <Route path="/karriere/" component={Career.Component} />

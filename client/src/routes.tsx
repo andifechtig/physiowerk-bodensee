@@ -18,13 +18,11 @@ export const Courses = preloadable(() => import("./pages/Courses"));
 export const Imprint = preloadable(() => import("./pages/Imprint"));
 export const Physiotherapy = preloadable(() => import("./pages/Physiotherapy"));
 export const Privacy = preloadable(() => import("./pages/Privacy"));
-export const SelfPay = preloadable(() => import("./pages/SelfPay"));
 export const Team = preloadable(() => import("./pages/Team"));
 export const Training = preloadable(() => import("./pages/Training"));
 
 const routes = {
   "/physiotherapie/": Physiotherapy,
-  "/selbstzahlerangebote/": SelfPay,
   "/medizinisches-training-und-fitness/": Training,
   "/team-praxis/": Team,
   "/karriere/": Career,

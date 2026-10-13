@@ -7,6 +7,9 @@ export function redirectForUrl(url: string): string | undefined {
   const pathname = index < 0 ? url : url.slice(0, index);
   const query = index < 0 ? "" : url.slice(index);
   if (pathname === "/index.html") return "/" + query;
+  if (pathname === "/selbstzahlerangebote" || pathname === "/selbstzahlerangebote/") {
+    return `/${query}#selbstzahlerangebote`;
+  }
   const page = seoForPath(pathname);
   // Only known routes redirect; never use user-controlled hosts as targets.
   if (!page.notFound && pathname !== page.path) return page.path + query;

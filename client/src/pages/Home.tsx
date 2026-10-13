@@ -74,14 +74,20 @@ const conditions = {
     "Und viele mehr",
   ],
   "Selbstzahlerleistungen": [
-    "Strukturelle Integration / Rolfing",
-    "Krankengymnastik & Manuelle Therapie",
-    "Narbenbehandlung, Massage & Fango",
+    "Strukturelle Integration / Rolfing, Einzelsitzung (1 h)",
+    "Strukturelle Integration / Rolfing, 10er-Serie (Sparpaket)",
+    "Krankengymnastik",
+    "Manuelle Therapie",
+    "Narbenbehandlung (1 h)",
+    "Massage",
+    "Fango",
     "Kinesio-Tape",
-    "Funktionelles Personal Krafttraining",
+    "Funktionelles Personal Krafttraining (60 min)",
+    "Personal Training, 10 × 60 min (Sparpaket)",
   ],
   "Angebot Kassenleistungen": [
     "KG Krankengymnastik",
+    "Krankengymnastik am Gerät (KGG)",
     "Manuelle Therapie",
     "Atem Physiotherapie",
     "T-RENA (Trainingstherapeutische Rehabilitationsnachsorge)",
@@ -284,18 +290,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="content-section content-section-soft">
+      <section className="content-section content-section-soft" id="selbstzahlerangebote">
         <div className="site-shell condition-grid">
           {Object.entries(conditions).map(([title, items]) => (
             <article key={title}>
               <h2>{title}</h2>
-              <ul>
+              <ul className={title === "Selbstzahlerleistungen" ? "condition-selfpay-list" : undefined}>
                 {items.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
               {title === "Selbstzahlerleistungen" ? (
-                <ArrowLink href="/selbstzahlerangebote/">Alle Selbstzahlerangebote</ArrowLink>
+                <ArrowLink href="/kurse/">ZPP-zertifizierte Onlinekurse ansehen</ArrowLink>
               ) : null}
             </article>
           ))}
