@@ -81,7 +81,7 @@ describe("stable site routes", () => {
     expect(SOCIAL_LINKS).toEqual([
       {
         label: "Instagram",
-        href: "https://www.instagram.com/andi_biomechanix?igsh=MW53MnhjeGNwN2t6Mg==",
+        href: "https://www.instagram.com/physiowerk_bodensee/",
       },
       { label: "Facebook", href: "https://www.facebook.com/deinbiomechaniker/" },
     ]);

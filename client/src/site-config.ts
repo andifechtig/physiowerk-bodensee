@@ -63,7 +63,7 @@ export const NAVIGATION = [
 export const SOCIAL_LINKS = [
   {
     label: "Instagram",
-    href: "https://www.instagram.com/andi_biomechanix?igsh=MW53MnhjeGNwN2t6Mg==",
+    href: "https://www.instagram.com/physiowerk_bodensee/",
   },
   { label: "Facebook", href: "https://www.facebook.com/deinbiomechaniker/" },
 ] as const;
