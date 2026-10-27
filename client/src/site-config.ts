@@ -42,6 +42,7 @@ export const CANONICAL_REDIRECTS: Record<string, string> = {
   "/coaching": "/coaching/",
   "/app": "/app/",
   "/kurse": "/kurse/",
+  "/blog": "/blog/",
   "/kontakt": "/kontakt/",
   "/impressum": "/impressum/",
   "/datenschutzerklaerung": "/datenschutzerklaerung/",
@@ -58,6 +59,7 @@ export const NAVIGATION = [
   { label: "Coaching", href: "/coaching/" },
   { label: "App", href: "/app/" },
   { label: "Kurse", href: "/kurse/" },
+  { label: "Blog", href: "/blog/" },
 ] as const;
 
 export const SOCIAL_LINKS = [
@@ -120,6 +122,11 @@ export const SEO: Record<string, SeoConfig> = {
     "title": "Online-Präventionskurse §20 | Physiowerk Bodensee",
     "description": "Zertifizierte Online-Präventionskurse nach §20 SGB V beim Physiowerk Bodensee. Informiere Dich über die Kurse und mögliche Krankenkassen-Zuschüsse.",
     "path": "/kurse/"
+  },
+  "blog": {
+    "title": "Blog: Wissen & Einblicke | Physiowerk Bodensee",
+    "description": "Videos, verständliche Infos rund um Bewegung und Gesundheit sowie Neuigkeiten aus dem Physiowerk Bodensee in Meckenbeuren.",
+    "path": "/blog/"
   },
   "contact": {
     "title": "Kontakt & Anfahrt Meckenbeuren | Physiowerk Bodensee",

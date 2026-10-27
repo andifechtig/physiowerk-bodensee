@@ -11,6 +11,7 @@ function preloadable(load: () => Promise<{ default: ComponentType }>) {
 }
 
 export const AppPage = preloadable(() => import("./pages/AppPage"));
+export const Blog = preloadable(() => import("./pages/Blog"));
 export const Career = preloadable(() => import("./pages/Career"));
 export const Coaching = preloadable(() => import("./pages/Coaching"));
 export const Contact = preloadable(() => import("./pages/Contact"));
@@ -29,6 +30,7 @@ const routes = {
   "/coaching/": Coaching,
   "/app/": AppPage,
   "/kurse/": Courses,
+  "/blog/": Blog,
   "/kontakt/": Contact,
   "/impressum/": Imprint,
   "/datenschutzerklaerung/": Privacy,

@@ -7,7 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import { CANONICAL_REDIRECTS } from "./site-config";
 
-import { AppPage, Career, Coaching, Contact, Courses, Imprint, Physiotherapy, Privacy, Team, Training } from "./routes";
+import { AppPage, Blog, Career, Coaching, Contact, Courses, Imprint, Physiotherapy, Privacy, Team, Training } from "./routes";
 
 function CanonicalRedirect({ to }: { to: string }) {
   useEffect(() => {
@@ -39,6 +39,7 @@ function Router() {
           <Route path="/coaching/" component={Coaching.Component} />
           <Route path="/app/" component={AppPage.Component} />
           <Route path="/kurse/" component={Courses.Component} />
+          <Route path="/blog/" component={Blog.Component} />
           <Route path="/kontakt/" component={Contact.Component} />
           <Route path="/impressum/" component={Imprint.Component} />
           <Route path="/datenschutzerklaerung/" component={Privacy.Component} />

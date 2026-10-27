@@ -21,6 +21,7 @@ describe("stable site routes", () => {
       "/coaching/",
       "/app/",
       "/kurse/",
+      "/blog/",
       "/kontakt/",
       "/impressum/",
       "/datenschutzerklaerung/",
@@ -34,7 +35,7 @@ describe("stable site routes", () => {
       href: "/medizinisches-training-und-fitness/",
     });
     expect(NAVIGATION.some(entry => entry.label === "Medizinisches Training und Fitness")).toBe(false);
-    expect(NAVIGATION.at(-1)).toEqual({ label: "Kurse", href: "/kurse/" });
+    expect(NAVIGATION.at(-1)).toEqual({ label: "Blog", href: "/blog/" });
   });
 
   it("redirects every non-slash URL to its canonical trailing-slash route", () => {
@@ -46,6 +47,7 @@ describe("stable site routes", () => {
       "/coaching": "/coaching/",
       "/app": "/app/",
       "/kurse": "/kurse/",
+      "/blog": "/blog/",
       "/kontakt": "/kontakt/",
       "/impressum": "/impressum/",
       "/datenschutzerklaerung": "/datenschutzerklaerung/",
@@ -136,6 +138,7 @@ describe("stable site routes", () => {
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/coaching/");
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/app/");
     expect(sitemap).toContain("https://www.physiowerk-bodensee.de/kurse/");
+    expect(sitemap).toContain("https://www.physiowerk-bodensee.de/blog/");
   });
 
   it("keeps current membership prices, course funding contracts and KGG details explicit", () => {

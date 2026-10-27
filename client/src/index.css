@@ -3,6 +3,7 @@
 @import "./app.css";
 @import "./courses.css";
 @import "./reviews.css";
+@import "./blog.css";
 
 :root {
   --brand: #e63746;
