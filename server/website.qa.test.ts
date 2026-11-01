@@ -102,11 +102,11 @@ describe("website quality contracts", () => {
     const mediaExtensions = new Set([".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".mp4", ".webm"]);
     const mediaFiles = files.filter(file => mediaExtensions.has(extname(file).toLowerCase()));
 
-    // Self-Hosting: Alle Medien liegen als lokale Assets unter client/public/{brand,images}.
+    // Self-Hosting: Alle Medien liegen lokal unter client/public/{brand,images,videos}.
     expect(mediaFiles.length).toBeGreaterThan(0);
     for (const file of mediaFiles) {
       const rel = relative(publicRoot, file);
-      expect(rel.startsWith("brand/") || rel.startsWith("images/")).toBe(true);
+      expect(rel.startsWith("brand/") || rel.startsWith("images/") || rel.startsWith("videos/")).toBe(true);
       expect(statSync(file).size).toBeGreaterThan(0);
     }
 

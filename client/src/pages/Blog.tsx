@@ -134,13 +134,25 @@ export default function Blog() {
               </div>
             </div>
           ) : (
-            <div className="blog-post-grid">
+            <div className={`blog-post-grid${visiblePosts.some(post => post.video) ? " blog-post-grid-videos" : ""}`}>
               {visiblePosts.map(post => {
                 const category = categories.find(item => item.key === post.category);
                 const Icon = category?.icon ?? BookOpen;
                 return (
                   <article className="blog-post-card" key={post.slug}>
-                    {post.image ? (
+                    {post.video ? (
+                      <video
+                        className="blog-post-video"
+                        controls
+                        playsInline
+                        preload="none"
+                        poster={post.image}
+                        aria-label={`Video: ${post.title}`}
+                      >
+                        <source src={post.video} type="video/mp4" />
+                        Dein Browser unterstützt die Wiedergabe dieses Videos nicht.
+                      </video>
+                    ) : post.image ? (
                       <img className="blog-post-image" src={post.image} alt={post.imageAlt ?? ""} loading="lazy" />
                     ) : (
                       <div className="blog-post-art" aria-hidden="true"><Icon /></div>
