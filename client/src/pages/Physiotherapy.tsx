@@ -22,6 +22,7 @@ const BIOMECHANICS_MEDIA = {
 const services = [
   ["Physiotherapie/Krankengymnastik (KG)", "Wir rechnen alle klassischen Kassenrezepte im Bereich Physiotherapie ab."],
   ["Manuelle Therapie (MT)", "Mobilisation spezifischer Gelenke auf Basis physiotherapeutischer Aus- und Weiterbildungen."],
+  ["Atem Physiotherapie", "Gezielte physiotherapeutische Atemübungen und Techniken, individuell auf Beschwerden und ärztliche Verordnung abgestimmt."],
   ["Lymphdrainage (MLD)", "Therapie zur Entwässerung des Körpers von Ödemen/Flüssigkeitseinlagerungen unterschiedlicher Art."],
   ["Bobath (KG ZNS)", "Physiotherapie für Neurologische Themen rund um das zentrale und periphere Nervensystems (Schlaganfall, Paresen, MS ect)."],
   ["Krankengymnastik am Gerät (KGG)", "KGG ist ein gerätegestütztes Training unter physiotherapeutischer Anleitung. Ziel ist es, Kraft, Ausdauer, Koordination und Beweglichkeit zu verbessern. Die Leistung wird vom Arzt über eine Heilmittelverordnung verordnet und findet in unserem Trainingsbereich mit medizinischen Trainingsgeräten statt. Trainiert wird einzeln oder in Kleingruppen mit maximal drei Personen."],
