@@ -32,6 +32,7 @@ describe("website quality contracts", () => {
       ...Object.keys(CANONICAL_REDIRECTS),
       ...Object.values(CANONICAL_REDIRECTS),
       "/#selbstzahlerangebote",
+      "/physiotherapie/#return-to-sport",
       "/404",
       BOOKING_CONFIG.directUrl,
     ]);
@@ -59,6 +60,7 @@ describe("website quality contracts", () => {
       "Kinesio-Tape",
       "Funktionelles Personal Krafttraining (60 min)",
       "Personal Training, 10 × 60 min (Sparpaket)",
+      "Return-to-Sport-Test (Preise auf Anfrage)",
     ]) {
       expect(selfpay).toContain(offer);
     }
@@ -66,6 +68,16 @@ describe("website quality contracts", () => {
     expect(home).toContain('<ArrowLink href="/kurse/">ZPP-zertifizierte Onlinekurse ansehen</ArrowLink>');
     expect(home).toContain('id="selbstzahlerangebote"');
     expect(home).not.toContain('href="/selbstzahlerangebote/"');
+  });
+
+  it("links the homepage self-pay offer to a local Return-to-Sport-Test email inquiry", () => {
+    const home = readFileSync(join(sourceRoot, "pages", "Home.tsx"), "utf8");
+    const physiotherapy = readFileSync(join(sourceRoot, "pages", "Physiotherapy.tsx"), "utf8");
+    expect(home).toContain('href="/physiotherapie/#return-to-sport"');
+    expect(physiotherapy).toContain("Return-to-Sport-Test in Meckenbeuren");
+    expect(physiotherapy).toContain('id="return-to-sport"');
+    expect(physiotherapy).toContain("Preise auf Anfrage");
+    expect(physiotherapy).toContain('href="mailto:info@physiowerk-bodensee.de?subject=Anfrage%20zum%20Return-to-Sport-Test%20in%20Meckenbeuren"');
   });
 
   it("keeps KG Krankengymnastik first and adds KG-Gerät to statutory services", () => {

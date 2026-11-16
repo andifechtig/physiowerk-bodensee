@@ -89,6 +89,23 @@ export default function Physiotherapy() {
               </article>
             ))}
           </div>
+          <div id="return-to-sport" className="return-to-sport-card" aria-labelledby="return-to-sport-heading">
+            <p className="eyebrow">Selbstzahlerleistung</p>
+            <h3 id="return-to-sport-heading">Return-to-Sport-Test in Meckenbeuren</h3>
+            <p>
+              Du bist in Meckenbeuren oder im Bodenseekreis sportlich aktiv und möchtest nach einer
+              Sportverletzung oder längeren Trainingspause wieder in deine Sportart einsteigen? Der
+              Return-to-Sport-Test bietet eine physiotherapeutische Einschätzung mit Blick auf den
+              Wiedereinstieg in den Sport.
+            </p>
+            <p>
+              Welche Testung zu deiner Situation passt, klären wir im persönlichen Austausch. Das
+              Angebot ist eine Selbstzahlerleistung. <strong>Preise auf Anfrage.</strong>
+            </p>
+            <ArrowLink href="mailto:info@physiowerk-bodensee.de?subject=Anfrage%20zum%20Return-to-Sport-Test%20in%20Meckenbeuren">
+              Return-to-Sport-Test per E-Mail anfragen
+            </ArrowLink>
+          </div>
           <div className="physio-selfpay-link">
             <p>Sie interessieren sich für private Einzelbehandlungen, Rolfing oder Personal Training?</p>
             <ArrowLink href="/#selbstzahlerangebote">Zu den Selbstzahlerangeboten</ArrowLink>

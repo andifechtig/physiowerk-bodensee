@@ -89,8 +89,8 @@ export const SEO: Record<string, SeoConfig> = {
     "path": "/"
   },
   "physiotherapie": {
-    "title": "Physiotherapie & Biomechanik in Meckenbeuren",
-    "description": "Physiotherapie in Meckenbeuren: Krankengymnastik, manuelle Therapie, Lymphdrainage und KGG im Physiowerk Bodensee. Erfahre mehr über unsere Behandlung.",
+    "title": "Return-to-Sport-Test in Meckenbeuren | Physiowerk Bodensee",
+    "description": "Return-to-Sport-Test in Meckenbeuren im Bodenseekreis: physiotherapeutische Einschätzung für den Wiedereinstieg in den Sport. Selbstzahlerleistung, Preise auf Anfrage.",
     "path": "/physiotherapie/"
   },
   "training": {

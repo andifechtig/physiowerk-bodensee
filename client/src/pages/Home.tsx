@@ -84,6 +84,7 @@ const conditions = {
     "Kinesio-Tape",
     "Funktionelles Personal Krafttraining (60 min)",
     "Personal Training, 10 × 60 min (Sparpaket)",
+    "Return-to-Sport-Test (Preise auf Anfrage)",
   ],
   "Angebot Kassenleistungen": [
     "KG Krankengymnastik",
@@ -297,7 +298,11 @@ export default function Home() {
               <h2>{title}</h2>
               <ul className={title === "Selbstzahlerleistungen" ? "condition-selfpay-list" : undefined}>
                 {items.map(item => (
-                  <li key={item}>{item}</li>
+                  <li key={item}>
+                    {item.startsWith("Return-to-Sport-Test") ? (
+                      <a href="/physiotherapie/#return-to-sport">Return-to-Sport-Test (Preise auf Anfrage)</a>
+                    ) : item}
+                  </li>
                 ))}
               </ul>
               {title === "Selbstzahlerleistungen" ? (
