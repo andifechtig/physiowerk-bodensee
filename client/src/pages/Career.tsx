@@ -48,6 +48,13 @@ export default function Career() {
         </div>
       </section>
 
+      <section className="content-section">
+        <div className="site-shell">
+          <SectionHeading eyebrow="Ausbildungsförderung" title="Dein Weg in die Physiotherapie" />
+          <p className="lead-copy">Du möchtest Physiotherapeut:in werden? Wir unterstützen dich &ndash; je nach Situation &ndash; bei den Schulgebühren deiner Ausbildung. Nach deinem Abschluss bieten wir dir bei Physiowerk einen sicheren, fairen und gut bezahlten Arbeitsplatz. Lass uns persönlich über die Förderung und die Rahmenbedingungen sprechen.</p>
+        </div>
+      </section>
+
       <section className="application-cta">
         <div className="site-shell application-cta-grid">
           <div>
