@@ -25,6 +25,17 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "gesundheitsvortrag-entzuendungen-verstehen",
+    category: "video",
+    title: "Gesundheitsvortrag: Entzündungen verstehen",
+    summary:
+      "Was haben Nährstoffe mit Entzündungen zu tun? Physiotherapeut und Fitnesstrainer Timon Altmann gibt einen Einblick in den Vortrag und fragt, was wissenschaftlich belegt und was individuell ist. Donnerstag, 28. Januar 2027, 19:30 Uhr · Physiowerk Bodensee, Tettnanger Straße 14, Meckenbeuren.",
+    publishedAt: "2026-11-26",
+    video: "/videos/gesundheitsvortrag-entzuendungen-verstehen.mp4",
+    image: "/videos/gesundheitsvortrag-entzuendungen-verstehen-poster.jpg",
+    imageAlt: "Titelbild des Gesundheitsvortrags Entzündungen verstehen am 28. Januar 2027",
+  },
+  {
     slug: "physiowerk-gesundheitscoaching",
     category: "video",
     title: "Physiowerk Gesundheitscoaching",
